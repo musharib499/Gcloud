@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    //Layer1 : DIsplays the actual icon
+    <item
+        android:id="@+id/ic_cart"
+        android:drawable="@drawable/ic_notification_vector"
+        android:gravity="center" />
+
+    //Layer2: Actual badge count to display
+    <!-- set a place holder Drawable so android:drawable isn't null -->
+    <item
+        android:id="@+id/ic_badge"
+        android:drawable="@drawable/ic_notification_vector" />
+</layer-list>

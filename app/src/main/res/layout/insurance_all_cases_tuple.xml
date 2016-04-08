@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?><!--<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/background_light">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/insurance_tuple_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/requestNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_weight="1"
+            style="@style/textStyleHeading2"
+            android:textColor="@color/insurance_dark_gray" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            style="@style/textStyleHeading2"
+            android:textSize="12sp"
+            android:text="Booked"
+            android:textColor="@android:color/white"
+            android:background="@drawable/booked_status" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:id="@+id/makeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/makeModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading"
+            android:textColor="@color/insurance_dark_gray"
+            android:text="Maruti Suzuki Swift VXi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/registrationNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading2"
+            android:textColor="@color/insurance_dark_gray" />
+
+        <TextView
+            android:id="@+id/inspected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading2"
+            android:layout_marginLeft="10dp"
+            android:textSize="10sp"
+            android:text="Inspected"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/insurance_orange"
+            android:background="@drawable/inspected_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REQUEST DATE"
+                style="@style/textStyleHeading2"
+                android:textColor="@color/insurance_light_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/requestDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                style="@style/textStyleHeading"
+                android:textStyle="normal"
+                android:textColor="@color/insurance_dark_gray"
+                android:textSize="14sp"
+                android:text="23/06/2015" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INSURER"
+                style="@style/textStyleHeading2"
+                android:textColor="@color/insurance_light_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/insurer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                style="@style/textStyleHeading"
+                android:textSize="14sp"
+                android:text="Iffco Tokio"
+                android:textColor="@color/insurance_dark_gray"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PREMIUM"
+                style="@style/textStyleHeading2"
+                android:textColor="@color/insurance_light_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                style="@style/textStyleHeading"
+                android:textSize="14sp"
+                android:textColor="@color/insurance_dark_gray"
+                android:textStyle="normal"
+                android:drawableLeft="@drawable/rupee_symbol_grey"
+                android:text="12,000"
+                android:drawablePadding="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/insurance_tuple_divider" />
+
+    <LinearLayout
+        android:id="@+id/inspectedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/insurance_card_background_gray"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textStyleHeading2"
+                android:textSize="12sp"
+                android:textColor="@color/insurance_light_gray"
+                android:text="Booking Date: " />
+
+            <TextView
+                android:id="@+id/bookingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textStyleHeading"
+                android:textSize="14sp"
+                android:textColor="@color/insurance_dark_gray"
+                android:text="23/06/2016" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/downloadPolicy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="right|center_vertical"
+            android:text="DOWNLOAD POLICY"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="7dp"
+            android:textColor="@color/insurance_orange"
+            android:drawableRight="@drawable/download"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cancelledLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/insurance_card_background_gray"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cancelMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/cancel_info"
+            android:text="Documents were not correct"
+            android:textColor="@color/insurance_cancel_red"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/insurance_tuple_divider" />
+</LinearLayout>
+
+    <!--
+    </android.support.v7.widget.CardView>-->

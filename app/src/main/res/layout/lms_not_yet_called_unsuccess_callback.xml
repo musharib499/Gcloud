@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lms_activity_bg">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:textColor="@color/lms_dark_gray"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_dimen"
+        android:layout_marginTop="20dp"
+        android:background="@color/separatorColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LMSButton"
+            android:id="@+id/now"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:text="@string/now"
+            android:textColor="@color/lms_dark_gray"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="@dimen/separator_dimen"
+            android:layout_height="match_parent"
+            android:background="@color/separatorColor" />
+
+        <TextView
+            style="@style/LMSButton"
+            android:id="@+id/after1hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:text="@string/after1Hour"
+            android:layout_weight="1"
+            android:textColor="@color/lms_dark_gray" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_dimen"
+        android:background="@color/separatorColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LMSButton"
+            android:id="@+id/after2hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:text="@string/after2Hour"
+            android:layout_weight="1"
+            android:textColor="@color/lms_dark_gray" />
+
+        <View
+            android:layout_width="@dimen/separator_dimen"
+            android:layout_height="match_parent"
+            android:background="@color/separatorColor" />
+
+        <TextView
+            style="@style/LMSButton"
+            android:id="@+id/schedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:text="@string/schedule"
+            android:ellipsize="end"
+            android:layout_weight="1"
+            android:textColor="@color/lms_dark_gray" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_dimen"
+        android:background="@color/separatorColor" />
+
+</LinearLayout>

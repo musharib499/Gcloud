@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="actionbar_background">#E66437</color>-->
+    <color name="button_background">#ffeeeeee</color>
+    <color name="gc_button_background">#263242</color>
+    <color name="actionbar_background">#263242</color>
+    <color name="activity_background">@color/white</color>
+    <color name="gc_selected_color">#e66437</color>
+
+    <color name="font_light">#666666</color>
+    <color name="font_action_bar">@color/white</color>
+    <color name="action_bar_title_color">@color/white</color>
+
+    <color name="textColor">#263242</color>
+    <color name="hintColor">#AEAEAE</color>
+    <color name="separatorColor">#CECECE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dashboard_green">#99d53e</color>
+    <color name="transparent_vwPager">#e4000000</color>
+    <color name="login_button_background">#e86335</color>
+    <color name="background_floating_material_light">#ffeeeeee</color>
+
+    <color name="gray">#808080</color>
+    <color name="grey">#ffc3c3c3</color>
+    <color name="transparentBlackBg">#80000000</color>
+    <color name="selected_checkbox_color">#CECECE</color>
+    <color name="black">#ff000000</color>
+
+    <!-- date time picker -->
+
+    <color name="circle_background">#fff2f2f2</color>
+    <color name="line_background">#ffcccccc</color>
+    <color name="done_text_color_normal">#ff333333</color>
+    <color name="done_text_color_disabled">#ffcccccc</color>
+    <color name="orange">@color/login_button_background</color>
+    <color name="pressedOrange">#E87E53</color>
+    <color name="darker_blue">#ff212c66</color>
+    <color name="date_picker_text_normal">#ff999999</color>
+    <color name="calendar_header">#ff999999</color>
+    <color name="date_picker_view_animator">#fff2f2f2</color>
+
+    <color name="ampm_text_color">#8c8c8c</color>
+    <color name="numbers_text_color">#8c8c8c</color>
+
+    <color name="transparent_black">#80000000</color>
+    <color name="transparent">#00000000</color>
+
+
+    <!-- view pager indicator colors -->
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#fff3f3f3</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">
+        @color/vpi__bright_foreground_holo_light
+    </color>
+    <color name="vpi__bright_foreground_inverse_holo_light">
+        @color/vpi__bright_foreground_holo_dark
+    </color>
+    <color name="strokeColor">#CECECE</color>
+    <color name="hintStrokeColor">#80CECECE</color>
+    <color name="gc_background_list_backview">#263242</color>
+</resources>

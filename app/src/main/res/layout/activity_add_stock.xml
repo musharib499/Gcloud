@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_addStock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/makeModelVersionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/photos"
+                    layout="@layout/layout_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <!--<TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        style="@style/textStyleHeading2"
+                        android:text="@string/add_stock_model"
+                        android:gravity="center_vertical"/>
+                        -->
+                    <!--
+                                        <android.support.design.widget.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="8dp"
+                                            android:background="@color/red"
+                                            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                                            android:layout_weight="1"
+                                            android:gravity="left"
+
+                                            >-->
+
+                    <com.gcloud.gaadi.ui.CustomMaterialAutoCompleteTxtVw
+                        android:id="@+id/makeModel"
+                        style="@style/autoCompleteTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownSelector="@drawable/autocomplete_dropdown"
+                        android:gravity="left|center_vertical"
+                        android:hint="Model* (Example i10, Swift, etc.)"
+                        android:inputType="text"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/hintColor"
+                        app:met_primaryColor="@color/hintColor"
+                        app:met_textColorHint="@color/hintColor"
+                        app:met_underlineColor="@color/gray" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/version"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+
+                            android:focusable="false"
+                            android:hint="@string/add_stock_version" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fuelTypeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/fuelType"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="Fuel Type: Petrol"
+                        android:textColor="@color/hintColor" />
+
+                    <CheckBox
+                        android:id="@+id/cngFitted"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/cng_fitted" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stockcolorlayout"
+                    style="@style/textSpinnerStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="horizontal">
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center|left"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/stockColor"
+
+                            style="@style/autoCompleteTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+
+                            android:hint="Color*"
+                            android:minWidth="60dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/Color"
+                        android:layout_width="35dp"
+                        android:layout_height="18dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/oval_white_black_stroke"
+                        android:contentDescription="@string/emptyString" />
+
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/otherColorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/stockOtherColor"
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:hint="@string/other_color"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapWords"
+
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <!-- <TextView
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         style="@style/textStyleHeading2"
+                         android:layout_weight="1.5"
+                         android:singleLine="false"
+                         android:layout_gravity="center_vertical"
+                         android:text="@string/hint_model_month_year" />-->
+
+                    <!--<TextView
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="3"
+                      android:id="@+id/stockYear"
+                      style="@style/textSpinnerStyleHeading" />-->
+
+                    <!-- Gaurav Changes -->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/stockYear"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Mfg. Month and Year*" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--<View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2" />-->
+
+                    <!--<android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+
+                        <EditText
+                            android:id="@+id/stockMonth"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Mfg. Month*" />
+                    </android.support.design.widget.TextInputLayout>
+-->
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/kmsDriven"
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:hint="@string/hint_kms_driven"
+                        android:imeOptions="actionDone"
+
+                        android:inputType="number"
+                        android:maxLength="9" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/numOwners"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/hint_num_owners" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/registrationCityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                            android:id="@+id/registrationCity"
+                            style="@style/autoCompleteTextViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/hint_registration_city"
+                            android:imeOptions="actionDone"
+                            android:paddingLeft="8dp"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/registrationNumberLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+                    <!--<TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        style="@style/textStyleHeading2"
+                        android:layout_weight="1.5"
+                        android:text="@string/hint_registration_number"/>-->
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/registrationNumber"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/hint_registration_number"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapCharacters"
+                            android:paddingLeft="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/radioGroupLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/type_reg"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/evenOdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/insuranceTypeLabel"
+                        android:layout_marginTop="8dp"
+                        android:clickable="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/even"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:tag="2"
+                            android:text="@string/even"/>
+
+                        <RadioButton
+                            android:id="@+id/odd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:tag="1"
+                            android:text="@string/odd" />
+
+                    </RadioGroup>
+                </LinearLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/dealershipName"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/dealership" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <!-- <ImageView
+                         android:contentDescription="@string/emptyString"
+
+                         android:layout_width="10dp"
+                         android:layout_gravity="bottom"
+                         android:layout_height="10dp"
+
+                         android:layout_centerHorizontal="true"
+                         android:src="@drawable/rupee_symbol_grey"
+                         />-->
+                    <TextView
+                        android:id="@+id/tvStockPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="Stock Price*"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                    <EditText
+                        android:id="@+id/stockPrice"
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/rupee_symbol_grey"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/enter_price"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="11" />
+                   <!-- <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/stockPrice"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:drawablePadding="4dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/enter_price"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="11" />
+                    </android.support.design.widget.TextInputLayout>-->
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/insuranceTypeLabel"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/insuranceType"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/insuranceType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/insuranceTypeLabel"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RadioButton
+                            android:id="@+id/noInsurance"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:gravity="center_vertical"
+                            android:text="@string/no_insurance"/>
+
+                        <RadioButton
+                            android:id="@+id/thirdparty"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:gravity="center_vertical"
+                            android:text="@string/third_party_insurance" />
+
+                        <RadioButton
+                            android:id="@+id/comprehensive"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:gravity="center_vertical"
+                            android:text="@string/comprehensive_insurance" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/insuranceTypeOptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/insuranceType"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/textStyleHeading"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/valid_till"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <!--<TextView
+                          android:id="@+id/insuranceValidity"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="3"
+                          style="@style/textStyleHeading2"
+                          android:hint="@string/month_and_year"
+                          android:gravity="center_vertical|left"
+                          android:background="@drawable/abc_edit_text_material"
+                          />-->
+
+                        <!-- Gaurav Changes -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/insuranceValidYear"
+                                    style="@style/textSpinnerStyleHeading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:hint="Month and Year" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <!--<View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".2" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+
+                                android:layout_weight="1"
+                                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/insuranceValidMonth"
+                                    style="@style/textSpinnerStyleHeading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:hint="Month" />
+                            </android.support.design.widget.TextInputLayout>-->
+
+                        </LinearLayout>
+                        <!-- Changes End -->
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/taxTypeLabel"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/tax"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/taxType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/taxTypeLabel"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/individual"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/individual" />
+
+                        <RadioButton
+                            android:id="@+id/corporate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="@string/corporate" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/selltodealer"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/selltodealer" />
+
+                <LinearLayout
+                    android:id="@+id/dealerInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- <LinearLayout
+                       android:id="@+id/dealerMobileLayout"
+                       android:layout_width="match_parent"
+                       android:layout_height="52dp"
+
+                       android:orientation="horizontal" >
+
+                       <TextView
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1.5"
+                         style="@style/textStyleHeading2"
+                         android:singleLine="false"
+                         android:text="@string/dealer_phone_no"
+                         android:gravity="left|center_vertical"/>
+
+                       <EditText
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:id="@+id/dealerMobile"
+                         android:layout_weight="3"
+                         android:inputType="number"
+                         android:imeOptions="actionDone"
+                         style="@style/editTextStyle"
+                         android:hint="@string/dealer_mobile_no"
+                         android:maxLength="10"
+                         android:gravity="left|center_vertical"/>
+
+                     </LinearLayout>-->
+
+
+                    <!-- <ImageView
+                         android:contentDescription="@string/emptyString"
+                         android:id="@+id/rupeee_symbol"
+                         android:layout_width="10dp"
+                         android:layout_gravity="bottom"
+                         android:layout_height="10dp"
+
+                         android:layout_centerHorizontal="true"
+                         android:background="@drawable/rupee_symbol_grey"
+                         />-->
+                    <TextView
+                        android:id="@+id/tvDealerPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/hint_dealer_price"
+                        android:textSize="12sp"
+                        android:visibility="gone"/>
+                    <EditText
+                        android:id="@+id/dealerPrice"
+                        style="@style/editTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/rupee_symbol_grey"
+                        android:drawablePadding="4dp"
+                        android:hint="@string/hint_dealer_price"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="11" />
+
+                   <!-- <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/dealerPrice"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableLeft="@drawable/rupee_symbol_grey"
+                            android:drawablePadding="4dp"
+                            android:hint="@string/hint_dealer_price"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="11" />
+                    </android.support.design.widget.TextInputLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addGaadi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="@string/add_gaadi"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

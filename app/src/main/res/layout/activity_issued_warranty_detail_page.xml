@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress ALL -->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollVw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:isScrollContainer="true"
+
+        android:overScrollMode="ifContentScrolls"
+        android:paddingBottom="@dimen/time_label_size"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+
+                        android:padding="@dimen/default_padding">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_centerVertical="true"
+
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/btn_callNow"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:background="#86be67"
+
+                            android:drawableLeft="@drawable/call_icon"
+                            android:drawablePadding="3dp"
+                            android:focusable="false"
+                            android:padding="5dp"
+                            android:text="Call Now"
+                            android:textAllCaps="false"
+
+                            android:textColor="@color/white"
+                            android:textStyle="normal" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/email_grey" />
+
+                        <LinearLayout
+                            android:id="@+id/emaillay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+
+                            android:padding="8dp">
+
+                            <TextView
+                                style="@style/textStyleHeading2.customFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/d2dPrice"
+                                android:layout_weight="1"
+                                android:text="Email ID" />
+
+                            <TextView
+                                android:id="@+id/email"
+                                style="@style/textStyleHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_centerVertical="true"
+
+                                android:layout_weight="1"
+
+                                android:drawablePadding="4dp"
+                                android:text="abc@gmail.com" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@color/gray_light_border" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/address" />
+
+                        <LinearLayout
+                            android:id="@+id/addresslay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/postedOnLabel"
+                                style="@style/textStyleHeading2.customFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/postedOn"
+                                android:text="Address" />
+
+                            <TextView
+                                android:id="@+id/address"
+                                style="@style/textStyleHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="Gurgaon" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/warrantyIdLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            style="@style/textStyleHeading2.customFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Warranty ID: "
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/warrantyId"
+                            style="@style/textStyleHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="WARR1234"
+                            android:textColor="@color/primary" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_padding">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+
+                                android:padding="8dp"
+                                android:visibility="visible">
+
+                                <TextView
+                                    style="@style/textStyleHeading2.customFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/insuranceValue"
+                                    android:text="Warranty Type" />
+
+                                <TextView
+                                    android:id="@+id/warrantyType"
+                                    style="@style/textStyleHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Warranty Type" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+
+                                android:padding="8dp"
+                                android:visibility="visible">
+
+                                <TextView
+                                    style="@style/textStyleHeading2.customFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/insuranceValue"
+                                    android:text="Issue Date" />
+
+                                <TextView
+                                    android:id="@+id/warrantyStartDate"
+                                    style="@style/textStyleHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="issue date" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lay"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <TextView
+                                    style="@style/textStyleHeading2.customFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerVertical="true"
+
+                                    android:text="@string/odo_meter_text" />
+
+                                <TextView
+                                    android:id="@+id/odMetter"
+                                    style="@style/textStyleHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerVertical="true"
+                                    android:text="Odo Meter  " />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/warrantyexpireson"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lay"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <TextView
+                                    style="@style/textStyleHeading2.customFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerVertical="true"
+
+                                    android:text="Warranty Expires On" />
+
+                                <TextView
+                                    android:id="@+id/tvwarrantyexpireson"
+                                    style="@style/textStyleHeading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerVertical="true"
+                                    android:text="end date" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_light_border" />
+
+                    <TextView
+                        style="@style/textStyleHeading2.customFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+
+                        android:padding="20dp"
+
+                        android:text="@string/odo_meter" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--  <RelativeLayout
+                 android:id="@+id/additionalDetails"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/imagesPagerLayout"
+                 android:layout_marginLeft="8dp"
+                 android:layout_marginRight="8dp"
+                 android:layout_marginTop="8dp">
+
+
+
+                <RelativeLayout
+                     android:id="@+id/warrantyIdLayout"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:text="Warranty Id"/>
+
+                     <TextView
+                         android:id="@+id/warrantyId"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="WARR1234"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/namelay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/warrantyIdLayout"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:text="Name"/>
+
+                     <TextView
+                         android:id="@+id/name"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="name"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/mobilelay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/namelay"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/registrationNumber"
+                         android:text="Mobile No."/>
+
+                     <TextView
+                         android:id="@+id/mobile"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="9911684561"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/emaillay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/mobilelay"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/d2dPrice"
+                         android:text="Email ID"/>
+
+                     <TextView
+                         android:id="@+id/email"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+
+                         android:drawablePadding="4dp"
+                         android:text="abc@gmail.com"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/addresslay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/emaillay"
+                     android:padding="8dp">
+
+                     <TextView
+                         android:id="@+id/postedOnLabel"
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/postedOn"
+                         android:text="Address"/>
+
+                     <TextView
+                         android:id="@+id/address"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="Gurgaon"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/vehiclesaledatelay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/addresslay"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/taxValue"
+                         android:text="Vehicle Sale Date"/>
+
+                     <TextView
+                         android:id="@+id/vehiclesaledate"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text=""/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/lay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/vehiclesaledatelay"
+                     android:padding="8dp"
+                     android:visibility="visible">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/insuranceValue"
+                         android:text="Warranty Start Date"/>
+
+                     <TextView
+                         android:id="@+id/warrantyStartDate"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text=""/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/warrantyexpireson"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/lay"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/insuranceValue"
+                         android:text="Warranty Expires On"/>
+
+                     <TextView
+                         android:id="@+id/tvwarrantyexpireson"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text=""/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/chasislay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/warrantyexpireson"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/insuranceValue"
+                         android:text="Chasis No."/>
+
+                     <TextView
+                         android:id="@+id/chasis"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="abc"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/enginenolay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/chasislay"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/insuranceValue"
+                         android:text="Engine No."/>
+
+                     <TextView
+                         android:id="@+id/engineno"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="abc"/>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/regnolay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/enginenolay"
+                     android:padding="8dp">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/insuranceValue"
+                         android:text="Registration No."/>
+
+                     <TextView
+                         android:id="@+id/regno"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="abc"/>
+                 </RelativeLayout>
+
+
+                 <RelativeLayout
+                     android:id="@+id/warrantyendlay"
+                     android:layout_width="match_parent"
+                     android:layout_height="42dp"
+                     android:layout_below="@+id/regnolay"
+                     android:padding="8dp"
+                     android:visibility="gone">
+
+                     <TextView
+                         style="@style/textStyleHeading2.customFont"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentLeft="true"
+                         android:layout_centerVertical="true"
+                         android:layout_toLeftOf="@+id/insuranceValue"
+                         android:text="Warranty end date"/>
+
+                     <TextView
+                         android:id="@+id/warrantyend"
+                         style="@style/textStyleHeading"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:text="abc"/>
+                 </RelativeLayout>
+             </RelativeLayout>-->
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/imagesPagerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/imagesPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@android:color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/dropshadow">
+
+                    <com.gcloud.gaadi.ui.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/circlePagerIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="2dp"
+                        app:fillColor="@color/actionbar_background"
+                        app:pageColor="@color/white"
+                        app:radius="2dp"
+                        app:strokeColor="@color/hintColor"
+                        app:strokeWidth="1dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reg_no"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="37dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+
+                    app:layout_collapseMode="parallax" />
+
+            </RelativeLayout>
+
+
+            <!-- <ImageView
+                 android:id="@+id/backdrop"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerCrop"
+                 app:layout_collapseMode="parallax" />
+  -->
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                app:layout_collapseMode="pin"
+
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/abc_ic_ab_back_material" />
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

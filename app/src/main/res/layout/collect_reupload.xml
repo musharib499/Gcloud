@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvImageCount"
+            android:background="@drawable/orange_circle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:minWidth="15dp"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!--<ScrollView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:scrollbars="none">-->
+
+            <!--<com.getbase.floatingactionbutton.FloatingActionsMenu xmlns:fab="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/multiple_action"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--fab:fab_addButtonColorNormal="@color/white"-->
+                <!--fab:fab_addButtonColorPressed="@color/white_pressed"-->
+                <!--fab:fab_addButtonSize="mini"-->
+                <!--fab:fab_addButtonPlusIconColor="@color/half_black"-->
+                <!--fab:fab_expandDirection="down"-->
+                <!--fab:fab_labelStyle="@style/menu_labels_style"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginEnd="16dp">-->
+
+            <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+        <!--</ScrollView>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/transparentBlackDark"
+        android:id="@+id/overlayLayout"
+        android:layout_marginLeft="-70dp"
+        android:clickable="true"
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:layout_marginLeft="@dimen/default_large_margin"
+            android:layout_marginRight="@dimen/default_large_margin"
+            android:id="@+id/gvDocInfos"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:horizontalSpacing="@dimen/default_margin"
+            android:verticalSpacing="@dimen/default_margin"
+            android:numColumns="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></GridView>
+
+        <Button
+            android:id="@+id/bNextDocument"
+            android:text="Upload next"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:background="@color/primary"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

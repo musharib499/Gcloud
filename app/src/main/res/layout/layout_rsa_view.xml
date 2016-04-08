@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/emptyString"
+            android:src="@drawable/rsa_dialog_image" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="@string/issue_rsa_help_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/subText"
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/rsa_validity_period"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/no"
+            style="@style/textStyleHeading2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@color/strokeColor"
+            android:text="@string/no" />
+
+        <Button
+            android:id="@+id/yes"
+            style="@style/textStyleWhite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/login_button_background"
+            android:text="@string/issue_free_rsa"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

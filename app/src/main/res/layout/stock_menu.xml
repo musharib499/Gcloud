@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/lay_menu_view"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        style="@style/textStyleHeading2"
+        android:text="Sort By"
+        />
+    <RadioGroup
+        android:id="@+id/radio_menu"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/sort_by_relevance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:text="@string/sort_by_relevance"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+     <!--   <RadioButton
+            android:id="@+id/sort_by_most_leads"
+            android:padding="@dimen/default_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_most_leads"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />-->
+        <RadioButton
+            android:id="@+id/sort_by_price_asc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_price_asc"
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+        <RadioButton
+            android:id="@+id/sort_by_price_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:text="@string/sort_by_price_desc"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+        <RadioButton
+            android:id="@+id/sort_by_km_asc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:text="@string/sort_by_km_asc"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+        <RadioButton
+            android:id="@+id/sort_by_km_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:text="@string/sort_by_km_desc"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+        <RadioButton
+            android:id="@+id/sort_by_year_asc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:text="@string/sort_by_year_asc"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+        <RadioButton
+            android:id="@+id/sort_by_year_desc"
+            style="@style/textStyleHeading2"
+            android:padding="@dimen/default_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by_year_desc"
+            android:button="@null"
+            android:drawableRight="@drawable/stock_menu_checkbox"
+            />
+
+
+    </RadioGroup>
+
+</LinearLayout>
+
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Sort By"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/default_padding"
+       android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="Latest at Top"
+            />
+
+      &lt;!&ndash;  <CheckBox
+            android:id="@+id/check_latest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+           android:button="@drawable/stock_menu_checkbox"
+             />&ndash;&gt;
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Price - Low to Hight"
+                />
+
+            <CheckBox
+                android:id="@+id/check_price_low_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/stock_menu_checkbox"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Price - Hight to Low"
+                />
+
+            <CheckBox
+                android:id="@+id/check_price_high_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/stock_menu_checkbox"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="kilometers - High to Low "
+                />
+
+            <CheckBox
+                android:id="@+id/check_k_low_hight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/stock_menu_checkbox"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Kilometers- Hight to Low"
+                />
+
+            <CheckBox
+                android:id="@+id/check_k_hight_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/stock_menu_checkbox"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Year - Low to High"
+                />
+
+            <CheckBox
+                android:id="@+id/check_y_low_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/stock_menu_checkbox"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="Year- Hight to Low"
+                />
+
+            <CheckBox
+                android:id="@+id/check_y_high_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/stock_menu_checkbox"
+                />
+
+        </RelativeLayout>
+        </LinearLayout>-->
+
+</ScrollView>

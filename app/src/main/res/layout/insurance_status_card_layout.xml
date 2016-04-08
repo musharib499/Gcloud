@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="#ffffff"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_requestId"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:text="@string/request_no" />
+
+        <TextView
+            android:id="@+id/tv_vehicleName"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/tv_requestId"
+            android:gravity="center_vertical|right"
+            android:text="Maruti Swift Vx1" />
+
+        <TextView
+            android:id="@+id/tv_requestDate"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_requestId"
+            android:gravity="center_vertical|left"
+
+            android:text="@string/request_date"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_insurerName"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_requestDate"
+            android:gravity="center_vertical|left"
+
+            android:text="IFFCO Tokio"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_requestDate"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/tv_insurerName"
+            android:gravity="center_vertical|right"
+            android:text="Booked"
+            android:textColor="@color/red"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_premiumAmount"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_insurerName"
+            android:gravity="center_vertical|left"
+
+            android:text="@string/premium_amount"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_carType"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_premiumAmount"
+            android:gravity="center_vertical|left"
+
+            android:text="@string/car_type"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

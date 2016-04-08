@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_floating_material_light">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_right_radius_red">
+
+                <include layout="@layout/view_lead_list_item" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:background="@color/background_floating_material_light"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/leadName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dip"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/user_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/lead_name"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:text="Rohit Mehra"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="14sp">
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/white"
+                    android:drawablePadding="8dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/lead_name"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:text="Rohit@gmail.com"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="14sp">
+
+                    <requestFocus />
+                </EditText>
+
+                <LinearLayout
+                    android:id="@+id/pricekmsfuelLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="3dip"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dip"
+                        android:layout_marginTop="3dip"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/lead_name"
+                        android:inputType="textCapWords"
+                        android:padding="3dp"
+                        android:text="9911684561"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <ImageView
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/call_icon" />
+
+                    <ImageView
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:src="@drawable/chat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/lead_source"
+                            android:textSize="16sp" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="52dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/sourceWalkin"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_walkin"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sourceGaadi"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_gaadi"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sourceCartrade"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_cartrade"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sourceCarwale"
+                                    android:layout_width="60dip"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_carwale"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sourceOlx"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_olx"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sourceQuickr"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_quickr"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:id="@+id/sourceWebsite"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:button="@null"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center_horizontal"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="@string/source_website"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/date"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:background="@drawable/abc_edit_text_material"
+                    android:gravity="center"
+                    android:text="13 Dec 2014" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/lead_status"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/statusHot"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/oval_background_selector"
+                            android:button="@null"
+                            android:gravity="bottom|center_horizontal"
+                            android:padding="3dp"
+                            android:text="@string/hot"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/statusWarm"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="bottom|center_horizontal"
+                            android:padding="3dp"
+                            android:text="@string/warm"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/statusCold"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="bottom|center_horizontal"
+                            android:padding="3dp"
+                            android:text="@string/cold"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/statusClosed"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:gravity="bottom|center_horizontal"
+                            android:padding="3dp"
+                            android:text="@string/closed"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/white"
+                    android:drawablePadding="8dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/lead_name"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:text="3 - 4 Lakh"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="14sp">
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="35dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/white"
+                    android:drawablePadding="8dp"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/lead_name"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:text="Customer will buy within a week "
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="14sp">
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/addLead"
+            style="@style/gc_dark_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/add_lead" />
+    </LinearLayout>
+
+</RelativeLayout>

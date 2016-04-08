@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_commentDate"
+        android:text="hi"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_commentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/name"
+        android:singleLine="true"
+        android:text="29 Nov, 2014"
+        android:textColor="@color/textColor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_commentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_commentDate"
+        android:layout_below="@+id/tv_commentDate"
+        android:text="9:30 AM"
+        android:textColor="@color/textColor"
+        android:textSize="12sp" />
+</RelativeLayout>

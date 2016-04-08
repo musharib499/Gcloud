@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        style="@style/gc_textview_nobackground"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:text="+91 " />
+
+    <EditText
+        android:id="@+id/contactNumber"
+        style="@style/gc_textview_nobackground"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+
+        android:layout_margin="8dp"
+        android:hint="@string/hint_add_mob_no"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingLeft="8dp" />
+
+</LinearLayout>
+
+
+

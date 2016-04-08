@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/conditionReportLabel"
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_condition_report" />
+
+            <LinearLayout
+                android:id="@+id/overallConditionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_label_min_height"
+                android:layout_below="@+id/conditionReportLabel"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textStyleHeading2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/label_overall_condition" />
+
+                <TextView
+                    android:id="@+id/overallCondition"
+                    style="@style/textSpinnerStyleHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_condition" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otherConditionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/overallConditionLayout"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/exteriorInteriorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/overallConditionLayout"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/exterior"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_exterior_condition" />
+
+                    <TextView
+                        android:id="@+id/interior"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_interior" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/batteryElectricalsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/exteriorInteriorLayout"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/electronicsElectricals"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_electronics" />
+
+                    <TextView
+                        android:id="@+id/battery"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_battery" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/engineSuspensionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/batteryElectricalsLayout"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/engineTransmission"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_engine_transmission" />
+
+                    <TextView
+                        android:id="@+id/suspensionSteering"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_suspension" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bodyACLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/engineSuspensionLayout"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bodyFrame"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_body_frame" />
+
+                    <TextView
+                        android:id="@+id/acHeater"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_acheater" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tyresBrakesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@id/bodyACLayout"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tyres"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_tyres" />
+
+                    <TextView
+                        android:id="@+id/brakes"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_brakes" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_label_min_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/no_corner_white_background"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/ad_stock_submit"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

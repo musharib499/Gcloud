@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lms_activity_bg">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:textColor="@color/lms_dark_gray"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/after1hour"
+            android:text="@string/after1Hour"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/after2hour"
+            android:text="@string/after2Hour"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/after4hour"
+            android:text="@string/after4Hour"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/dontRemind"
+            android:text="@string/dontRemind"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

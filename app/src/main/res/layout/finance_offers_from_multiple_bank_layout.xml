@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        card_view:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbMaxAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Max Loan Amount"
+                        android:textSize="@dimen/finance_offers_label_text_Size"/>
+
+                    <RadioButton
+                        android:id="@+id/rbCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_little_margin"
+                        android:text="Custom"
+                        android:textSize="@dimen/finance_offers_label_text_Size"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/minuButton"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/loan_offers_button"
+                        android:gravity="center"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tenure"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/orange" />
+
+                    <Button
+                        android:id="@+id/plusButton"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/loan_offers_button"
+                        android:text="+" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/buttonLayout"
+                        android:layout_centerHorizontal="true"
+                        android:text="Tenure(Yrs)"
+                        android:textSize="@dimen/finance_offers_label_text_Size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/loanAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:padding="10dp"
+                        android:text="Loan Amount"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/finance_offers_label_text_Size" />
+                    <TextView
+                        android:id="@+id/maxLoanAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/finance_offers_label_text_Size" />
+                    <SeekBar
+                        android:id="@+id/seek_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/maxLoanAmount"
+                        android:layout_marginBottom="20dp"
+                        android:maxHeight="5dp"
+                        android:minHeight="5dp"
+                        android:thumb="@drawable/seekbar_thumb" />
+                </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+    <Button
+        android:id="@+id/applyNowButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_change_effect"
+        android:text="APPLY NOW"
+        android:textColor="@color/white" />
+</LinearLayout>

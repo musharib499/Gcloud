@@ -1,0 +1,458 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+        <RelativeLayout
+            android:id="@+id/viewStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable">
+
+            <ImageView
+                android:id="@+id/viewStockImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/view_stock" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/viewStockImg"
+                android:gravity="bottom|center_horizontal"
+                android:padding="16dp"
+                android:text="@string/view_stock" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/divider_view" />
+
+        <RelativeLayout
+            android:id="@+id/addStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable">
+
+            <ImageView
+                android:id="@+id/addStockImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/add_stock_main" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/addStockImg"
+                android:padding="16dp"
+                android:text="@string/add_stock" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/divider_view" />
+
+        <RelativeLayout
+            android:id="@+id/viewLeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transition_background">
+
+            <LinearLayout
+                android:id="@+id/manage_lead_sub_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/manage_lead_linear_layout"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include
+                    layout="@layout/divider_view" />
+
+                <TextView
+                    android:id="@+id/buyer_lead"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:padding="10dp"
+                    android:text="@string/buyer_leads"/>
+
+                <include
+                    layout="@layout/divider_view" />
+
+                <TextView
+                    android:id="@+id/seller_leads"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:padding="10dp"
+                    android:text="@string/sellerLeads"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/manage_lead_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/manageLeadImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/emptyString"
+                    android:src="@drawable/dealer_platform" />
+
+                <TextView
+                    style="@style/textStyleHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:padding="16dp"
+                    android:text="@string/manage_leads" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/next" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <include layout="@layout/divider_view" />
+
+        <RelativeLayout
+            android:id="@+id/addLead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable">
+
+            <ImageView
+                android:id="@+id/addLeadImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/add_lead" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/addLeadImg"
+                android:padding="16dp"
+                android:text="Add Buyer Lead" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+        <include layout="@layout/divider_view" />
+
+        <RelativeLayout
+            android:id="@+id/gaadiwarranty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable">
+
+            <ImageView
+                android:id="@+id/ivWarranty"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/warranty" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivWarranty"
+                android:padding="16dp"
+                android:text="@string/warranty" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/divider_view" />
+        <RelativeLayout
+            android:id="@+id/insurancePolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivInsurance"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/insurance_application" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivInsurance"
+                android:padding="16dp"
+                android:text="@string/insurance" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/insuranceSeparator"
+            layout="@layout/divider_view"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:id="@+id/gaadiFinance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivFinance"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/loan_icon" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivFinance"
+                android:padding="16dp"
+                android:text="@string/finance" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/financeFooter"
+            layout="@layout/divider_view"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:id="@+id/usedCarValuationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable">
+
+            <ImageView
+                android:id="@+id/usedCarValuationImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/ic_car_evaluation" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/usedCarValuationImg"
+                android:padding="16dp"
+                android:text="@string/usedcar" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+
+
+
+        <include layout="@layout/divider_view" />
+
+        <RelativeLayout
+            android:id="@+id/gaadiRSA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivRSA"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/rsa_icon" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivRSA"
+                android:padding="16dp"
+                android:text="@string/rsa" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/rsaSeparator"
+            layout="@layout/divider_view"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/dealerPlatform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable">
+
+            <ImageView
+                android:id="@+id/ivDealerPlatform"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/manage_lead" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivDealerPlatform"
+                android:padding="16dp"
+                android:text="@string/dealer_platform" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/chatLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selected_background_drawable"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivChatLogs"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/chat" />
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivChatLogs"
+                android:padding="16sp"
+                android:text="@string/chat_logs" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_view"
+            android:visibility="gone" />
+
+        <include layout="@layout/divider_view" />
+    </LinearLayout>
+</ScrollView>

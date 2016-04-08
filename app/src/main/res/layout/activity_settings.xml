@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollVw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_scrollFlags="scroll">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fitsSystemWindows="true">
+
+                <LinearLayout
+                    android:id="@+id/headerImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/my_profile"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dealership_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/dealership_name"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp" />
+
+                    <View
+                        android:layout_width="74dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/logedInAs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/lognedin_as"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/syncNow"
+                        android:layout_width="136dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/synk_now" />
+
+                    <TextView
+                        android:id="@+id/syncDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/sync_date"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/versionName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:text="@string/version_name"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/changePasswordButtonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerImageView"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/changePasswordExpand"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#F1F1F1"
+                        android:drawableRight="@drawable/edit_gray"
+                        android:gravity="center_vertical|left"
+                        android:onClick="onExpandClicked"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/change_your_password"
+                        android:textAllCaps="false"
+                        android:textColor="#263242"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/changePasswordContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changePasswordButtonContainer"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/edit_your_password"
+                        android:textColor="@color/orange" />
+
+                    <EditText
+                        android:id="@+id/oldPass"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_default_bg"
+                        android:drawableLeft="@drawable/lock_img"
+                        android:hint="@string/old_password"
+                        android:padding="12dp"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColorHint="#959698" />
+
+                    <EditText
+                        android:id="@+id/newPass"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edittext_default_bg"
+                        android:drawableLeft="@drawable/lock_img"
+                        android:hint="@string/new_password"
+                        android:padding="12dp"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColorHint="#959698" />
+
+                    <CheckBox
+                        android:id="@+id/showPass"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onExpandClicked"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/show_password" />
+
+                    <Button
+                        android:id="@+id/changePass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/login_button_background"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/done_label"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dealerToDealerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/changePasswordContainer"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/edittext_default_bg"
+                    android:orientation="vertical"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp">
+
+                    <Button
+                        android:id="@+id/dealerToDealerExpand"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#F1F1F1"
+                        android:drawableRight="@drawable/edit_gray"
+                        android:gravity="center_vertical|left"
+                        android:onClick="onExpandClicked"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/dealer_to_dealer_no"
+                        android:textAllCaps="false"
+                        android:textColor="#263242"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dealerToDealerChangeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dealerToDealerContainer"
+                    android:layout_centerInParent="true"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/edit_no"
+                        android:textColor="@color/orange" />
+
+                    <EditText
+                        android:id="@+id/dealerToDealerNo"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_default_bg"
+                        android:drawableLeft="@drawable/lock_img"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:textColorHint="#b5b5b5" />
+
+                    <Button
+                        android:id="@+id/dealerToDealerNoDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/login_button_background"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/done_label"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

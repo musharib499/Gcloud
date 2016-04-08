@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/lms_activity_bg">
+
+    <LinearLayout
+        android:id="@+id/dateTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<TextView
+            android:id="@+id/previousTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+
+        <include layout="@layout/lms_not_yet_called_unsuccess_callback_schedule" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notTimeSetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noTimeSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/noTimeSet"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_margin="20dp"
+            android:text="CANCEL"
+            android:textColor="#04B486"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

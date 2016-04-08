@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GalleryLibrary/GalleryLibrary.iml" filepath="$PROJECT_DIR$/GalleryLibrary/GalleryLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gcloud.iml" filepath="$PROJECT_DIR$/Gcloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageUploadLibrary-master/ImageUploadLibrary-master.iml" filepath="$PROJECT_DIR$/ImageUploadLibrary-master/ImageUploadLibrary-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamicgrid/dynamicgrid.iml" filepath="$PROJECT_DIR$/dynamicgrid/dynamicgrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slideDateTimePicker/slideDateTimePicker.iml" filepath="$PROJECT_DIR$/slideDateTimePicker/slideDateTimePicker.iml" />
+    </modules>
+  </component>
+</project>

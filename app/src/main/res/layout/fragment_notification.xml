@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/errorLayout"
+        layout="@layout/layout_error" />
+
+    <android.support.v7.widget.ListViewCompat
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/insurance_tuple_grey"
+        android:orientation="vertical" />
+</LinearLayout>

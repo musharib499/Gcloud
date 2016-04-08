@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3">
+    <dataSet config="main">
+        <source
+            path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/src/main/assets">
+            <file name="fonts/Roboto-Medium.ttf"
+                path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/src/main/assets/fonts/Roboto-Medium.ttf" />
+        </source>
+    </dataSet>
+    <dataSet config="debug">
+        <source
+            path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/src/debug/assets" />
+    </dataSet>
+</merger>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GalleryLib</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">My Profile</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="title_activity_grid_vw">GridVwActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="empty_string"/>
+</resources>

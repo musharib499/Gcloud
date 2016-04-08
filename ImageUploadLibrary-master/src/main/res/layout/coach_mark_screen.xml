@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/coachMarksLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="65dp"
+
+        android:adjustViewBounds="true"
+        android:src="@drawable/skiptext" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/caochmark_1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/caochmark_2" />
+    <!--  <ImageView
+          android:id="@+id/iv_dismissCoachMarks"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/caochmark_3"
+          android:layout_marginTop="10dp"
+          android:layout_gravity="center_horizontal"
+          android:adjustViewBounds="true"/>-->
+
+</LinearLayout>

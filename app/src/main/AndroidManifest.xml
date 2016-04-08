@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gcloud.gaadi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Required to register a SyncStatusObserver to display a "syncing..." progress indicator. -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <!-- Required because we're manually creating a new account. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- Pushwoosh permission -->
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- <permission -->
+    <!-- android:name="com.gcloud.gaadi.dev.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+
+
+    <!--
+        <permission android:name="com.gcloud.gaadi.hdfc.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    -->
+
+
+    <!--
+        &lt;!&ndash;<permission android:name="com.gcloud.gaadi.hdfc.dev.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    -->
+
+
+    <!--
+        <permission android:name="com.gcloud.gaadi.dev.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    -->
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+    <!-- <uses-permission android:name="com.gcloud.gaadi.dev.permission.C2D_MESSAGE" /> -->
+    <!-- <uses-permission android:name="com.gcloud.gaadi.hdfc.permission.C2D_MESSAGE" /> -->
+
+
+    <!--
+      <uses-permission android:name="com.gcloud.gaadi.hdfc.dev.permission.C2D_MESSAGE" />
+      <uses-permission android:name="com.gcloud.gaadi.dev.permission.C2D_MESSAGE" />
+    -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- for camera options -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- permission for SFA login -->
+    <permission
+        android:name="${applicationId}.permission.ALLOW_SFA_LOGIN_BY_TOKEN"
+        android:description="@string/sfa_login_permission_description"
+        android:label="@string/sfa_login_permission_label"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.ALLOW_SFA_LOGIN_BY_TOKEN" />
+    <!-- ends here -->
+
+    <application
+        android:name=".ApplicationController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppCompatNoActionBarTheme"
+        tools:replace="android:theme">
+
+        <!--
+        <meta-data
+            android:name="PW_APPID"
+            android:value="E160E-5F6F2" />
+        <meta-data
+            android:name="PW_PROJECT_ID"
+            android:value="A385664041989" />
+        -->
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNoActionBarTheme">
+
+            <!--
+                <meta-data android:name="android.support.UI_OPTIONS"
+                android:uiOptions="splitActionBarWhenNarrow"
+                android:value="splitActionBarWhenNarrow" />
+            -->
+
+        </activity>
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.Finance.FinanceReuploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Finance.FinanceOthersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StocksActivity"
+            android:label="@string/title_activity_stocksactivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNoActionBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.StockViewActivity"
+            android:label="@string/view_stock"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNoActionBarTheme" />
+        <activity
+            android:name=".ui.Finance.FinanceFormsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/finance_form_theme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.Finance.FinanceCollectReuploadImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Finance.FinanceOffersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/finance_form_theme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.Finance.FinanceCollectImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Finance.FinanceLoadingActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LoanProcessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ViewLeadActivity"
+            android:label="@string/view_stock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LeadAddActivity"
+            android:label="@string/add_lead"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.DealerPlatformActivity"
+            android:label="@string/dealer_platform"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.LeadsManageActivity"
+            android:label="@string/buyer_leads"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"
+                android:value=".ui.LeadsManageActivity" />
+        </activity>
+        <activity
+            android:name=".ui.SellerLeadsActivity"
+            android:label="@string/sellerLeads"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNoActionBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.SearchResultsActivity"
+            android:label="@string/search_lead"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.StockAddActivity"
+            android:label="@string/add_stock"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.StockAddAdditionalActivity"
+            android:label="@string/add_stock"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.StockAddLeadActivity"
+            android:label="@string/add_lead"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.CarLeadsActivity"
+            android:label="@string/leads"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.LeadAddOptionActivity"
+            android:label="@string/add_lead"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.LeadsActivity"
+            android:label="@string/related_cars"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.PhotoUploadActivity"
+            android:label="@string/add_photos"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.SearchCarsListActivity"
+            android:label="@string/title_activity_search_cars_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.ThankYouFinance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.Finance.FinanceReviewDocumentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".insurance.DealerQuoteScreen"
+            android:label="@string/quote_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance" />
+        <activity
+            android:name=".insurance.InsuranceCustomerDetailScreen"
+            android:label="@string/title_activity_customer_detail_screenn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.PaymentModeScreen"
+            android:label="@string/title_activity_payment_mode_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service
+            android:name=".service.ImageUploadService"
+            android:label="@string/emptyString" />
+        <service
+            android:name=".service.PendingImagesService"
+            android:label="@string/emptyString" />
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="9ecbcaf333d4fc734a7f8ff610f5c6b14d475107" />
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gcloud.gaadi.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.FeedbackActivity"
+            android:label="Dealer Helpline"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gcloud.gaadi.ui.MainActivity" />
+        </activity>
+
+        <!-- Form LMS -->
+        <activity
+            android:name=".ui.LeadFollowUpActivity"
+            android:configChanges="fontScale"
+            android:label="@string/leadFollowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <service
+            android:name=".lms.LeadManageIntentService"
+            android:label="@string/emptyString" />
+        <service
+            android:name=".lms.LMSNotificationService"
+            android:label="@string/emptyString" />
+        <service
+            android:name=".lms.LMSResetAlarmService"
+            android:label="@string/emptyString" />
+        <service
+            android:name=".lms.LMSAlarmRescheduleService"
+            android:label="@string/emptyString" />
+
+        <!-- Warranty activities -->
+        <activity
+            android:name=".ui.GaadiWarrantyActivity"
+            android:label="@string/warranty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.IssueWarrantyDetailPageActivity"
+            android:label="@string/issuedwarrantydetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".PhotoUpload"
+            android:label="@string/issuedwarrantydetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.IssueWarrantyFormActivity"
+            android:label="@string/warrantyissueform"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- For Chat -->
+        <activity
+            android:name=".chat.DealerChatListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Chat Logs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UsedCarValuationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Used Car Valuation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".chat.DealerChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Chat List"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.Finance.GaadiFinanceActivity"
+            android:label="@string/finance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Finance.AvailableCarsActivity"
+            android:label="@string/finance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Finance.FinanceToolbarActivity"
+            android:label="@string/finance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".rsa.RSAAvailableCarsInStockActivity"
+            android:label="@string/rsa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".insurance.IssuePolicyForInspctdCarsActivity"
+            android:label="@string/title_activity_issue_policy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".rsa.RSACustomerInfoActivity"
+            android:configChanges="fontScale"
+            android:label="@string/issue_rsa"
+            android:screenOrientation="portrait" />
+
+        <!-- For Pushwoosh -->
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.gcloud.gaadi.dev" />
+                <category android:name="com.gcloud.gaadi" />
+                <category android:name="com.gcloud.gaadi.hdfc" />
+                <category android:name="com.gcloud.gaadi.hdfc.dev" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".chat.GCMIntentService" />
+
+        <!--
+        <receiver android:name=".GaadiGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+
+
+            -<intent-filter>
+
+            <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+            <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+            <category android:name="com.gcloud.gaadi.dev"/>
+            <category android:name="com.gcloud.gaadi" />
+            <category android:name="com.gcloud.gaadi.hdfc" />
+            <category android:name="com.gcloud.gaadi.hdfc.dev" />
+
+        </intent-filter>
+
+        </receiver>
+        -->
+
+        <meta-data
+            android:name="PW_PUSH_SERVICE"
+            android:value="com.gcloud.gaadi.chat.GCMIntentService" />
+
+        <activity android:name="com.arellomobile.android.push.PushWebview" />
+        <activity android:name="com.arellomobile.android.push.MessageActivity" />
+        <activity android:name="com.arellomobile.android.push.PushHandlerActivity" />
+        <activity
+            android:name=".insurance.IssuePolicyForOtherCarsActivity"
+            android:label="@string/title_activity_issue_policy_for_other_cars"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.ThankYouInsurance"
+            android:label="@string/lable_thanku"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance" />
+        <activity
+            android:name=".insurance.DocumentScreenActivity"
+            android:label="More Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".insurance.InsuranceDocument"
+            android:label="Documents"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatActionBarTheme.Insurance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.Finance.FinanceCasesStatusActivity"
+            android:label="@string/loan_case"
+            android:parentActivityName=".ui.Finance.GaadiFinanceActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".retrofit.RetrofitImageUploadService"
+            android:exported="false" />
+        <service
+            android:name=".retrofit.FinanceImagesUploadService"
+            android:exported="false" />
+        <service
+            android:name=".retrofit.RetrofitImageReUploadService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".retrofit.ImageUploadReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.BaseActivity"
+            android:label="@string/title_activity_base_activty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".insurance.InspectedCarsIssuePolicyActivity"
+            android:label="@string/title_activity_inspected_cars_issue_policy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".insurance.InsuranceInspectedCarsListActivity"
+            android:label="@string/title_activity_insurance_inspected_cars_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".insurance.AllCasesActivity"
+            android:label="@string/title_activity_all_cases"
+            android:screenOrientation="portrait" />
+
+        <!-- Deeplinking activity -->
+        <activity
+            android:name=".ui.DeeplinkingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.viewpagerindicator.BaseActivityCollapsingToolbar"
+            android:label="@string/title_activity_base_activity_collapsing_tollbar" />
+        <activity
+            android:name=".ui.SellerLeadsDetailPageActivity"
+            android:label="@string/title_activity_seller_leads_detail_page"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.BaseCoordinatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".insurance.InsuranceFilter"
+            android:label="Filter"
+            android:screenOrientation="portrait" />
+
+        <!-- LMS SyncAdapter starts -->
+        <provider
+            android:name=".syncadapter.LMSContentProvider"
+            android:authorities="${applicationId}.syncadapter.lms"
+            android:exported="false"
+            android:label="Leads Manage" />
+        <provider
+            android:name=".syncadapter.SplashContentProvider"
+            android:authorities="${applicationId}.syncadapter.splash"
+            android:exported="false"
+            android:label="Gcloud" />
+        <provider
+            android:name=".providers.LeadsContentProvider"
+            android:authorities="${applicationId}.syncadapter.leads"
+            android:exported="false"
+            android:label="Leads" />
+        <provider
+            android:name=".syncadapter.FinanceContentProvider"
+            android:authorities="${applicationId}.syncadapter.finance"
+            android:exported="false"
+            android:label="Finance" />
+
+        <provider
+            android:name=".providers.ViewStockProvider"
+            android:authorities="${applicationId}.syncadapter.viewStocks"
+            android:exported="false"
+            android:label="ViewStocks" />
+
+        <service android:name=".service.SyncStocksService" />
+
+        <service
+            android:name=".syncadapter.SyncService"
+            android:exported="true">
+
+            <!--
+            This intent filter is required. It allows the system to launch our sync service
+            as needed.
+            -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <!-- This points to a required XML file which describes our SyncAdapter. -->
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service
+            android:name=".syncadapter.SplashSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/splashsyncadapter" />
+        </service>
+        <service
+            android:name=".syncadapter.LeadsSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/leadssyncadapter" />
+        </service>
+        <service
+            android:name=".syncadapter.FinanceSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/finance_syncadapter" />
+        </service>
+        <service android:name=".syncadapter.GenericAccountService">
+
+            <!-- Required filter used by the system to launch our account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XMLf ile which describes our account service. -->
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- <service android:name="com.appsee.AppseeBackgroundUploader" /> -->
+
+
+        <!-- LMS SyncAdapter ends -->
+        <service
+            android:name=".service.KnowlarityContactService"
+            android:exported="false" />
+        <service android:name=".service.GaadiGCMIntentService" />
+
+        <activity
+            android:name=".ui.FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.UCVFeedbackActivity"
+            android:label="@string/title_activity_ucvfeedback"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNoActionBarTheme" />
+        <activity
+            android:name=".ui.DealerPlatformFilterActivity"
+            android:label="@string/title_activity_dealer_platform_filter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatNoActionBarTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".insurance.InsuranceInspectedCarsFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.WarrantyFilter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".insurance.InsuranceAllCasesFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.BaseLeadActivity"
+            android:label="@string/title_activity_base_activty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BuyerFilterActivity"
+            android:label="@string/title_activity_filter"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.DatabaseInsertionService"
+            android:exported="false" />
+
+        <!-- activity for SFA login -->
+        <activity
+            android:name=".sfa.SfaGcloudLoginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="${applicationId}.permission.ALLOW_SFA_LOGIN_BY_TOKEN"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="com.gcloud.gaadi.ACTION_SFA_LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Used for Google Play Store Campaign Measurement, also  for install through SFA app-->
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver" />
+
+        <receiver android:name="com.gcloud.gaadi.sfa.SfaCampaignTrackingReceiver"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <!-- ends here -->
+
+        <service
+            android:name=".insurance.InsuranceBackgroundImageUploadService"
+            android:exported="false" />
+
+        <activity
+            android:name=".insurance.NewInsuranceDashboard"
+            android:label="@string/title_activity_insurance_dashboard"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".providers.InsuranceProvider"
+            android:authorities="${applicationId}.provider.insurance"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".insurance.InsurancePendingActivity"
+            android:label="@string/title_activity_insurance_pending"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SellerFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".rsa.RSADashboardActivity"
+            android:label="@string/title_activity_rsa_dashboard"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:screenOrientation="portrait"></activity>
+
+        <provider
+            android:name=".providers.NotificationProvider"
+            android:authorities="${applicationId}.provider.notification"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

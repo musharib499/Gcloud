@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/active_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >-->
+
+
+    <com.gcloud.gaadi.ui.swipelistview.SwipeListView
+        android:id="@+id/inventoriesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+        app:swipeBackView="@+id/view_active_inventories_back_layout"
+        app:swipeCloseAllItemsWhenMoveList="true"
+        app:swipeDrawableChecked="@drawable/choice_selected"
+        app:swipeDrawableUnchecked="@drawable/choice_unselected"
+        app:swipeFrontView="@+id/view_active_inventories_front_layout"
+        app:swipeMode="left">
+
+    </com.gcloud.gaadi.ui.swipelistview.SwipeListView>
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light"
+    android:clickable="false"
+    android:orientation="vertical">
+
+    <!--<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/strokeColor"/>-->
+
+    <include
+        android:id="@+id/toolbar_menu"
+        layout="@layout/filter_tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_menu"
+        android:layout_above="@+id/filter_footer">
+
+        <FrameLayout
+            android:id="@+id/filter_option_contatiner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35" />
+
+        <com.gcloud.gaadi.ui.NoSwipeViewPager
+            android:id="@+id/filter_option_viewpager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/filter_footer"
+        layout="@layout/filter_footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" />
+
+    <!--<ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_menu"
+        android:clickable="false"
+        android:fillViewport="true"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llMakeModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/gc_light_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/make"/>
+
+                <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                    android:id="@+id/makeSuggestor"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_weight="3"
+                    android:background="@drawable/abc_edit_text_material"
+                    android:drawablePadding="8dp"
+                    android:dropDownSelector="@drawable/autocomplete_dropdown"
+                    android:gravity="left|center_vertical"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llMakeModel"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/gc_light_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/model"/>
+
+                <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                    android:id="@+id/modelSuggestor"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_weight="3"
+                    android:background="@drawable/abc_edit_text_material"
+                    android:drawablePadding="8dp"
+                    android:dropDownSelector="@drawable/autocomplete_dropdown"
+                    android:gravity="left|center_vertical"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/trustmarkCertified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llModel"
+                android:text="TrustMark Certified"
+                style="@style/gc_light_textview"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvBudgetFromFilter"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trustmarkCertified"
+                android:layout_marginTop="20dp"
+                android:hint="Budget From"/>
+
+            <TextView
+                android:id="@+id/tvBudgetToFilter"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBudgetFromFilter"
+                android:layout_marginTop="20dp"
+                android:hint="Budget To"/>
+
+            <TextView
+                android:id="@+id/tvKmDriven"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBudgetToFilter"
+                android:layout_marginTop="@dimen/default_margin"
+                android:hint="Km Driven"/>
+
+            <TextView
+                android:id="@+id/yearFrom"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvKmDriven"
+                android:layout_marginTop="@dimen/default_margin"
+                android:clickable="false"
+                android:hint="From Year"/>
+
+            <TextView
+                android:id="@+id/yearTo"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yearFrom"
+                android:layout_marginTop="20dp"
+                android:layout_weight="3"
+                android:clickable="false"
+                android:hint="To Year"/>
+
+
+        </RelativeLayout>
+    </ScrollView>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/bFilterStocks"-->
+    <!--style="@style/textStyleHeading2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/actionbar_background"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:text="SEARCH"-->
+    <!--android:textStyle="normal" />-->
+
+</RelativeLayout>

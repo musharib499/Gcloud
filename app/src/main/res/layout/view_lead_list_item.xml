@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_select_background_white_drawable"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/detailsContainer"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/callBtnLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/leadDetails"
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Ankit Garg | Hot | Gaadi" />
+
+
+            <RelativeLayout
+                android:id="@+id/leadmakemodel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/makeLogo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:contentDescription="@string/emptyString"
+
+                    android:src="@drawable/maruti"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/stockModelVersion"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/makeLogo"
+                    android:layout_alignTop="@+id/makeLogo"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/makeLogo"
+                    android:gravity="center"
+                    android:text="Alto k10" />
+
+                <!--<ImageView
+                    android:id="@+id/stockColor"
+                    android:layout_toRightOf="@+id/stockModelVersion"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/add_button_circle"/>-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/leadDate"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/gray"
+                    android:layout_toRightOf="@+id/detailsContainer"
+                    android:gravity="center"
+                    android:text="Date: " />
+
+                <TextView
+                    android:id="@+id/budget"
+                    style="@style/textStyleHeading2Oragne"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="3,50,000" />
+
+                <ImageView
+                    android:id="@+id/iv_certifiedLogo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/verification_logo" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/callBtnLayout"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/background_material_light"
+            android:id="@+id/view"
+            android:layout_toLeftOf="@+id/callButton" />
+
+        <ImageView
+            android:id="@+id/callButton"
+            android:layout_width="@dimen/call_button_size"
+            android:layout_height="@dimen/call_button_size"
+
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/lead_call_btn_bg"
+            android:contentDescription="@string/emptyString"
+            android:src="@drawable/call_green" />
+    </LinearLayout>
+
+
+</RelativeLayout>

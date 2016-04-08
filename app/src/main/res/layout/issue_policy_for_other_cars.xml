@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_addStock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/insurance_inspected_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/iv_actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/ic_ab_back_material" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_actionBack"
+                android:text="Renew Policy"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/insurance_action_bar_button_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/next"
+
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <!-- <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="48dp"
+             android:src="@drawable/step_2"/>-->
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/makeModelVersionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!--     <com.rengwuxian.materialedittext.MaterialTextView
+                         android:id="@+id/tv_requesttype"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Request Type"
+                         android:inputType="textCapWords"
+                         android:padding="5dp"
+                         android:singleLine="true"
+                         android:textColor="@color/textColor"
+                         app:met_floatingLabel="highlight"
+                         app:met_floatingLabelTextSize="14sp"
+                         app:met_primaryColor="@color/login_button_background"/>-->
+
+                <com.gcloud.gaadi.ui.CustomMaterialAutoCompleteTxtVw
+                    android:id="@+id/makeModel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/makeModelVersion"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/version"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_primaryColor="@color/login_button_background" />
+
+
+                <!--   <com.rengwuxian.materialedittext.MaterialEditText
+                       android:id="@+id/et_expiringIDV"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/expiring_idv"
+                       android:inputType="number"
+                       android:maxLength="11"
+                       android:padding="5dp"
+                       android:singleLine="true"
+                       android:textColor="@color/textColor"
+                       app:met_floatingLabel="highlight"
+                       app:met_floatingLabelTextSize="14sp"
+                       app:met_primaryColor="@color/login_button_background"/>-->
+
+              <!--  <com.rengwuxian.materialedittext.MaterialCalenderView
+                    android:id="@+id/tv_regDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/spinnerStyle"
+                    android:hint="@string/reg_date"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/calendar_grey"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/textColor"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_primaryColor="@color/login_button_background" />-->
+
+                <!--<android.support.design.widget.TextInputLayout
+                    android:id="@+id/joiningdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center">-->
+
+                    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/tv_regDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/reg_date"
+                        android:padding="5dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/insurance_text_size"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                        app:met_primaryColor="@color/material_text"/>
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/et_RegNum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_regDate"
+                    android:hint="@string/reg_no"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_primaryColor="@color/login_button_background" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/tvRTO"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:hint="RTO*"
+                        android:inputType="textCapWords"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/insurance_text_size"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                        app:met_primaryColor="@color/login_button_background" />
+
+                    <ProgressBar
+                        android:id="@+id/rtoProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/policyClaimedLayout"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_claimedInCurrentPolicy"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:hint="@string/claimed_in_current_policy"
+                        android:textSize="@dimen/insurance_text_size"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/rGrpClaimedCurrentPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_below="@+id/tv_claimedInCurrentPolicy"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_ClaimPolicyYes"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+                            android:button="@drawable/insurance_radio_button"
+                            android:text="@string/yes"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="@dimen/insurance_text_size" />
+
+                        <RadioButton
+                            android:id="@+id/rb_ClaimPolicyNo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/insurance_radio_button"
+                            android:checked="true"
+                            android:text="@string/no"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="@dimen/insurance_text_size" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/tv_NCB"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ncb_for_new_policy"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_primaryColor="@color/login_button_background" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/makeModelVersionLayout"
+
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_cngLpg"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/cng_lpg"
+                        android:textSize="@dimen/insurance_text_size"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/rGrpcngLpgType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_below="@+id/tv_cngLpg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/yesCngLpg"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+                            android:button="@drawable/insurance_radio_button"
+                            android:text="@string/yes"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="@dimen/insurance_text_size" />
+
+                        <RadioButton
+                            android:id="@+id/noCngLpg"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/insurance_radio_button"
+                            android:checked="true"
+                            android:text="@string/no"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="@dimen/insurance_text_size" />
+
+
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/kitTypeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_kitType"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:hint="@string/kit_type"
+                        android:textSize="@dimen/insurance_text_size"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_kitType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_label_min_height"
+                        android:layout_below="@+id/tv_kitType"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_companyFitted"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+                            android:button="@drawable/insurance_radio_button"
+                            android:text="@string/company_fitted"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="@dimen/insurance_text_size" />
+
+                        <RadioButton
+                            android:id="@+id/rb_externallyFitted"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/insurance_radio_button"
+                            android:checked="true"
+                            android:text="@string/externally_fitted"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="@dimen/insurance_text_size" />
+
+                    </RadioGroup>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/et_CngLpgKitValue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rg_kitType"
+                        android:hint="@string/enter_value_of_cng_lpg_kit"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/insurance_text_size"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                        app:met_primaryColor="@color/login_button_background" />
+
+                </RelativeLayout>
+
+                <!--<android.support.design.widget.TextInputLayout
+                    android:id="@+id/joiningdate1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center">-->
+
+                    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/prevPolicyEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Previous Policy End Date*"
+                        android:padding="5dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/insurance_text_size"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                        app:met_primaryColor="@color/material_text" />
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+               <!-- <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/prevPolicyEndDate"
+                    style="?android:attr/spinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Previous Policy End Date"
+                    android:drawableRight="@drawable/calendar_grey"
+                    android:drawablePadding="4dp"
+                    android:layout_marginTop="8dp"
+                    app:met_floatingLabel="highlight"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    android:padding="5dp"
+                    app:met_primaryColor="@color/material_text" />-->
+
+                <!--         <RelativeLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="16dp">
+
+                             <TextView
+                                 android:id="@+id/tv_accessories"
+                                 style="@style/textStyleHeading"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:gravity="center_vertical|left"
+                                 android:text="@string/accessories"
+                                 android:textStyle="normal"/>
+
+                             <RadioGroup
+                                 android:id="@+id/rGrpAccessories"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/view_label_min_height"
+                                 android:layout_below="@+id/tv_accessories"
+                                 android:layout_marginTop="8dp"
+                                 android:orientation="horizontal">
+
+                                 <RadioButton
+                                     android:id="@+id/rb_accessoriesYes"
+                                     style="@style/radio_button_style"
+                                     android:layout_width="0dp"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1"
+                                     android:gravity="center"
+
+                                     android:text="@string/yes"/>
+
+                                 <RadioButton
+                                     android:id="@+id/rb_accessoriesNo"
+                                     style="@style/radio_button_style"
+                                     android:layout_width="0dp"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1"
+                                     android:checked="true"
+                                     android:gravity="center"
+                                     android:text="@string/no"/>
+
+                             </RadioGroup>
+
+                         </RelativeLayout>
+
+                         <com.rengwuxian.materialedittext.MaterialEditText
+                             android:id="@+id/et_accessoriesValue"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:hint="@string/enter_accessories_value"
+                             android:inputType="number"
+                             android:maxLength="8"
+                             android:padding="5dp"
+                             android:singleLine="true"
+                             android:textColor="@color/textColor"
+                             android:visibility="gone"
+                             app:met_floatingLabel="highlight"
+                             app:met_floatingLabelTextSize="14sp"
+                             app:met_primaryColor="@color/login_button_background"/>-->
+
+
+                <!--       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="16dp">
+
+                           <TextView
+                               android:id="@+id/tv_insurePassengers"
+                               style="@style/textStyleHeading"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:gravity="center_vertical|left"
+                               android:text="@string/insure_all_passengers"
+                               android:textStyle="normal"/>
+
+                           <RadioGroup
+                               android:id="@+id/rGrpInsurePassengers"
+                               android:layout_width="match_parent"
+                               android:layout_height="@dimen/view_label_min_height"
+                               android:layout_below="@+id/tv_insurePassengers"
+                               android:layout_marginTop="8dp"
+
+                               android:orientation="horizontal">
+
+                               <RadioButton
+                                   android:id="@+id/rb_insurePassengersYes"
+                                   style="@style/radio_button_style"
+                                   android:layout_width="0dp"
+                                   android:layout_height="match_parent"
+                                   android:layout_weight="1"
+                                   android:gravity="center"
+
+                                   android:text="@string/yes"/>
+
+                               <RadioButton
+                                   android:id="@+id/rb_insurePassengersNo"
+                                   style="@style/radio_button_style"
+                                   android:layout_width="0dp"
+                                   android:layout_height="match_parent"
+                                   android:layout_weight="1"
+                                   android:checked="true"
+                                   android:gravity="center"
+                                   android:text="@string/no"/>
+
+                           </RadioGroup>
+
+                       </RelativeLayout>
+
+       -->
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!--  <LinearLayout
+          android:id="@+id/footerLayout"
+          android:layout_width="match_parent"
+          android:layout_height="52dp"
+          android:layout_alignParentBottom="true"
+          android:background="@color/white"
+          android:orientation="horizontal"
+          android:padding="3dp">
+
+          <TextView
+              android:id="@+id/tv_next"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/insurance_btn_color"
+              android:gravity="center"
+              android:text="@string/next"
+              android:textColor="@color/white"
+              android:textSize="18sp"/>
+      </LinearLayout>-->
+
+</RelativeLayout>

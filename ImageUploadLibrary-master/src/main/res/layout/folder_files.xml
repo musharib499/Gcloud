@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize">
+
+                <TextView
+                    android:id="@+id/tvFolderNameAndCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tvDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/orange"
+                    android:padding="8dp"
+                    android:text="Next"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>-->
+
+    <GridView
+
+        android:id="@+id/gvFolderPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:columnWidth="@dimen/grid_column_width"
+        android:horizontalSpacing="@dimen/gv_horizontal_spacing"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/gv_vertical_spacing">
+
+    </GridView>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/coachMarksImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/swipe_right"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvImageCount"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/orange_circle"
+                android:gravity="center"
+                android:minWidth="15dp"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--<com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/multiple_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonSize="mini"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_expandDirection="down"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"/>-->
+
+            <!--<ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:layout_margin="16dp"
+                android:layout_below="@+id/multiple_action"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llImageInflator"
+                    android:orientation="vertical"
+                    android:layout_width="56dp"
+                    android:background="@color/orange"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </ScrollView>-->
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/overlayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginLeft="-70dp"
+        android:background="@color/transparentBlackDark"
+        android:clickable="true">
+
+        <GridView
+            android:id="@+id/gvDocInfos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/default_large_margin"
+            android:layout_marginRight="@dimen/default_large_margin"
+            android:horizontalSpacing="@dimen/default_margin"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/default_margin" />
+
+        <Button
+            android:id="@+id/bNextDocument"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/primary"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

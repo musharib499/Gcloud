@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_one"
+        android:orderInCategory="100"
+        android:title="@string/action_make_premium"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_two"
+        android:orderInCategory="200"
+        android:title="@string/action_stock_edit"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_three"
+        android:orderInCategory="300"
+        android:title="@string/action_sold"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_four"
+        android:orderInCategory="400"
+        android:title="@string/action_remove"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:fillViewport="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:layout_above="@+id/bNext"
+        android:layout_alignParentTop="true">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/professionType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Profession Type" />
+
+            <Spinner
+                android:id="@+id/profession_Type"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp"
+                android:hint="Select Profession Type"
+                android:paddingLeft="0dp"
+                android:textSize="15sp">
+
+            </Spinner>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvofficeType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Office Setup Type" />
+
+            <Spinner
+                android:id="@+id/officeSetUpType"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp"
+                android:hint="Select Profession Type"
+                android:paddingLeft="0dp"
+                android:textSize="15sp">
+
+            </Spinner>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- <android.support.design.widget.TextInputLayout
+             android:id="@+id/tilStartDate"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="4dp"
+             android:textColorHint="@color/grey"
+             app:hintTextAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+             android:layout_marginRight="4dp"
+             android:gravity="center">-->
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="Start date of profession"
+                android:textColorHint="@color/hintColor"
+                android:textSize="18sp"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"/>
+        >
+
+       <!-- </android.support.design.widget.TextInputLayout>-->
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/last_year_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:hint="Last year's PAT"
+            android:inputType="number"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hintColor"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/emi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:hint="Total Existing EMI"
+            android:inputType="number"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hintColor"
+            android:visibility="gone"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grey">
+
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/mactv_bankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Current Account Bank Name"
+                android:inputType="textAutoComplete"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+            android:id="@+id/workCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="@string/work_city"
+            android:inputType="textAutoComplete|textCapSentences"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+    </LinearLayout>
+    <!--</ScrollView>-->
+
+    <Button
+        android:id="@+id/bNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_change_effect"
+        android:text="Next"
+        android:textColor="@color/white" />
+</RelativeLayout>

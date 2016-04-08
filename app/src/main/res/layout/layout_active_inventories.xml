@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_active_inventories_back_layout"
+        layout="@layout/active_inventories_back"
+        android:tag="view_active_inventories_back_layout" />
+
+    <include
+        android:id="@+id/view_active_inventories_front_layout"
+        layout="@layout/view_stock_list_item"
+        android:tag="view_active_inventories_front_layout" />
+
+</RelativeLayout>

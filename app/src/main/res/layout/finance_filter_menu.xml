@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_menu_view"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/textStyleHeading2"
+        android:text="Filter By"
+        />
+    <RadioGroup
+        android:id="@+id/radio_menu"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/sort_by_available_cars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textStyleHeading2"
+        android:padding="@dimen/default_padding"
+        android:text="Available Cars"
+        android:button="@null"
+        android:checked="true"
+        android:drawableRight="@drawable/stock_menu_checkbox"
+        />
+
+    <RadioButton
+        android:id="@+id/sort_by_removed_cars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Removed Cars"
+        style="@style/textStyleHeading2"
+        android:padding="@dimen/default_padding"
+        android:button="@null"
+        android:drawableRight="@drawable/stock_menu_checkbox"
+        />
+</RadioGroup>
+</LinearLayout>

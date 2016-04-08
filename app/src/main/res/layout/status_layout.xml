@@ -1,0 +1,157 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/leadStatusLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/leadSourceLayout"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textStyleHeadingCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:text="@string/lead_status"
+        android:textColor="@color/textColor" />
+
+    <HorizontalScrollView
+        android:id="@+id/statusscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/leadStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/statusHot"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/hot"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/statusWarm"
+                style="@style/textStyleHeading2"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/warm"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/statusCold"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/cold"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/statusWalkinScheduled"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:singleLine="false"
+                android:text="@string/status_walked_in_scheduled"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+
+            <RadioButton
+                android:id="@+id/statusWalkin"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:singleLine="false"
+                android:text="@string/status_walked_in"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/statusBooked"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/status_booked"
+                android:textColor="@drawable/toggle_text_color"
+
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/statusConverted"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/status_converted"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/statusClosed"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/closed"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

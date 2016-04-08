@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rootContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparentBlackBg">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/add_stock_layer_titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/photoLayerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/done"
+        android:layout_below="@+id/titleBar"
+        android:background="@color/white"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/propertyPhotosText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Stock Photos"
+            android:textColor="@color/textColor" />
+
+        <ImageView
+            android:id="@+id/lineShadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photoGalleryContainer"
+            android:background="@drawable/header_gradient"
+            android:contentDescription="@string/emptyString"
+            android:paddingBottom="5dp" />
+
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lineShadow"
+            android:layout_gravity="top"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:horizontalSpacing="15dp"
+            android:numColumns="3"
+            android:padding="0dp"
+            android:scrollbars="none"
+            android:verticalSpacing="15dp"></GridView>
+
+        <LinearLayout
+            android:id="@+id/photoGalleryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/propertyPhotosText"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/addPhotoCamera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_view_middle_selector_gray_black"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/device_access_camera"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Take Photo"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/addPhotoGallary"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_view_middle_selector_gray_black"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/gallery_icon"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Choose from Gallery"
+                android:textColor="@color/textColor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/photosCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/propertyPhotosText"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/propertyPhotosText"
+            android:background="@drawable/text_view_blue_border"
+            android:gravity="top"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:text="0"
+            android:textColor="@color/textColor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/text_view_nocorners_gray_black"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/gc_dark_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/actionbar_background"
+            android:gravity="center"
+            android:text="OK" />
+    </RelativeLayout>
+
+</RelativeLayout>

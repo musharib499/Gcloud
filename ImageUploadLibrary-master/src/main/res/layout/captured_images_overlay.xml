@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/camera_image_overlay_height">
+
+    <ImageView
+        android:id="@+id/ivCaptured"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/camera_image_overlay_height"
+        android:layout_marginTop="@dimen/camera_view_padding"
+        android:background="@drawable/captured_image_background"
+        android:paddingLeft="@dimen/camera_view_padding"
+        android:paddingRight="@dimen/camera_view_padding" />
+
+    <ImageView
+        android:id="@+id/ivRemoveImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close" />
+</RelativeLayout>

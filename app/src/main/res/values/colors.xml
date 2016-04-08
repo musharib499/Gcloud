@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="actionbar_background">#E66437</color>-->
+    <color name="button_background">#ffeeeeee</color>
+    <color name="gc_button_background">#263242</color>
+
+    <color name="activity_background">@color/white</color>
+    <color name="gc_selected_color">#e66437</color>
+    <color name="insurance_btn_color">#e86335</color>
+    <color name="primary">@color/actionbar_background</color>
+    <color name="primary_dark">@color/notification_bar</color>
+    <color name="my_primary_text">#ffffff</color>
+    <color name="my_secondary_text">#ffffff</color>
+
+    <color name="yellow_light">#FDD835</color>
+    <!--Loan pending , approved,Rejected colr code-->
+    <color name="dark_red">#B71C1C</color>
+    <color name="dark_orange">#F44336</color>
+    <color name="Blue">#2196F3</color>
+    <color name="Yellow">#FFEB3B</color>
+    <color name="Action_red">#f47a7a</color>
+
+    <color name="Approved_green">#96c783</color>
+
+
+    <color name="font_light">#666666</color>
+    <color name="font_action_bar">@color/white</color>
+    <color name="action_bar_title_color">@color/white</color>
+
+    <color name="textColor">#263242</color>
+    <color name="textColorOrage">@color/actionbar_background</color>
+    <color name="hintColor">#9E9E9E</color>
+    <color name="separatorColor">#CECECE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="login_button_background">@color/actionbar_background</color>
+    <color name="background_floating_material_light">#ffeeeeee</color>
+
+    <color name="gray">#808080</color>
+    <color name="grey">#c3c3c3</color>
+    <color name="grey_light">#ffd3d3d3</color>
+    <color name="transparentBlackBg">#80000000</color>
+    <color name="selected_checkbox_color">#CECECE</color>
+    <color name="black">#ff000000</color>
+    <color name="black_semi_transparent">#B2000000</color>
+
+    <!-- date time picker -->
+
+    <color name="circle_background">#fff2f2f2</color>
+    <color name="line_background">#ffcccccc</color>
+    <color name="done_text_color_normal">#ff333333</color>
+    <color name="done_text_color_disabled">#ffcccccc</color>
+    <color name="orange">@color/login_button_background</color>
+    <color name="pressedOrange">@color/notification_bar</color>
+    <color name="darker_blue">#ff212c66</color>
+    <color name="date_picker_text_normal">#ff999999</color>
+    <color name="calendar_header">#ff999999</color>
+    <color name="date_picker_view_animator">#fff2f2f2</color>
+    <color name="ampm_text_color">#8c8c8c</color>
+    <color name="numbers_text_color">#8c8c8c</color>
+    <color name="transparent_black">#80000000</color>
+    <color name="transparent_orange">@color/transparent_bar</color>
+    <!-- view pager indicator colors -->
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#fff3f3f3</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">
+        @color/vpi__bright_foreground_holo_light
+    </color>
+    <color name="vpi__bright_foreground_inverse_holo_light">
+        @color/vpi__bright_foreground_holo_dark
+    </color>
+    <color name="strokeColor">#CECECE</color>
+    <color name="hintStrokeColor">#80CECECE</color>
+    <color name="gc_background_list_backview">#263242</color>
+    <color name="green">#86be65</color>
+    <color name="rejectedCasesBackground">#C88384</color>
+    <color name="pendingCasesBackground">#ff9c4c</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0099FF</color>
+    <color name="lms_dark_gray">#444444</color>
+    <color name="lms_orange">#e66437</color>
+    <color name="lms_button_layout_bg">#F8F8F8</color>
+    <color name="disbursed_color">#70bee2</color>
+
+    <item name="material_text" type="color">#E86335</item>
+
+    <color name="insurance_inspected_bg">#e3592a</color>
+    <color name="insurance_tuple_grey">#f9f9f9</color>
+    <color name="insurance_tuple_divider">#d7d7d7</color>
+    <!--<color name="insurance_dashboard_upper_bg">#f6f6f6</color>-->
+    <color name="insurance_dashboard_upper_bg">#e9e9e9</color>
+    <color name="insurance_booked_green">#adc88d</color>
+    <color name="insurance_cancel_red">#d48484</color>
+    <color name="insurance_unbooked_gray">#acacac</color>
+    <color name="insurance_dark_gray">#444444</color>
+    <color name="insurance_middle_gray">#666666</color>
+    <color name="insurance_light_gray">#999999</color>
+    <color name="insurance_orange">#e66437</color>
+    <color name="insurance_background">#f1eeee</color>
+    <color name="insurance_card_background_gray">#f5f5f5</color>
+    <color name="insurance_action_bar_button_bg">#8a4128</color>
+    <color name="transparentBlackDark">#AA000000</color>
+    <color name="gray_light2">#f5f5f5</color>
+    <color name="gray_light_border">#9f9f9f</color>
+    <color name="switch_on_internet_button">#01DFD7</color>
+    <color name="gray_thanks_screen">#F5F5F5</color>
+    <color name="insurance_pending_yellow">#f8a712</color>
+
+</resources>

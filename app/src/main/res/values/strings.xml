@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="http://schemas.android.com/apk/res/android">
+
+    <!--<string name="app_name" translatable="false">GCloud</string>-->
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">My Profile</string>
+    <string name="action_logout" translatable="false">Logout</string>
+    <string name="action_make_premium" translatable="false">Make Premium</string>
+    <string name="action_sold" translatable="false">Mark as Sold</string>
+    <string name="action_stock_edit" translatable="false">Edit</string>
+    <string name="action_remove" translatable="false">Remove</string>
+    <string name="username_hint" translatable="false">Email</string>
+    <string name="password_hint" translatable="false">Password</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="invalid_email_id" translatable="false">Your Email id</string>
+    <string name="invalid_password" translatable="false">Password Required</string>
+    <string name="initializing_app" translatable="false">Initializing app…</string>
+    <string name="view_stock" translatable="false">View Stock</string>
+    <string name="add_stock" translatable="false">Add Stock</string>
+    <string name="usedcar" translatable="false">Used Car Valuation</string>
+    <string name="add_to_stock" translatable="false">Add to Stock</string>
+    <string name="manage_leads" translatable="false">Manage Leads</string>
+    <string name="buyer_leads" translatable="false">Buyer Leads</string>
+    <string name="add_lead" translatable="false">Add Lead</string>
+    <string name="dealer_platform" translatable="false">Dealer Platform</string>
+    <string name="chat_logs" translatable="false">Chat Logs</string>
+    <string name="lead_source" translatable="false">Source*</string>
+    <string name="no_internet_msg">This feature required internet connection. Please check your internet setting and try again.</string>
+    <string name="offline_message">Buyer is currently offline. Your message will be notified to them &amp; you will get reply when buyer is online.</string>
+    <string name="lead_email_address" translatable="false">Customer Email</string>
+    <string name="lead_contact_number" translatable="false">Customer Mobile No.</string>
+    <string name="lead_name" translatable="false">Customer Name</string>
+    <string name="warm" translatable="false">Warm</string>
+    <string name="hot" translatable="false">Hot</string>
+    <string name="cold" translatable="false">Cold</string>
+    <string name="closed" translatable="false">Closed</string>
+    <string name="lead_status" translatable="false">Status</string>
+    <string name="select_follow_up_time" translatable="false">Time</string>
+    <string name="select_follow_up_date" translatable="false">Date</string>
+    <string name="lead_follow_up_date" translatable="false">Follow up date</string>
+    <string name="source_quickr" translatable="false">Quikr</string>
+    <string name="source_olx" translatable="false">OLX</string>
+    <string name="source_walkin" translatable="false">Walk-in</string>
+    <string name="source_cardekho" translatable="false">CarDekho</string>
+    <string name="source_gaadi" translatable="false">Gaadi</string>
+    <string name="source_website" translatable="false">Website</string>
+    <string name="source_cartrade" translatable="false">Cartrade</string>
+    <string name="source_carwale" translatable="false">Carwale</string>
+    <string name="enter_lead_name" translatable="false">Lead name</string>
+    <string name="error_field_required" translatable="false">This field is required</string>
+    <string name="error_lead_mobile_number" translatable="false">Lead mobile number is required</string>
+    <string name="error_lead_email_address" translatable="false">Lead email address</string>
+    <string name="error_provide_lead_source" translatable="false">Lead source is required</string>
+    <string name="Available_warranty" translatable="false">Available Warranty</string>
+
+    <!-- date time picker -->
+    <string name="done_label">Done</string>
+
+
+    <string name="searchlead">Search By</string>
+    <string name="day_picker_description">Month grid of days</string>
+    <string name="year_picker_description">Year list</string>
+    <string name="select_day">Select month and day</string>
+    <string name="select_year">Select year</string>
+
+    <string name="item_is_selected">%1$s selected</string>
+    <string name="sans_serif" translatable="false">sans-serif</string>
+    <string name="day_of_week_label_typeface" translatable="false">sans-serif</string>
+    <string name="time_placeholder" translatable="false">--</string>
+    <string name="time_separator" translatable="false">:</string>
+    <!--Insurance Filter string -->
+    <string name="ivr_range">IDV Range </string>
+    <string name="zero_check_string">Zero Depreciation Cover</string>
+    <string name="consumables">Consumables</string>
+    <string name="engine_protection">Engine Protection</string>
+    <string name="deductible_string">Voluntary Deductible </string>
+
+    <!-- Accessibility announcement when a number that had been typed in is deleted [CHAR_LIMIT=NONE] -->
+    <string name="deleted_key"><xliff:g example="4" id="key">%1$s</xliff:g> deleted</string>
+    <!--
+         Content description for the hour selector in the time picker, which displays
+         selectable hours of the day along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="hour_picker_description">Hours circular slider</string>
+    <!--
+         Content description for the minute selector in the time picker, which displays
+         selectable five-minute intervals along the inside edge of a circle, as in an analog clock.
+         [CHAR LIMIT=50]
+    -->
+    <string name="minute_picker_description">Minutes circular slider</string>
+    <string name="radial_numbers_typeface" translatable="false">sans-serif</string>
+    <string name="select_hours">Select hours</string>
+    <string name="select_minutes">Select minutes</string>
+    <string name="make" translatable="false">Make</string>
+    <string name="model" translatable="false">Model</string>
+    <string name="regplace" translatable="false">Reg Place</string>
+    <string name="dealerNum" translatable="false">Dealer Number</string>
+    <string name="dealerPrice" translatable="false">Dealr Price</string>
+    <string name="regnum" translatable="false">Reg Num</string>
+    <string name="price" translatable="false">Price</string>
+    <string name="version" translatable="false">Version*</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="view_lead" traslatable="false">View Lead</string>
+    <string name="ad_stock_submit" translatable="false" traslatable="false">Add Stock</string>
+    <string name="search_by_name_number" translatable="false">Enter Name or Number</string>
+    <string name="emptyString"></string>
+    <string name="network_error" translatable="false">No Internet connection</string>
+    <string name="checkConnection" translatable="false">Please check your internet connection</string>
+    <string name="leads">Leads</string>
+    <string name="makeModelVersion">Model*</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="select_dealer">Select Dealer</string>
+    <string name="change_dealer">Change Dealer</string>
+    <string name="maruti" translatable="false">Maruti</string>
+    <string name="hyundai" translatable="false">Hyundai</string>
+    <string name="honda" translatable="false">Honda</string>
+    <string name="toyota" translatable="false">Toyota</string>
+    <string name="tata" translatable="false">Tata</string>
+    <string name="mahindra" translatable="false">Mahindra</string>
+    <string name="ford" translatable="false">Ford</string>
+    <string name="chevrolet" translatable="false">Chevrolet</string>
+    <string name="audi" translatable="false">Audi</string>
+    <string name="volkswagen" translatable="false">Volkswagen</string>
+    <string name="bmw" translatable="false">BMW</string>
+    <string name="renault" translatable="false">Renault</string>
+    <string name="mercedes" translatable="false">Mercedes</string>
+    <string name="nissan" translatable="false">Nissan</string>
+    <string name="skoda" translatable="false">Skoda</string>
+    <string name="lamborghini" translatable="false">Lamborghini</string>
+    <string name="bugatti" translatable="false">Bugatti</string>
+    <string name="polaris" translatable="false">Polaris</string>
+    <string name="ferrari" translatable="false">Ferrari</string>
+    <string name="aston_martin" translatable="false">Aston Martin</string>
+    <string name="mini" translatable="false">MINI</string>
+    <string name="willy" translatable="false">Willy</string>
+    <string name="lexus" translatable="false">Lexus</string>
+    <string name="ashok_leyland" translatable="false">Ashok Leyland</string>
+    <string name="mazda" translatable="false">Mazda</string>
+    <string name="morris" translatable="false">Morris</string>
+    <string name="studebaker" translatable="false">Studebaker</string>
+    <string name="chrysler" translatable="false">Chrysler</string>
+    <string name="hindustan_motors" translatable="false">Hindustan Motors</string>
+    <string name="opel" translatable="false">Opel</string>
+    <string name="reva" translatable="false">Reva</string>
+    <string name="mahindra_renault" translatable="false">Mahindra Renault</string>
+    <string name="maybach" translatable="false">Maybach</string>
+    <string name="san_motors" translatable="false">San Motors</string>
+    <string name="daewoo" translatable="false">Daewoo</string>
+    <string name="ssangyong" translatable="false">SSangYong</string>
+    <string name="isuzu" translatable="false">Isuzu</string>
+    <string name="maserati" translatable="false">Maserati</string>
+    <string name="force" translatable="false">Force</string>
+    <string name="mitsubishi" translatable="false">Mitsubishi</string>
+    <string name="premier" translatable="false">Premier</string>
+    <string name="porsche" translatable="false">Porsche</string>
+    <string name="icml" translatable="false">ICML</string>
+    <string name="rolls_royce" translatable="false">Rolls Royce</string>
+    <string name="volvo" translatable="false">Volvo</string>
+    <string name="land_rover" translatable="false">Land Rover</string>
+    <string name="bentley" translatable="false">Bentley</string>
+    <string name="retry" translatable="false">Refresh</string>
+    <string name="server_error" translatable="false">Oops! Some Problem With Our Servers.</string>
+    <string name="no_internet_connection" translatable="false">No Internet Connection</string>
+    <string name="title_activity_stocksactivity" translatable="false">View Stock</string>
+    <string name="sort_by_price_asc" translatable="false">Price - Low To High</string>
+    <string name="sendEmail" translatable="false">Email</string>
+    <string name="sendSMS" translatable="false">SMS</string>
+    <string name="makeCall" translatable="false">Call</string>
+    <string name="makeOffer" translatable="false">Make Offer</string>
+    <string name="sendWhatsapp" translatable="false">WhatsApp</string>
+    <string name="hint_kms_driven" translatable="false">Kms driven*</string>
+    <string name="hint_num_owners" translatable="false">Number of Owners*</string>
+    <string name="cng_fitted" translatable="false">CNG Fitted</string>
+    <string name="hint_registration_city" translatable="false">Registration City</string>
+    <string name="customer_city" translatable="false">Customer City*</string>
+    <string name="hint_registration_number" translatable="false">Registration No.</string>
+    <string name="no_lead_present" translatable="false">No Leads Found</string>
+    <string name="add_stock_lead" translatable="false">Lead</string>
+    <string name="sorry" translatable="false">Sorry!</string>
+    <string name="add_stock_later" translatable="false">I will add stock later</string>
+    <string name="select_contact_from" translatable="false">Select Contact from</string>
+    <string name="add_contact" translatable="false">Add Contact</string>
+    <string name="add_number" translatable="false">Add Number</string>
+    <string name="hint_add_name" translatable="false">Provide name for contact</string>
+    <string name="enter_name" translatable="false">Enter name</string>
+    <string name="hint_add_mob_no" translatable="false">Enter number</string>
+    <string name="enter_email_ids" translatable="false">Enter Email ids</string>
+    <string name="edit" translatable="false">Edit</string>
+    <string name="remove_inventory" translatable="false">Remove</string>
+    <string name="add" translatable="false">Add</string>
+    <string name="hint_city" translatable="false">Enter city</string>
+    <string name="price_range_label" translatable="false">Price Range</string>
+    <string name="from" translatable="false">From</string>
+    <string name="to" translatable="false">To</string>
+    <string name="dealership" translatable="false">Dealership*</string>
+    <string name="hint_dealer_name" translatable="false">Dealership (Please enter city first)</string>
+    <string name="searchCars" translatable="false">Search Cars</string>
+    <string name="insuranceType" translatable="false">Insurance Type*</string>
+    <string name="third_party_insurance" translatable="false">Third party</string>
+    <string name="comprehensive_insurance" translatable="false">Comprehensive</string>
+    <string name="valid_till" translatable="false">Valid Till*</string>
+    <string name="individual" translatable="false">Individual</string>
+    <string name="tax" translatable="false">Tax*</string>
+    <string name="type_reg" translatable="false">Registration No. Type</string>
+    <string name="corporate" translatable="false">Corporate</string>
+    <string name="selltodealer" translatable="false">Sell to Dealer</string>
+    <string name="hint_dealer_price" translatable="false">Enter Dealer Price</string>
+    <string name="add_gaadi" translatable="false">Add Stock</string>
+    <string name="addPhoto" translatable="false">Add Photo</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="add_photos" translatable="false">Add Photos</string>
+    <string name="no_insurance" translatable="false">No Insurance</string>
+    <string name="error_make_model_required" translatable="false">Make Model is required</string>
+    <string name="error_make_model_invalid" translatable="false">Make Model is Invalid</string>
+    <string name="error_model_version_required" translatable="false">Version is required</string>
+    <string name="error_kms_driven_rquired" translatable="false">Enter kms driven</string>
+    <string name="error_num_owners_required" translatable="false">Number of owners is required</string>
+    <string name="error_registration_city_required" translatable="false">Registration city is required</string>
+    <string name="error_stock_year_required" translatable="false">Stock model and year required</string>
+    <string name="error_stock_color_required" translatable="false">Stock color is required</string>
+    <string name="dealership_name" translatable="false">Dealership Name</string>
+    <string name="lognedin_as" translatable="false">Logged in As: </string>
+    <string name="sync_date" translatable="false">Sync Date: </string>
+    <string name="edit_your_password" translatable="false">Edit Your Password</string>
+    <string name="change_your_password" translatable="false">Change Password</string>
+    <string name="old_password" translatable="false"> Old Password</string>
+    <string name="new_password" translatable="false"> New Password</string>
+    <string name="show_password" translatable="false">Show Password</string>
+    <string name="dealer_to_dealer_no" translatable="false">Dealer To Dealer Platform No</string>
+    <string name="edit_no" translatable="false">Edit Number</string>
+    <string name="error_dealership_name_required" translatable="false">Dealership name is required</string>
+    <string name="error_insurance_type_required" translatable="false">Please select insurance type</string>
+    <string name="error_insurance_validity_required" translatable="false">Please choose month and year for insurance validity</string>
+    <string name="title_remove_inventory" translatable="false">Remove inventory</string>
+    <string name="title_mark_sold_inventory" translatable="false">Mark inventory</string>
+    <string name="error_registration_number_required" translatable="false">Registration number required</string>
+    <string name="error_registration_number_length" translatable="false">Registration number should be 7 or more characters long</string>
+    <string name="error_tax_type_required" translatable="false">Please choose tax type</string>
+    <string name="registration_type_required" translatable="false">Registration type is required</string>
+    <string name="error_dealer_price_required" translatable="false">Please enter dealer-to-dealer price</string>
+    <string name="error_invalid_dealer_price" translatable="false">Please enter a valid dealer price</string>
+    <string name="error_stock_price_required" translatable="false">Please enter desired price</string>
+    <string name="error_invalid_stock_price" translatable="false">Please enter a valid stock price</string>
+    <string name="enter_price" translatable="false">Stock Price*</string>
+    <string name="label_condition_report" translatable="false">Condition Report</string>
+    <string name="label_overall_condition" translatable="false">Overall condition</string>
+    <string name="hint_condition">Select condition</string>
+    <string name="hint_exterior_condition">Exterior</string>
+    <string name="hint_body_frame">Body &amp; Frame</string>
+    <string name="hint_engine_transmission">Engine/Transmission/Clutch</string>
+    <string name="hint_suspension">Suspension/Steering</string>
+    <string name="hint_electronics">Electronics/Electricals</string>
+    <string name="hint_tyres">Tyres</string>
+    <string name="hint_brakes">Brakes</string>
+    <string name="hint_battery">Battery</string>
+    <string name="hint_acheater">AC/Heater</string>
+    <string name="hint_interior">Interior</string>
+    <string name="select_exteriors">Exterior</string>
+    <string name="select_interiors">Interiors</string>
+    <string name="select_engine_transmission_clutch">Engine/Transmission/Clutch</string>
+    <string name="select_body_frame">Body &amp; Frame</string>
+    <string name="select_brakes">Select brakes</string>
+    <string name="select_suspension_steering">Suspension/Steering</string>
+    <string name="select_tyres">Tyres</string>
+    <string name="select_overall_condition">Overall Condition</string>
+    <string name="select_battery">Battery</string>
+    <string name="select_electricals_electronics">Electronics/Electricals</string>
+    <string name="select_acheater">AC/Heater</string>
+    <string name="error_select_overall_condition">Please select overall condition first</string>
+    <string name="hint_name_number">Enter name or number</string>
+    <string name="search_lead">Search</string>
+    <string name="bring_to_top" translatable="false">Bring to top</string>
+    <string name="status_walked_in">Walked-in</string>
+    <string name="status_walked_in_scheduled">Walk-in\nScheduled</string>
+    <string name="status_booked">Booked</string>
+    <string name="status_converted">Converted</string>
+    <string name="title_activity_search_cars_list">Search List</string>
+    <string name="update_price">Update Price</string>
+    <string name="app_upgrade_title" translatable="false">Upgrade available</string>
+    <string name="app_upgrade_message" translatable="false">A new version of this app is available. Please update your current version.</string>
+    <string name="upgrade_now">Update now</string>
+    <string name="upgrade_later">Later</string>
+    <string name="application_error" translatable="false">Application error</string>
+    <string name="application_error_message" translatable="false">Data could not be saved in local db. Please retry. If issue still persists, please try re-installing the app.</string>
+    <string name="exit">Exit</string>
+    <string name="error_mobile_number_invalid">Please enter a valid mobile number</string>
+    <string name="no_active_inventories_present">No cars added on dealer platform</string>
+    <string name="no_inactive_inventories_present">No cars to add on dealer platform</string>
+    <string name="reupload_images">Reupload Images</string>
+    <string name="confirm_reupload_of_images">Images for this category already uploaded. Do you want to reupload??</string>
+
+    <!-- Warraty strings -->
+    <string name="submit">Submit</string>
+    <string name="warranty">Warranty</string>
+    <string name="warrantytype">Warranty Type*</string>
+    <string name="issuedwarrantydetail">Issued Warranty Detail</string>
+    <string name="warrantyissueform">Issue Warranty Form</string>
+    <string name="issue_warranty">Issue Warranty</string>
+    <string name="enter_customer_name">Customer name is required.</string>
+    <string name="error_customer_mobile_number">Customer Mobile No. is required.</string>
+    <string name="warranty_issue_date">Issue Date</string>
+    <string name="warranty_expiry_date">Expiry Date</string>
+
+    <string name="enter_odometer">Odometer Reading is required.</string>
+    <string name="warranty_type_required" translatable="false">Warranty type is required</string>
+    <string name="issue_warranty_later">Retry later</string>
+    <string name="enter_customer_email">Customer Email is required.</string>
+    <string name="enter_customer_address">Customer Address is required.</string>
+    <string name="sold_without_warranty">Sold Without\nWarranty</string>
+
+
+    <string name="other_color">Other Color</string>
+    <string name="sort_by_year_asc">Year - Low To High</string>
+    <string name="sort_by_km_desc">Km - High To Low</string>
+    <string name="sort_by_km_asc">Km - Low To High</string>
+    <string name="sort_by_price_desc">Price - High To Low</string>
+    <string name="sort_by_year_desc">Year - High To Low</string>
+    <string name="sort_by_relevance">Latest at Top</string>
+    <string name="add_stock_version" translatable="false">Version*</string>
+    <string name="uploaded_doc_msg">The images are currently being uploaded.\nOnce the images are uploaded,\nthe submission will be complete.</string>
+    <string name="uploaded_back_msg"> BACK TO MAIN HOME SCREEN </string>
+    <string name="used_car_valuation_price_range">Subject to condition, valuation will be \n between \u20B9 %1$s  to  \u20B9 %2$s</string>
+
+    <string name="odo_meter">* Odo Meter Reading at the time of sale</string>
+    <string name="odo_meter_text">Odo Meter Reading</string>
+
+
+    <string name="alert" translatable="false">Alert</string>
+
+    <string name="show_all_leads" translatable="false">Show All Leads</string>
+    <string name="send_sms" translatable="false">Do you want to send sms?</string>
+    <string name="soldcar_without_warranty" translatable="false">Do you want to sold this car without warranty?</string>
+    <string name="resetdata" translatable="false">Do you want to reset stock data?</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="related_cars">Related Cars</string>
+    <string name="network_connection_error">Network Connection Problem!</string>
+    <string name="network_connection_error_message">No Internet connection<!--It seems your network connection is not working fine. Please reconnect and try again.--></string>
+    <string name="server_error_message">Server Error. Please try again later.</string>
+  <string name="warranty_only_dealer_message">Please subscribe to access this feature.
+  </string>
+    <string name="no_premium_package">You are not subscribed to premium package.</string>
+    <string name="change_host_url">Change Host URL</string>
+    <string name="bring_to_top_not_service_executive" translatable="false">This feature is not available for service executives</string>
+    <string name="title_activity_media_store_test">MediaStoreTest</string>
+    <string name="finance">Loan Application</string>
+    <string name="insurance">Insurance</string>
+    <string name="new_case">New Case</string>
+
+    <string name="even">Even</string>
+    <string name="odd">Odd</string>
+
+    <!--Loan offers strings-->
+    <string name="reg_no">Registration Number*</string>
+    <string name="rsa">Road Side Assistance (RSA)</string>
+    <string name="title_activity_issue_policy">Issue Policy</string>
+    <string name="registrationNumber">Reg. No. - %1$s</string>
+
+    <string name="error_customer_name_required">Customer Name is required</string>
+    <string name="error_customer_name_invalid">Customer name should be 3 or more characters long</string>
+    <string name="error_customer_name_special_characters">Customer name should not contain numbers or special characters</string>
+    <string name="error_customer_email_required">Customer email required</string>
+    <string name="error_customer_email_invalid">Invalid customer email id</string>
+    <string name="error_customer_mobile_required">Customer mobile no. required</string>
+    <string name="minimum_length_should_be_three_char">Name should contain atleast 3 characters</string>
+    <string name="error_customer_mobile_invalid">Invalid customer mobile no.</string>
+    <string name="error_customer_city_required">Customer city required</string>
+    <string name="error_customer_city_invalid">Invalid customer city</string>
+    <string name="error_customer_pincode_required">Pincode required</string>
+    <string name="error_customer_pincode_invalid">Invalid pincode</string>
+    <string name="error_customer_city_from_list">Please select customer city from list</string>
+    <string name="issue_rsa_help_text">Give Your Customer Free Cardekho Road-Side Assistance(RSA)</string>
+    <string name="rsa_validity_period">Validity of this product is 6 months.</string>
+    <string name="issue_rsa">RSA Form</string>
+    <string name="issue_free_rsa">Issue RSA</string>
+    <string name="rsa_package">Please select any one of the packages offered</string>
+
+    <string name="idvValue">333333</string>
+    <string name="premium">Premium </string>
+    <string name="max_od_discount_amount_value">Rs 30</string>
+
+    <string name="final_od">FINAL OD  </string>
+    <string name="final_od_value"> Rs 33000</string>
+
+    <string name="total_tp">THIRD PARTY</string>
+    <string name="service_tax">SERVICE TAX</string>
+    <string name="ncb">NCB (%) </string>
+    <string name="ncb_value">NCB VALUE</string>
+
+    <string name="total_tp_value"> Rs 186.00</string>
+    <string name="title_activity_customer_detail_screenn">Customer\'s Details</string>
+    <string name="string_first_name">Full Name*</string>
+    <string name="string_gender">Gender*</string>
+    <string name="string_dob">Date Of Birth </string>
+    <string name="string_occupation">Occupation</string>
+    <string name="string_income">Annual Income</string>
+    <string name="string_nominee">Nominee\'s Full Name*</string>
+    <string name="string_previous_policy">Previous Policy Insurer*</string>
+    <string name="string_previous_policy_no">Previous Policy No*</string>
+    <string name="string_previous_start_date">New Policy Start Date*</string>
+    <string name="string_previous_end_date">New Policy End Date*</string>
+    <string name="string_appointee">Appointee\'s Full Name*</string>
+    <string name="string_appointee_relation">Appointee Relationship With Nominee*</string>
+    <string name="string_nominee_relation">Nominee Relationship With Vehicle Owner(Customer)*</string>
+    <string name="string_nominee_age">Nominee Age*</string>
+    <string name="string_address">Address*</string>
+    <string name="string_city">City*</string>
+    <string name="string_pin">Pin*</string>
+    <string name="string_email">Email ID*</string>
+    <string name="string_marital_status">Marital Status*</string>
+    <string name="string_mobile">Mobile Number*</string>
+    <string name="title_activity_payment_mode_screen">Payment Mode</string>
+    <string name="cheque_copy">Cheque Copy*</string>
+    <string name="update_lead">Update Lead</string>
+
+    <!--Insurance Policy strings-->
+    <string name="new_policy">New Policy</string>
+    <string name="renew_policy">Renew Policy</string>
+    <string name="rc_copy">RC Copy*</string>
+    <string name="form_29">Form 29*</string>
+    <string name="form_30">Form 30*</string>
+    <string name="payment_mode">Payment Mode*</string>
+    <string name="cheque_in_favour_of">Cheque to be in favour of*</string>
+    <string name="cheque_no">Cheque Number*</string>
+    <string name="issue_bank">Issuing Bank*</string>
+    <string name="expiring_idv">Expiring IDV</string>
+    <string name="reg_date">Registration Date*</string>
+    <string name="reg_date_for_inspctd_cars">Reg.Date*</string>
+    <string name="cng_lpg">CNG/LPG Kit*</string>
+    <string name="kit_type">Kit Type*</string>
+    <string name="vehicle_owner">Vehicle Owner*</string>
+    <string name="company_fitted">Company Fitted</string>
+    <string name="externally_fitted">Externally Fitted</string>
+    <string name="enter_value_of_cng_lpg_kit">Kit Value*</string>
+    <string name="accessories" translatable="false">Elec./Non-elec. Accessories</string>
+    <string name="enter_accessories_value">Elec./Non-elec. Accessories value</string>
+    <string name="claimed_in_current_policy">Claim Taken In Previous Policy*</string>
+    <string name="ncb_for_new_policy">NCB on Previous Policy* </string>
+    <string name="bank_list" translatable="false">Finance Company* </string>
+    <string name="insure_all_passengers">Insure Co-Passengers</string>
+    <string name="car_financed">Is Car Financed?*</string>
+    <string name="lable_thanku">Thank You</string>
+    <string name="request_type">Request Type ( Owner Changed )</string>
+    <string name="title_activity_issue_policy_for_other_cars">Renew Policy</string>
+    <string name="min_value_is_100000" translatable="false">Minimum value is Rs 1,00,000</string>
+    <string name="error_customer_address_required">Customer address is required</string>
+    <string name="error_customer_first_name_required">Please enter Customer\'s first name</string>
+    <string name="error_expiring_idv_required">Ex Showroom price/Expiring IDV required</string>
+    <string name="kit_value_required">Kit value required</string>
+    <string name="max_value_50000">Maximum value is Rs 50,000</string>
+    <string name="max_value_100000">Maximum value is Rs 1,00,000</string>
+    <string name="reg_date_req">Registration Date Required</string>
+    <string name="city_req">City is required</string>
+    <string name="reg_num_req">Registration no. is required</string>
+    <string name="ncb_valie_req">NCB value required</string>
+    <string name="accessories_value_req" translatable="false">Accessories value required</string>
+    <string name="bank_value_req" translatable="false">Finance Company is required</string>
+    <string name="loan_case">Loan Cases</string>
+    <string name="request_no">Request No: %1$s</string>
+    <string name="request_date">Request Date: %1$s</string>
+    <string name="premium_amount">Premium: Rs. %1$s</string>
+    <string name="car_type">Car Type: %1$s</string>
+    <string name="error_customer_dob_required">Customer Date of Birth Required</string>
+    <string name="error_customer_nominee_name_required">Customer\'s Nominee Name required</string>
+    <string name="error_customer_appointee_name_required">Nominee\'s Appointee Name required</string>
+    <string name="error_customer_nominee_relation_required">Customer\'s Nominee Relation required</string>
+    <string name="error_customer_appointee_relation_required">Nominee\'s Appointee Relation required</string>
+    <string name="error_customer_age_required">Customer\'s Age required</string>
+    <string name="error_policy_start_date_required">Policy start date required</string>
+    <string name="error_policy_end_date_required">Policy end date required</string>
+    <string name="error_previous_policy_end_date_required">Previous Policy end date required</string>
+    <string name="error_previous_policy_insurer_required">Please enter previous policy insurer</string>
+    <string name="error_previous_policy_number_required">Previous policy number required</string>
+    <string name="error_prev_policy_number_cant_contain_special_chars">Previous Policy no. can not contain special characters</string>
+    <string name="error_engine_no_required">Engine number is required</string>
+    <string name="error_engine_cant_contain_special_char">Engine no. can not contain special characters</string>
+    <string name="error_engine_no_invalid">Please enter a valid engine no.</string>
+    <string name="error_chassis_no_required">Chasis number required</string>
+    <string name="error_chassis_no_invalid">Please enter valid chassis number</string>
+    <string name="error_chassis_no_cant_contain_special_chars">Chasis no. can not contain special characters</string>
+    <string name="error_registration_number_special_characters">Registration number should not contain special characters</string>
+    <string name="error_customer_gender_required">Customer\'s gender required</string>
+    <string name="idv">New IDV</string>
+    <string name="back_to_main" translatable="false">Back To Main Screen</string>
+    <string name="error_request_type_required">Request type required</string>
+    <string name="error_issuing_bank_name_required">Name of issuing bank is required</string>
+    <string name="error_cheque_number_required">Cheque number is required</string>
+    <string name="month">Month - %1$s</string>
+    <string name="registrationYear">Year - %1$s</string>
+    <string name="quote_screen">Select Quotes</string>
+    <string name="error_customer_marital_status_required">Customer\'s marital status is required</string>
+    <string name="error_vehicle_owner_required">Vehicle Owner is required</string>
+    <string name="married">Married</string>
+    <string name="single">Single</string>
+    <string name="trustmarkCertified">Trustmark Certified</string>
+    <string name="warranty_issued_title">Warranty Issued Successfully</string>
+    <string name="warranty_rsa">Warranty ID: %1$s, RSA ID: %2$s</string>
+    <string name="warranty_message">Warranty ID: %1$s</string>
+
+    <!-- Lead Manage System -->
+    <string name="callBack">Call Back</string>
+    <string name="scheduleWalkIn">Schedule\nWalk In</string>
+    <string name="markClosed">Mark Closed</string>
+    <string name="scheduleFollowUp">Schedule\nFollow Up</string>
+    <string name="after1Hour" translatable="false">After 1 Hour</string>
+    <string name="after2Hour" translatable="false">After 2 Hours</string>
+    <string name="after4Hour" translatable="false">After 4 Hours</string>
+    <string name="dontRemind">Don\'t Remind</string>
+    <string name="remind_later">Set reminder for</string>
+    <string name="schedule">Schedule Date &amp; Time</string>
+    <string name="now">Now</string>
+    <string name="reScheduleWalkIn">Re Schedule\nWalk In</string>
+    <string name="reScheduleFollowUp">Re Schedule\nFollow Up</string>
+    <string name="confirmWalkIn">Confirm\nWalk In</string>
+    <string name="setDateTime">Set Date\nand Time</string>
+    <string name="walkIn_callSuccessNo">When do you want to call %1$s again?</string>
+    <string name="walkIn_callSuccess">Is %1$s going to visit your showroom?</string>
+    <string name="notYetCalled_callUnsuccess">It seems you couldn’t speak to %1$s</string>
+    <string name="notYetCalled_callUnsuccess_callback">When do you want to call %1$s again?</string>
+    <string name="notYetCalled_callSuccess">Is %1$s Interested in Buying Car:</string>
+    <string name="notYetCalled_callSuccess_yes">Choose Next Step</string>
+    <string name="leadFollowActivity">Lead Management</string>
+    <string name="noTimeSet">No Time Set</string>
+    <string name="notYetCalled_callUnsuccess_callback_schedule">Schedule Date and Time for %1$s</string>
+
+    <string name="datsun">Datsun</string>
+    <string name="error_lead_name_invalid_chars">Lead name contains invalid characters</string>
+    <string name="hummer">Hummer</string>
+    <string name="cadillac">Cadillac</string>
+    <string name="carBooked">Car Booked</string>
+    <string name="carSold">Car Sold</string>
+    <string name="callNow">Call Now</string>
+    <string name="time">%1$s</string>
+    <string name="alphanumeric_valid_chars">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="home_city">Home City</string>
+    <string name="work_city">Work City</string>
+
+    <string-array name="array_titles">
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Dr.</item>
+        <item>Mrs.</item>
+    </string-array>
+
+    <string-array name="array_occupation">
+        <item>Self Employed</item>
+        <item>Service</item>
+        <item>Agri/Farmer/Land Holding</item>
+        <item>Home Maker</item>
+        <item>Retired</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="array_nominee_relation">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Spouse</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Sibling</item>
+        <item>Guardian</item>
+    </string-array>
+
+    <string-array name="array_income">
+        <item>3 Lacs</item>
+        <item>5-7 Lacs</item>
+        <item>7-10 Lacs</item>
+        <item>10-15 Lacs</item>
+        <item>15 Lacs+</item>
+    </string-array>
+
+
+
+    <string-array name="array_age">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+    </string-array>
+
+    <string name="title_activity_insurance_dashboard">Insurance</string>
+    <string name="title_activity_inspected_cars_issue_policy">Issue Policy
+    </string>
+    <string name="title_activity_insurance_inspected_cars_list">Inspected Cars
+    </string>
+    <string name="title_activity_all_cases">All Cases</string>
+    <string name="scheme">gcloud</string>
+    <string name="error_customer_nominee_name_invalid">Customer\'s nominee name is invalid</string>
+    <string name="error_customer_appointee_name_invalid">Nominee\'s appointee name is invalid</string>
+    <string name="title_activity_base_activty">BaseActivity</string>
+    <string name="sellerLeads">Seller Leads</string>
+    <string name="title_activity_base_activity_collapsing_tollbar">BaseActivityCollapsingTollbar
+    </string>
+
+    <string name="got_it">Got it</string>
+    <string name="voluntary_details">You can get additional discount on your premium by selecting a voluntary
+        deductible amount. This is the amount that you agree to pay at the time of claim settlement.
+        The balance amount will be paid by Insurance Company.
+    </string>
+    <string name="zero_depth">This offers full claim without any depreciation on the value of the repaired parts in case of claim settlement.
+        Standard claim registration charges still apply</string>
+    <string name="zero_depth_title">Zero Depreciation</string>
+    <string name="voluntary_title">Voluntary Deductibles</string>
+
+    <string name="know_more_title">Know More</string>
+    <string name="know_more_descripsion">Suggested Prices depends on following conditions:\n
+     &#8226; Valuation is for vehicle with no major structural damage\n
+   &#8226; Cost incurred for vehicle insurance is not included\n
+   &#8226; Value for aftermarket accessories is not accounted</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_seller_leads_detail_page">SellerLeadsDetailPageActivity</string>
+    <string name="title_activity_filter">Filter</string>
+    <string name="string_doj">Date of Joining</string>
+    <string name="prompt_select_residence_type">Select Residence Type</string>
+    <string name="uploaded_thanks_msg">THANKS\nFOR CHOOSING US.</string>
+    <string name="uploaded_thanks_msg2">A bank representative will get in \n touch with you shortly.</string>
+    <string name="title_activity_dealer_platform_filter">DealerPlatformFilterActivity</string>
+    <string name="inr">\u20B9 %1$s</string>
+    <string name="title_activity_ucvfeedback">Used Car Valuation</string>
+    <string name="know_more">Know More</string>
+    <string name="information">Information</string>
+    <string name="permission_error">Permission Error</string>
+    <string name="you_need_to_allow_access_to">You need to allow access to %1$s.\nSettings->Apps->Gcloud->Permissions->%2$s</string>
+    <string name="go_to_app_info">Go to App Info</string>
+    <string name="error_stock_month_required">Stock model month required</string>
+    <string name="error_in_images_retry_later">Error in images uploaded, will retry later.</string>
+    <string name="file_not_exist">File not found on your device.</string>
+    <string name="error_wrong_color">Wrong Color name</string>
+    <string name="noresult">No result found</string>
+    <string name="showpassword">Show Password</string>
+    <!-- <string name="refine_filter">Please refine your filter</string>-->
+    <!-- <string name="refine_filter">Please refine your filter</string>-->
+    <!--<string name="com.appsee.apikey" translatable="false">f356948726f445e39ebe9ebd6decb586</string>-->
+    <string name="search_by_reg_no">Search by Registration number</string>
+    <string name="enter_reg_no">Enter a Registration number to search</string>
+    <string name="incorrect_entry">Incorrect Entry</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="text_has_invalid_value">%1$s has invalid value</string>
+    <string name="source_zigwheels">Zigwheels</string>
+    <string name="total_commission_earned">Total Commission Earned</string>
+    <string name="issued">Issued</string>
+    <string name="in_process">In Process</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="pending_cases">%1$s Pending Cases</string>
+    <string name="upload_now">Upload Now</string>
+    <string name="insurance_makeModelVersion">%1$s %2$s %3$s</string>
+    <string name="title_activity_insurance_pending">Re Upload Image</string>
+    <string name="title_activity_notification">Notifications</string>
+    <string name="download">Download</string>
+    <string name="share">Share</string>
+    <string name="notification">Notification</string>
+    <bool name="abc_config_actionMenuItemAllCaps" tools:ignore="PrivateResource">false</bool>
+
+    <!--RSA-->
+    <string name="carsInInventory">Cars In Stock</string>
+    <string name="carsNotInInventory">Cars Not In Stock</string>
+    <string name="title_activity_rsa_dashboard">Road Side Assistance</string>
+
+
+    <string name="sfa_login_permission_label">GCloud Login</string>
+    <string name="sfa_login_permission_description">Application allows login from SFA app</string>
+    <string name="sfa_no_permission">You do not have permission to perform this action</string>
+    <string name="rsa_back_press_message">The data you have entered in the form will be lost if you go back. Do you want to go back?</string>
+    <string name="helpline_number">Helpline</string>
+    <string name="version_name">Version: %1$s</string>
+
+    <plurals name="rsa_package">
+        <item quantity="zero">0 RSA Issued</item>
+        <item quantity="one">1 RSA Issued</item>
+        <item quantity="other">%1$s RSAs Issued</item>
+    </plurals>
+
+</resources>

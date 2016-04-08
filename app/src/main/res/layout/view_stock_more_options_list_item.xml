@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_stock_list_item_height"
+    android:background="@color/grey_light"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingLeft="8dp">
+
+    <RelativeLayout
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected_background_drawable">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/emptyString"
+            android:padding="4dp"
+            android:src="@drawable/email" />
+
+        <TextView
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/sendEmail"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/whatsapp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected_background_drawable">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/emptyString"
+            android:padding="4dp"
+            android:src="@drawable/whatsapp" />
+
+        <TextView
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/sendWhatsapp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sms"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected_background_drawable">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/emptyString"
+            android:padding="4dp"
+            android:src="@drawable/sms" />
+
+        <TextView
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/sendSMS"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bringToTop"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/item_selected_background_drawable">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/emptyString"
+            android:padding="4dp"
+            android:src="@drawable/bring_top" />
+
+        <TextView
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/bring_to_top"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

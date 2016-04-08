@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llDocInfo"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/default_large_margin"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        card_view:cardBackgroundColor="@color/transparentBlackDark"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/tvDocName"
+            android:textColor="@color/white"
+            android:background="@color/transparentBlackBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Application Form" />
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_addStock"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/tv_regDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/reg_date_for_inspctd_cars"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="14sp"
+                    app:met_primaryColor="@color/login_button_background" />
+
+                <TextView
+                    android:id="@+id/registrationMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/month"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/registrationYear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/registrationYear"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/tv_regCity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_registration_city"
+                android:inputType="textCapWords"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="14sp"
+                app:met_primaryColor="@color/login_button_background" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_expiringIDV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/expiring_idv"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="14sp"
+                app:met_primaryColor="@color/login_button_background" />
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/tv_requesttype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/request_type"
+                android:inputType="textCapWords"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="14sp"
+                app:met_primaryColor="@color/login_button_background" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_cngLpg"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/cng_lpg"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpcngLpgType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/tv_cngLpg"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/yesCngLpg"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:gravity="center"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:id="@+id/noCngLpg"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/no" />
+
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/kitTypeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_kitType"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/kit_type"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:id="@+id/rg_kitType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/tv_kitType"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_companyFitted"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/company_fitted" />
+
+                    <RadioButton
+                        android:id="@+id/rb_externallyFitted"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/externally_fitted" />
+
+                </RadioGroup>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/et_CngLpgKitValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rg_kitType"
+                    android:hint="@string/enter_value_of_cng_lpg_kit"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="14sp"
+                    app:met_primaryColor="@color/login_button_background" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tv_accessories"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/accessories"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpAccessories"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/tv_accessories"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_accessoriesYes"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:id="@+id/rb_accessoriesNo"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/no" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_accessoriesValue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_accessories_value"
+                android:inputType="number"
+                android:maxLength="8"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:visibility="gone"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="14sp"
+                app:met_primaryColor="@color/login_button_background" />
+
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/tv_NCB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ncb_for_new_policy"
+                android:inputType="textCapWords"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:visibility="gone"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="14sp"
+                app:met_primaryColor="@color/login_button_background" />
+
+
+            <RelativeLayout
+                android:id="@+id/insurePassengersLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tv_insurePassengers"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/insure_all_passengers"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpInsurePassengers"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/tv_insurePassengers"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_insurePassengersYes"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:gravity="center"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:id="@+id/rb_insurePassengersNo"
+                        style="@style/radio_button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/no" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/actionbar_background"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

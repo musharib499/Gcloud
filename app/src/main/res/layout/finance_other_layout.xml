@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:layout_above="@+id/bNext"
+        android:layout_alignParentTop="true">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/employmentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Other Type"
+                />
+            <Spinner
+                android:id="@+id/employment_Type"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp"
+                android:hint="Select Employment Type"
+                android:paddingLeft="0dp"
+                android:textSize="15sp">
+
+            </Spinner>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Does the customer own a house/commercial property"
+            android:textColor="@color/hintColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rbgResidenceProof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbResidenceProofYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/rbResidenceProofNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:checked="false"
+                    android:text="No" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Has the customer taken a loan before"
+            android:textColor="@color/hintColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rbgTakenLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbTakenLoanYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/rbTakenLoanNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:checked="true"
+                    android:text="No" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loanTenureRepaidTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="How much of the loan tenure has he repaid"
+            android:textColor="@color/hintColor"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rbgMonthRepaying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rbMonthRepayingLessThan12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=' &lt; 12 ' />
+
+                <RadioButton
+                    android:id="@+id/rbMonthRepaying12To24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:checked="false"
+                    android:text=" 12-24 " />
+
+                <RadioButton
+                    android:id="@+id/rbMonthRepayingMoreThan24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    android:text=' &gt; 24 ' />
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+   <!-- </ScrollView>-->
+
+    <Button
+        android:id="@+id/bNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_change_effect"
+        android:text="Next"
+        android:textColor="@color/white" />
+</RelativeLayout>

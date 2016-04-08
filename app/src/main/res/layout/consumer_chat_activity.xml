@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/chatFragmentRelativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e2e2e2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/chatActivtyDetailRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#FFF">
+
+        <ImageView
+            android:id="@+id/chatCarImageView"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/car_image_bg"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_load_default_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/relativeLayout_call_contact"
+            android:layout_toRightOf="@+id/chatCarImageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chatCarNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="Maruti Suzuki Swift Dzire"
+                android:textColor="#0e0e0e"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/chatCarCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Rs. 4.85 Lac - Rs.7.0 Lac*"
+                android:textColor="#f05a28"
+                android:textSize="14dp" />
+
+            <RatingBar
+                android:id="@+id/chatCarRatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="4"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/chatActivtyDealerChatKmAndYearRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/chatActivtyDealerChatKmImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/km" />
+
+                <TextView
+                    android:id="@+id/chatActivtyDealerChatKmTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/chatActivtyDealerChatKmImageView"
+                    android:text="7000 Km"
+                    android:textColor="#535353"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/chatActivtyDealerChatModalOfYearImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/chatActivtyDealerChatKmTextView"
+                    android:src="@drawable/carmodelyear" />
+
+                <TextView
+                    android:id="@+id/chatActivtyDealerChatModalOfYearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/chatActivtyDealerChatModalOfYearImageView"
+                    android:text="2000"
+                    android:textColor="#535353"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_call_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dip">
+
+            <ImageView
+                android:id="@+id/imageViewChatCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call_new"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewChatContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewChatCall"
+                android:src="@drawable/add_contact"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/chatActivtyDetailRelativeLayout22222"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/chatActivtyDetailRelativeLayout"
+        android:background="#000"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/chatActivtyTypeOfChatRelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/chatActivtyDetailRelativeLayout22222"
+        android:background="@drawable/headingbar"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/chatExpertOrDealerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:text="You&apos;re chatting with CarDekho Expert"
+            android:textColor="#535353" />
+
+        <TextView
+            android:id="@+id/chatWithDealerOfferPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="Rs. 2154"
+            android:textColor="#535353"
+            android:textSize="16dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chatActivtyChatWithDealerRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/chatActivtyTypeOfChatRelativeLayout1"
+        android:background="#f3f3f3">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="You&apos;re chatting with Seller"
+            android:textColor="#535353" />
+
+        <ImageView
+            android:id="@+id/onlineOfflineimageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textViewOnlineOffline"
+            android:src="@drawable/off"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textViewOnlineOffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:text="Offline"
+            android:textColor="#535353" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/FrameLayoutChat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#FFF"
+        android:padding="2dip">
+
+        <EditText
+            android:id="@+id/chatMessageEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/sendChatMessageButton"
+            android:background="@drawable/edit_text_drawable"
+            android:hint="Type here..."
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLines="5"
+            android:padding="5dip"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/sendChatMessageButton"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            android:enabled="true"
+            android:padding="10dp"
+            android:text="Send" />
+    </RelativeLayout>
+
+    <com.gcloud.gaadi.chat.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textViewTying"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/chatActivtyChatWithDealerRelativeLayout">
+
+        <ListView
+            android:id="@+id/carChatListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:transcriptMode="normal"></ListView>
+    </com.gcloud.gaadi.chat.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/textViewTying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/FrameLayoutChat"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="4dp"
+        android:text="@string/offline_message"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="8dp" />
+
+</RelativeLayout>

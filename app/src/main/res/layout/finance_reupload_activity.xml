@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"/>
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_below="@id/tool_bar"
+        android:layout_above="@+id/bUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/bUpload"
+        style="@style/gc_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_change_effect"
+        android:text="Upload" />
+
+</RelativeLayout>

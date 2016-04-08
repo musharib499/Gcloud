@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/default_little_margin"
+    android:background="@drawable/tv_bg"
+    android:layout_height="@dimen/proof_tuple_height">
+
+    <ImageView
+        android:id="@+id/ivProofIcon"
+        android:src="@drawable/idcard"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvProofText"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/ivProofIcon"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/ivGroupIndicator"
+
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="@dimen/default_large_margin"
+        android:src="@drawable/finance_add_images"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivDone"
+        android:src="@drawable/finance_done"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/default_large_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/ivGrpExpandable"
+        android:src="@drawable/down_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/default_large_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

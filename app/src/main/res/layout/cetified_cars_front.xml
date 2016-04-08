@@ -1,0 +1,767 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list_layout"
+
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/view_stock_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+
+        <ImageView
+            android:id="@+id/stockImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_centerVertical="true"
+
+            android:contentDescription="@string/emptyString"
+            android:scaleType="centerCrop" />
+
+
+        <RelativeLayout
+            android:id="@+id/detailsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/stockImage"
+            android:background="@drawable/item_select_background_white_drawable"
+            android:padding="8dp"
+            android:paddingLeft="8dp">
+
+            <LinearLayout
+                android:id="@+id/stockModelVersionLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/makeLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/emptyString"
+                    android:src="@drawable/maruti"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/stockModelVersion"
+                    style="@style/textStyleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/makeLogo"
+                    android:layout_alignTop="@+id/makeLogo"
+
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_marginLeft="5dp"
+
+                    android:layout_toRightOf="@+id/makeLogo"
+                    android:gravity="left|center_vertical"
+                    android:text="Alto K10 LXI" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/stockDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/littel_margin"
+                android:layout_below="@+id/stockModelVersionLayout"
+
+
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/color"
+                        android:layout_width="25dp"
+                        android:layout_height="17dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|start"
+                        android:background="@drawable/oval_white_black_stroke"
+                        android:contentDescription="@string/emptyString"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/kmsDriven"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/color"
+                        android:gravity="center"
+                        android:text="1,45,000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/speed_kms"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/kmsDriven"
+                        android:text="kms"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/modelYear"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/calendar"
+                        android:gravity="center"
+                        android:text="2012"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/fuelType"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="12sp" />
+
+
+                    <!-- <ImageView
+                         android:id="@+id/color"
+                         android:layout_width="14dp"
+                         android:layout_height="14dp"
+                         android:layout_centerInParent="true"
+                         android:layout_gravity="center_vertical"
+                         android:background="@drawable/oval_white_black_stroke"
+                         android:contentDescription="@string/emptyString"
+                         android:visibility="visible"/>-->
+
+
+                    <TextView
+                        android:id="@+id/colorValue"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="Silver Grey"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/moreOptions"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".4"
+                    android:background="@drawable/item_selected_background_drawable"
+                    android:contentDescription="@string/emptyString"
+                    android:src="@drawable/overflow_menu" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/stockPrice"
+                style="@style/textStyleHeading2Oragne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/littel_margin"
+
+                android:layout_below="@+id/stockDateLayout"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="4dp"
+                android:gravity="left|center_vertical"
+                android:text="2.48 Lacs" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/order_layout"
+        android:layout_below="@+id/view_stock_list_item"
+        android:layout_width="match_parent"
+        android:background="@color/gray_light2"
+        android:paddingTop="@dimen/default_padding"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/textStyleHeading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:hint="@string/Available_warranty" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fstpckgtv"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:singleLine="false"
+                android:layout_weight="1"
+                android:layout_toRightOf="@+id/fstercpckg"
+                android:text="Package 1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/scndpckgtv"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:singleLine="false"
+                android:layout_toRightOf="@+id/scndercpckg"
+                android:text="Package 2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/thirdpckgtv"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/thirdcpckg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="Package 3"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/fourthpckgtv"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/forthrcpckg"
+                android:gravity="center"
+                android:text="Package 4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <!--<LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stockModelVersionLayout"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/littel_margin"
+
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="Reg No."
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/regnum"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                />
+            <LinearLayout
+                android:id="@+id/frstrcmndpackd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:baselineAligned="false"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:id="@+id/fstpckgtv"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/fstercpckg"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="Package 1"
+                        android:textSize="12sp"/>
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/scndpckgtv"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:visibility="gone"
+                        android:layout_toRightOf="@+id/scndercpckg"
+                        android:gravity="center"
+                        android:text="Package 2"
+                        android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scndrcmndpackd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:baselineAligned="false"
+                android:gravity="left"
+
+                android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:id="@+id/thirdpckgtv"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/thirdcpckg"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="Package 3"
+                        android:textSize="12sp"/>
+
+
+                    <TextView
+                        android:id="@+id/fourthpckgtv"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:visibility="gone"
+                        android:layout_toRightOf="@+id/forthrcpckg"
+                        android:gravity="center"
+                        android:text="Package 4"
+                        android:textSize="12sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/certifiedlaydate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:baselineAligned="false"
+            android:gravity="left"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="Certified Date:"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/certifieddate"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                />
+        </LinearLayout>-->
+
+    </LinearLayout>
+    <!--
+        <RelativeLayout
+            android:layout_below="@+id/order_layout"
+            android:id="@+id/detailsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/stockPrice"
+                style="@style/textStyleHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stockModelVersionLayout"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="2dp"
+                android:drawableLeft="@drawable/rupee_symbol_grey"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="2.48 Lacs"/>
+
+            <LinearLayout
+                android:id="@+id/regLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stockModelVersionLayout"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@+id/moreOptions"
+                android:layout_toRightOf="@+id/stockPrice"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textStyleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="Reg No."
+                    android:textSize="13dp"/>
+
+                <TextView
+                    android:id="@+id/regnum"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="abcdsw"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/moreOptions"
+                android:layout_width="@dimen/time_label_size"
+                android:layout_height="@dimen/time_label_size"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+                android:contentDescription="@string/emptyString"
+                android:padding="16dp"
+
+                android:src="@drawable/overflow_menu"/>
+
+            <LinearLayout
+                android:id="@+id/lastlay"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_below="@+id/stockPrice"
+                android:layout_marginTop="4dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/kms"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/emptyString"
+                        android:src="@drawable/kms"/>
+
+                    <TextView
+                        android:id="@+id/kmsDriven"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/kms"
+                        android:gravity="center"
+                        android:text="1,45,000"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/calendar"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/emptyString"
+                        android:src="@drawable/calendar"/>
+
+                    <TextView
+                        android:id="@+id/modelYear"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/calendar"
+                        android:gravity="center"
+                        android:text="2012"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/color"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/oval_white_black_stroke"
+                        android:contentDescription="@string/emptyString"/>
+
+                    <TextView
+                        android:id="@+id/colorValue"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/color"
+                        android:gravity="center"
+                        android:text="Silver Grey"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/certifiedlaydate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lastlay"
+                android:layout_marginTop="6dp"
+                android:baselineAligned="false"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/textStyleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="Certified Date:"
+                    android:textSize="13dp"/>
+
+                <TextView
+                    android:id="@+id/certifieddate"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="2 May, 2012"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rcmndpackg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/certifiedlaydate"
+                android:layout_marginTop="2dp"
+                android:baselineAligned="false"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textStyleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="Recommended Packages:"
+                    android:textSize="13dp"/>
+
+                <LinearLayout
+                    android:id="@+id/frstrcmndpackd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:baselineAligned="false"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/fstpckg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/fstercpckg"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/emptyString"
+                            android:src="@drawable/oval_white_black_stroke_certified_cars"/>
+
+                        <TextView
+                            android:id="@+id/fstpckgtv"
+                            style="@style/textStyleHeading2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/fstercpckg"
+                            android:gravity="center"
+                            android:text="Package 1"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/scndpckg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/scndercpckg"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/emptyString"
+                            android:src="@drawable/oval_white_black_stroke"/>
+
+                        <TextView
+                            android:id="@+id/scndpckgtv"
+                            style="@style/textStyleHeading2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/scndercpckg"
+                            android:gravity="center"
+                            android:text="Package 2"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/scndrcmndpackd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:baselineAligned="false"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/thirdpckg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/thirdcpckg"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/emptyString"
+                            android:src="@drawable/oval_white_black_stroke_certified_cars"/>
+
+                        <TextView
+                            android:id="@+id/thirdpckgtv"
+                            style="@style/textStyleHeading2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/thirdcpckg"
+                            android:gravity="center"
+                            android:text="Package 3"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fourthpckg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/forthrcpckg"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/emptyString"
+                            android:src="@drawable/oval_white_black_stroke"/>
+
+                        <TextView
+                            android:id="@+id/fourthpckgtv"
+                            style="@style/textStyleHeading2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/forthrcpckg"
+                            android:gravity="center"
+                            android:text="Package 4"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>-->
+</RelativeLayout>
+
+

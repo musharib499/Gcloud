@@ -1,0 +1,354 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1+'
+    }
+
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        dev {
+            keyAlias 'dev_keystore'
+            keyPassword '123456'
+            storeFile file(project.DEV_SIGNING_KEY)
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        generatedDensities = []
+        resConfigs "en", "en_US", "en_UK", "en_IN"
+        applicationId "com.gcloud.gaadi"
+        minSdkVersion Integer.parseInt(project.MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    buildTypes {
+
+        hdfc_beta {
+            debuggable true
+            buildConfigField "String", "REST_HOST", project.DEV_URL
+            buildConfigField "String", "WARRANTY_REST_HOST", project.DEV_URL
+            buildConfigField "String", "FINANCE_REST_HOST", project.FINANCE_DEV_URL
+            resValue("string", "REST_HOST_BETA", project.DEV_URL_RES)
+            resValue("string", "REST_HOST_LIVE", project.LIVE_URL_RES)
+            buildConfigField "String", "APP_SOURCE", "\"GCLOUD\""
+            resValue("string", "app_name", "\"HDFC Pre-owned\"")
+            resValue("color", "notification_bar", "#263242")
+            applicationIdSuffix '.hdfc.dev'
+            buildConfigField "String", "ACCOUNT_TYPE", "\"com.gcloud.gaadi.hdfc.dev\""
+            resValue("string", "account_type", defaultConfig.applicationId + ".hdfc.dev")
+            resValue("color", "actionbar_background", "#054a8f")
+            resValue("color", "transparent_bar", "#bb263242")
+            resValue("string", "lms_authority", defaultConfig.applicationId + ".hdfc.dev.syncadapter.lms")
+            resValue("string", "leads_authority", defaultConfig.applicationId + ".hdfc.dev.syncadapter.leads")
+            resValue("string", "splash_authority", defaultConfig.applicationId + ".hdfc.dev.syncadapter.splash")
+            resValue("string", "finance_authority", defaultConfig.applicationId + ".hdfc.dev.syncadapter.finance")
+            versionNameSuffix '-HDFC_BETA'
+        }
+
+        hdfc_staging {
+            debuggable true
+            buildConfigField "String", "REST_HOST", project.STAGING_URL
+            buildConfigField "String", "WARRANTY_REST_HOST", project.STAGING_WARRANTY_URL
+            buildConfigField "String", "FINANCE_REST_HOST", project.STAGING_URL
+            resValue("string", "REST_HOST_BETA", project.DEV_URL_RES)
+            resValue("string", "REST_HOST_LIVE", project.LIVE_URL_RES)
+            buildConfigField "String", "APP_SOURCE", "\"GCLOUD\""
+            resValue("string", "app_name", "\"HDFC Pre-owned Staging\"")
+            resValue("color", "notification_bar", "#263242")
+            applicationIdSuffix '.hdfc.stg'
+            buildConfigField "String", "ACCOUNT_TYPE", "\"com.gcloud.gaadi.hdfc.stg\""
+            resValue("string", "account_type", defaultConfig.applicationId + ".hdfc.stg")
+            resValue("color", "actionbar_background", "#054a8f")
+            resValue("color", "transparent_bar", "#bb263242")
+            resValue("string", "lms_authority", defaultConfig.applicationId + ".hdfc.stg.syncadapter.lms")
+            resValue("string", "leads_authority", defaultConfig.applicationId + ".hdfc.stg.syncadapter.leads")
+            resValue("string", "splash_authority", defaultConfig.applicationId + ".hdfc.stg.syncadapter.splash")
+            resValue("string", "finance_authority", defaultConfig.applicationId + ".hdfc.stg.syncadapter.finance")
+            versionNameSuffix '-HDFC_BETA'
+        }
+
+        hdfc_live {
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            minifyEnabled false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            buildConfigField "String", "REST_HOST", project.LIVE_URL
+            buildConfigField "String", "WARRANTY_REST_HOST", project.LIVE_URL
+            buildConfigField "String", "FINANCE_REST_HOST", project.FINANCE_LIVE_URL
+            resValue("string", "REST_HOST_LIVE", project.LIVE_URL_RES)
+            resValue("string", "REST_HOST_BETA", project.DEV_URL_RES)
+            buildConfigField "String", "APP_SOURCE", "\"GCLOUD\""
+            resValue("color", "actionbar_background", "#054a8f")
+            resValue("string", "app_name", "\"HDFC Pre-Owned Car\"")
+            resValue("color", "notification_bar", "#263242")
+            resValue("color", "transparent_bar", "#bb263242")
+            applicationIdSuffix '.hdfc'
+            buildConfigField "String", "ACCOUNT_TYPE", "\"com.gcloud.gaadi.hdfc\""
+            resValue("string", "account_type", defaultConfig.applicationId + ".hdfc")
+            resValue("string", "lms_authority", defaultConfig.applicationId + ".hdfc.syncadapter.lms")
+            resValue("string", "leads_authority", defaultConfig.applicationId + ".hdfc.syncadapter.leads")
+            resValue("string", "splash_authority", defaultConfig.applicationId + ".hdfc.syncadapter.splash")
+            resValue("string", "finance_authority", defaultConfig.applicationId + ".hdfc.syncadapter.finance")
+        }
+
+        gcloud_beta {
+            debuggable true
+            versionNameSuffix '-GCLOUD_BETA'
+            buildConfigField "String", "REST_HOST", project.DEV_URL
+            buildConfigField "String", "WARRANTY_REST_HOST", project.DEV_URL
+            buildConfigField "String", "FINANCE_REST_HOST", project.FINANCE_DEV_URL
+            resValue("string", "REST_HOST_BETA", project.DEV_URL_RES)
+            resValue("string", "REST_HOST_LIVE", project.LIVE_URL_RES)
+            buildConfigField "String", "APP_SOURCE", "\"GCLOUD\""
+            resValue("string", "app_name", "\" GCloud Beta\"")
+            applicationIdSuffix '.dev'
+            buildConfigField "String", "ACCOUNT_TYPE", "\"com.gcloud.gaadi.dev\""
+            resValue("string", "account_type", defaultConfig.applicationId + ".dev")
+            resValue("color", "actionbar_background", "#DC592B")
+            resValue("color", "notification_bar", "#BA4824")
+            resValue("color", "transparent_bar", "#bbE86335")
+            resValue("string", "lms_authority", defaultConfig.applicationId + ".dev.syncadapter.lms")
+            resValue("string", "leads_authority", defaultConfig.applicationId + ".dev.syncadapter.leads")
+            resValue("string", "splash_authority", defaultConfig.applicationId + ".dev.syncadapter.splash")
+            resValue("string", "finance_authority", defaultConfig.applicationId + ".dev.syncadapter.finance")
+
+        }
+
+        gcloud_staging {
+            debuggable true
+            versionNameSuffix '-GCLOUD_STAGING'
+            buildConfigField "String", "REST_HOST", project.STAGING_URL
+            buildConfigField "String", "WARRANTY_REST_HOST", project.STAGING_WARRANTY_URL
+            buildConfigField "String", "FINANCE_REST_HOST", project.STAGING_URL
+            resValue("string", "REST_HOST_BETA", project.DEV_URL_RES)
+            resValue("string", "REST_HOST_LIVE", project.LIVE_URL_RES)
+            buildConfigField "String", "APP_SOURCE", "\"GCLOUD\""
+            resValue("string", "app_name", "\" GCloud Staging\"")
+            applicationIdSuffix '.stg'
+            buildConfigField "String", "ACCOUNT_TYPE", "\"com.gcloud.gaadi.stg\""
+            resValue("string", "account_type", defaultConfig.applicationId + ".stg")
+            resValue("color", "actionbar_background", "#DC592B")
+            resValue("color", "notification_bar", "#BA4824")
+            resValue("color", "transparent_bar", "#bbE86335")
+            resValue("string", "lms_authority", defaultConfig.applicationId + ".stg.syncadapter.lms")
+            resValue("string", "leads_authority", defaultConfig.applicationId + ".stg.syncadapter.leads")
+            resValue("string", "splash_authority", defaultConfig.applicationId + ".stg.syncadapter.splash")
+            resValue("string", "finance_authority", defaultConfig.applicationId + ".stg.syncadapter.finance")
+
+        }
+
+        gcloud_live {
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            buildConfigField "String", "REST_HOST", project.LIVE_URL
+            buildConfigField "String", "WARRANTY_REST_HOST", project.LIVE_URL
+            buildConfigField "String", "FINANCE_REST_HOST", project.FINANCE_LIVE_URL
+            resValue("string", "REST_HOST_LIVE", project.LIVE_URL_RES)
+            resValue("string", "REST_HOST_BETA", project.DEV_URL_RES)
+            buildConfigField "String", "APP_SOURCE", "\"GCLOUD\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"com.gcloud.gaadi\""
+            resValue("string", "account_type", defaultConfig.applicationId)
+            resValue("string", "app_name", "\"GCloud\"")
+            resValue("color", "actionbar_background", "#DC592B")
+            resValue("color", "notification_bar", "#BA4824")
+            resValue("color", "actionbar_background", "#DC592B")
+            resValue("color", "transparent_bar", "#bbE86335")
+            resValue("string", "lms_authority", defaultConfig.applicationId + ".syncadapter.lms")
+            resValue("string", "leads_authority", defaultConfig.applicationId + ".syncadapter.leads")
+            resValue("string", "splash_authority", defaultConfig.applicationId + ".syncadapter.splash")
+            resValue("string", "finance_authority", defaultConfig.applicationId + ".syncadapter.finance")
+        }
+
+        debug{
+            initWith(buildTypes.gcloud_beta)
+            ext.enableCrashlytics = false
+        }
+    }
+    productFlavors {
+
+        hdfc_development {
+            ext.enableCrashlytics = true
+            buildConfigField "String", "GA_PROPERTY_ID", "\"UA-56830864-1\""
+            buildConfigField "boolean", "IS_DEV_BUILD", "true"
+            buildConfigField "String", "ENVIRONMENT", "\"DEV\""
+            buildConfigField "String", "CLOUD_OWNER", "\"HDFC\""
+            buildConfigField "int", "RETRY_IMAGES_DURATION", "2*60*60"
+            signingConfig signingConfigs.dev
+            versionCode Integer.parseInt(project.HDFC_VERSION_CODE_DEV)
+            versionName project.HDFC_VERSION_NAME_DEV
+        }
+
+        hdfc_production {
+            ext.enableCrashlytics = true
+            buildConfigField "String", "GA_PROPERTY_ID", "\"UA-5667080-26\""
+            buildConfigField "boolean", "IS_DEV_BUILD", "false"
+            buildConfigField "String", "ENVIRONMENT", "\"PROD\""
+            buildConfigField "String", "CLOUD_OWNER", "\"HDFC\""
+            buildConfigField "int", "RETRY_IMAGES_DURATION", "2*60*60"
+            versionCode Integer.parseInt(project.HDFC_VERSION_CODE_PRODUCTION)
+            versionName project.HDFC_VERSION_NAME_PRODUCTION
+        }
+
+        gcloud_development {
+            ext.enableCrashlytics = true
+            buildConfigField "String", "GA_PROPERTY_ID", "\"UA-56830864-1\""
+            buildConfigField "boolean", "IS_DEV_BUILD", "true"
+            buildConfigField "String", "ENVIRONMENT", "\"DEV\""
+            buildConfigField "String", "CLOUD_OWNER", "\"GAADI\""
+            buildConfigField "int", "RETRY_IMAGES_DURATION", "2*60*60"
+            signingConfig signingConfigs.dev
+            versionCode Integer.parseInt(project.GCLOUD_VERSION_CODE_DEV)
+            versionName project.GCLOUD_VERSION_NAME_DEV
+        }
+
+        gcloud_production {
+            ext.enableCrashlytics = true
+            /*buildConfigField "String", "GA_PROPERTY_ID", "\"UA-56830864-1\""*/
+            buildConfigField "String", "GA_PROPERTY_ID", "\"UA-5667080-20\""
+            buildConfigField "boolean", "IS_DEV_BUILD", "false"
+            buildConfigField "String", "ENVIRONMENT", "\"PROD\""
+            buildConfigField "String", "CLOUD_OWNER", "\"GAADI\""
+            buildConfigField "int", "RETRY_IMAGES_DURATION", "2*60*60"
+            versionCode Integer.parseInt(project.GCLOUD_VERSION_CODE_PRODUCTION)
+            versionName project.GCLOUD_VERSION_NAME_PRODUCTION
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            /*if (variant.buildType.name.equals("gcloud_beta") &&
+                    variant.productFlavors[0].name.equals("gcloud_development")) {
+                def apk = output.outputFile;
+                output.outputFile = new File(getHomePath() + "/Gcloud APKs", "Gcloud - BETA_" + getDate() + ".apk");
+            } else*/ if (variant.buildType.name.equals("gcloud_live") &&
+                    variant.productFlavors[0].name.equals("gcloud_development")) {
+                def apk = output.outputFile;
+                output.outputFile = new File(getHomePath() + "/Gcloud APKs", "Gcloud - DEV_LIVE_" + getDate() + ".apk");
+            } else if (variant.buildType.name.equals("gcloud_live") &&
+                    variant.productFlavors[0].name.equals("gcloud_production")) {
+                def apk = output.outputFile;
+                output.outputFile = new File(getHomePath() + "/Gcloud APKs", "Gcloud - " + getDate() + ".apk");
+            } else if (variant.buildType.name.equals("gcloud_staging") &&
+                    variant.productFlavors[0].name.equals("gcloud_development")) {
+                def apk = output.outputFile;
+                output.outputFile = new File(getHomePath() + "/Gcloud APKs", "Gcloud - STG_" + getDate() + ".apk");
+            } else if (variant.buildType.name.equals("gcloud_staging") &&
+                    variant.productFlavors[0].name.equals("gcloud_production")) {
+                def apk = output.outputFile;
+                output.outputFile = new File(getHomePath() + "/Gcloud APKs", "Gcloud - STG_PROD_" + getDate() + ".apk");
+            }
+        }
+    }
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('dd-MMM-yyyy')
+    return formattedDate
+}
+
+def getHomePath() {
+    return System.properties['user.home']
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/dependencies.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project.MULTIDEX_LIBRARY
+    compile project.APP_COMPAT_LIBRARY
+    compile project.GSON_LIBRARY
+    compile project.OTTO_LIBRARY
+    compile project.GOOGLE_PLAY_SERVICES
+    compile project.SUPPORT_LIBRARY
+    compile project.NINE_OLD_ANDROIDS_LIBRARY
+    compile project.GLIDE_LIBRARY
+    compile project.JODA_TIME_LIBRARY
+    compile project.RETROFIT_LIBRARY
+    compile project.OKHTTP_LIBRARY
+    compile project.RECYCLER_VIEW_COMPAT
+    compile project.CARD_VIEW_COMPAT
+    compile project.MATERIAL_DESIGN_COMPAT
+    compile project.GOOGLE_PLAY_SERVICES_GCM
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar')
+    {
+        transitive = true;
+    }
+    compile project(':MaterialDesign')
+    compile project(':ImageUploadLibrary-master')
+    compile project(':slideDateTimePicker')
+    //compile 'com.afollestad:material-dialogs:0.7.9.1'
+    compile 'org.adw.library:discrete-seekbar:1.0.0'
+    //compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+
+    //    compile 'com.karumi:expandableselector:1.0.0'
+
+    //    compile 'com.getbase:floatingactionbutton:1.10.0'
+
+    //for unit testing
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    androidTestCompile 'com.android.support.test:rules:0.4'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    androidTestCompile 'com.android.support:support-annotations:23.2.0'
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+}

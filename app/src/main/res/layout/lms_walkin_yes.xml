@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lms_activity_bg">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:textColor="@color/lms_dark_gray"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/carBooked"
+            android:text="@string/carBooked"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/scheduleWalkIn"
+            android:text="@string/reScheduleWalkIn"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/markClosed"
+            android:text="@string/markClosed"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/LMSButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:id="@+id/carSold"
+            android:text="@string/carSold"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

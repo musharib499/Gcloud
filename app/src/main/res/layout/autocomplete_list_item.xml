@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/white"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/make"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/emptyString" />
+
+    <TextView
+        android:id="@+id/autosuggest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/make"
+        android:background="@drawable/autocomplete_dropdown"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text="Test"
+        android:textColor="@drawable/autocomplete_textcolor"
+        android:textSize="14sp" />
+
+</RelativeLayout>

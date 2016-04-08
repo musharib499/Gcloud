@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<ImageView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/emptyString" />-->
+
+    <ImageView
+        android:id="@+id/no_internet_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/no_internet_icons" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        style="@style/textStyleHeading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/no_internet_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:singleLine="false"
+        android:text="@string/network_error"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/checkconnection"
+        style="@style/textStyleHeading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errorMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="@string/checkConnection"
+        android:textColor="@color/hintColor"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/retry"
+        style="@style/textStyleHeading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkconnection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/login_edittext_background"
+        android:text="@string/retry"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/showallleads"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/orange"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/addLead"
+            style="@style/gc_dark_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/show_all_leads"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</RelativeLayout>

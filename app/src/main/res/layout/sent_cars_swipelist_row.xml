@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/sent_cars_back_view_layout"
+        layout="@layout/sent_cars_back_view"
+        android:tag="sent_cars_back_view_layout" />
+
+    <include
+        android:id="@+id/sent_cars_front_view_layout"
+        layout="@layout/sent_cars_front_view"
+        android:tag="sent_cars_front_view_layout" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/gray_thanks_screen"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvThankyouMessage"
+            android:textSize="24sp"
+
+            android:gravity="center"
+            android:text="@string/uploaded_thanks_msg"
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_little_margin"
+            android:singleLine="false"
+            android:layout_marginTop="@dimen/default_large_margin"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvMessage"
+            android:textSize="13sp"
+            android:layout_below="@+id/tvThankyouMessage"
+            android:gravity="center"
+            android:text="@string/uploaded_thanks_msg2"
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_little_margin"
+            android:singleLine="false"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/thanks_image"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/default_large_margin"
+        app:cardMaxElevation="1dp">
+
+        <TextView
+            android:id="@+id/tvGoToMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/uploaded_back_msg"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

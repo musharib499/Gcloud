@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/fromRecentcalls"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+
+            android:gravity="center"
+            android:background="@drawable/add_button_square">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/emptyString"
+                android:padding="12dp"
+                android:src="@drawable/add_stock" />
+
+            <TextView
+                style="@style/gc_textview_nobackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="From Recent Calls"
+                android:textColor="@color/actionbar_background" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fromCallTracker"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/add_button_square">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/emptyString"
+                android:padding="12dp"
+                android:src="@drawable/add_stock" />
+
+            <TextView
+                style="@style/gc_textview_nobackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="From Call Tracker"
+                android:textColor="@color/actionbar_background" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_addLead"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_button_square">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/emptyString"
+                android:padding="12dp"
+                android:src="@drawable/add_stock" />
+
+            <TextView
+                style="@style/gc_textview_nobackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Add Lead"
+                android:textColor="@color/actionbar_background" />
+
+        </RelativeLayout>
+
+
+        <!--    <LinearLayout
+                android:id="@+id/cartrade"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/item_selected_background_drawable"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/emptyString"
+                    android:src="@drawable/cartrade_logo"/>
+
+
+                <TextView
+                    android:id="@+id/cartradeCount"
+                    style="@style/gc_textview_nobackground"
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="4dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/actionbar_background"/>
+            </LinearLayout>
+
+            <include layout="@layout/divider_view"/>
+
+            <LinearLayout
+                android:id="@+id/OLX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/item_selected_background_drawable"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/emptyString"
+                    android:src="@drawable/olx"/>
+
+
+                <TextView
+                    android:id="@+id/olxCount"
+                    style="@style/gc_textview_nobackground"
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="4dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/actionbar_background"/>
+            </LinearLayout>
+
+            <include layout="@layout/divider_view"/>
+
+            <LinearLayout
+                android:id="@+id/Quiker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/item_selected_background_drawable"
+                android:orientation="horizontal"
+
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/emptyString"
+
+                    android:src="@drawable/quikr"/>
+
+
+                <TextView
+                    android:id="@+id/quikerCount"
+                    style="@style/gc_textview_nobackground"
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="4dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/actionbar_background"/>
+            </LinearLayout>
+
+            <include layout="@layout/divider_view"/>
+
+            <LinearLayout
+                android:id="@+id/Carwale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/item_selected_background_drawable"
+                android:orientation="horizontal"
+
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/emptyString"
+                    android:src="@drawable/carwale"/>
+
+
+                <TextView
+                    android:id="@+id/CarwaleCount"
+                    style="@style/gc_textview_nobackground"
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="4dip"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/actionbar_background"/>
+            </LinearLayout>
+
+            <include layout="@layout/divider_view"/>-->
+    </LinearLayout>
+</ScrollView>
+
+    <!--<LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/no_corner_white_background"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/addLead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/actionbar_background"
+            android:gravity="center"
+            android:text="@string/add_lead"
+            android:textSize="18sp"
+            style="@style/textStyleHeading2" />
+    </LinearLayout>-->

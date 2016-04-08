@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/searchCars"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp">
+
+            <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                android:id="@+id/city"
+                style="@style/autoCompleteTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_label_min_height"
+                android:hint="@string/hint_city"
+                android:imeOptions="actionNext"
+                android:paddingLeft="8dp"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:id="@+id/makeModelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_label_min_height"
+                android:layout_below="@+id/city"
+                android:orientation="horizontal">
+
+
+                <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                    android:id="@+id/make"
+                    style="@style/autoCompleteTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/make"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true" />
+
+                <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                    android:id="@+id/model"
+                    style="@style/autoCompleteTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/model"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <!--<TextView
+                android:id="@+id/fuelType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_label_min_height"
+                android:layout_below="@+id/makeModelLayout"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_dropdown"
+                style="@style/textStyleHeading2"
+                android:hint="@string/hint_fuel_type"
+                android:paddingLeft="8dp"/>-->
+
+
+            <TextView
+                android:id="@+id/showroom"
+                style="@style/textStyleHeading2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_label_min_height"
+                android:layout_below="@+id/makeModelLayout"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_dropdown"
+                android:gravity="center_vertical|left"
+                android:hint="@string/hint_dealer_name"
+                android:paddingLeft="8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/priceRangeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_label_min_height"
+                android:layout_below="@+id/showroom"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textStyleHeading"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="@string/price_range_label" />
+
+                <EditText
+                    android:id="@+id/priceFrom"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:hint="@string/from"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/priceTo"
+                    style="@style/editTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:hint="@string/to"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/searchCars"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/time_label_size"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/textStyleHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="@string/searchCars"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+</RelativeLayout>

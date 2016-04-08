@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lms_activity_bg">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Hello"
+        android:textColor="@color/lms_dark_gray"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <!--<DatePicker
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:calendarViewShown="false"/>
+
+    <TimePicker
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/dateLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/dateScheduled"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:background="@drawable/border">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:contentDescription="@string/emptyString"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/calendar" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/date"
+                        android:textSize="18sp"
+                        android:textColor="@color/textColor"
+                        android:layout_marginLeft="4dp"
+                        android:text="10"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/month"
+                        android:text="Aug"
+                        android:textColor="@color/lms_dark_gray"
+                        android:textSize="14sp"
+                        android:gravity="bottom|center_horizontal"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top|center_horizontal"
+                        android:id="@+id/year"
+                        android:text="2015"
+                        android:textColor="@color/lms_dark_gray"
+                        android:paddingTop="2dp"
+                        android:layout_gravity="center"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/timeScheduled"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/calendar"
+                android:contentDescription="@string/emptyString"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/textColor"
+                android:text="@string/time"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
+
+        <TextView
+            android:id="@+id/modify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_margin="20dp"
+            android:text="MODIFY"
+            android:textColor="#04B486"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_margin="20dp"
+            android:text="CONFIRM"
+            android:textColor="#04B486"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

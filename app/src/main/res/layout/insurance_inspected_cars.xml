@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.gcloud.gaadi.insurance.InsuranceInspectedCarsFragment">
+
+    <com.gcloud.gaadi.ui.HotFixRecyclerView
+        android:id="@+id/cardList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_view"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:paddingBottom="5dp" />
+</RelativeLayout>

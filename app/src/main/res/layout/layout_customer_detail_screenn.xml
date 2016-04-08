@@ -1,0 +1,537 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/customerDetailstoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/insurance_inspected_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/iv_actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_ab_back_material"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_actionBack"
+                android:text="Customer\'s Details"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+
+                android:id="@+id/btnNextCustomerDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/insurance_action_bar_button_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+
+                android:paddingRight="10dp"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:src="@drawable/step_1" />
+
+    </LinearLayout>
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customerDetailstoolbar"
+
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/vehicle_owner"
+                android:textColor="@color/insurance_dark_gray"
+                android:textSize="@dimen/insurance_text_size" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupVehicleOwner"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/individual"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75"
+                    android:button="@drawable/insurance_radio_button"
+                    android:checked="true"
+                    android:text="Individual"
+                    android:textColor="@color/insurance_radio_button_text_color"
+                    android:textSize="@dimen/insurance_text_size" />
+
+                <RadioButton
+                    android:id="@+id/company"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@drawable/insurance_radio_button"
+                    android:text="Company"
+                    android:textColor="@color/insurance_radio_button_text_color"
+                    android:textSize="@dimen/insurance_text_size" />
+
+
+            </RadioGroup>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_first_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+        <!-- <com.rengwuxian.materialedittext.MaterialEditText
+             android:id="@+id/etMiddleName"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:gravity="center_vertical"
+             android:hint="@string/string_middle_name"
+             android:imeOptions="actionNext"
+             android:inputType="textCapWords"
+
+             android:singleLine="true"
+             android:textColor="@color/textColor"
+
+             android:textSize="@dimen/insurance_text_size"
+             app:met_floatingLabel="highlight"
+             app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+             app:met_primaryColor="@color/material_text">
+
+         </com.rengwuxian.materialedittext.MaterialEditText>-->
+
+
+        <!-- <com.rengwuxian.materialedittext.MaterialEditText
+             android:id="@+id/etLastName"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:gravity="center_vertical"
+             android:hint="@string/string_last_name"
+             android:imeOptions="actionNext"
+             android:inputType="textCapWords"
+             android:singleLine="true"
+             android:textColor="@color/textColor"
+             android:textSize="@dimen/insurance_text_size"
+
+             app:met_floatingLabel="highlight"
+             app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+             app:met_primaryColor="@color/material_text">
+
+         </com.rengwuxian.materialedittext.MaterialEditText>-->
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_mobile"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etCustAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_address"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_city"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialAutoCompleteTextView>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_pin"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColor="@color/textColor"
+
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+        <LinearLayout
+            android:id="@+id/customer_detail_hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_gender"
+                android:textColor="@color/insurance_dark_gray"
+                android:textSize="@dimen/insurance_text_size" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75"
+                    android:button="@drawable/insurance_radio_button"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textColor="@color/insurance_radio_button_text_color"
+                    android:textSize="@dimen/insurance_text_size" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@drawable/insurance_radio_button"
+                    android:text="Female"
+                    android:textColor="@color/insurance_radio_button_text_color"
+                    android:textSize="@dimen/insurance_text_size" />
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/string_marital_status"
+                    android:textColor="@color/insurance_dark_gray"
+                    android:textSize="@dimen/insurance_text_size" />
+
+                <RadioGroup
+                    android:id="@+id/martialStatusGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioSingle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:button="@drawable/insurance_radio_button"
+                        android:checked="true"
+                        android:text="@string/single"
+                        android:textColor="@color/insurance_radio_button_text_color"
+                        android:textSize="@dimen/insurance_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/radioMarried"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/insurance_radio_button"
+                        android:text="@string/married"
+                        android:textColor="@color/insurance_radio_button_text_color"
+                        android:textSize="@dimen/insurance_text_size" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/etDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="4dp"
+                android:drawableRight="@drawable/calendar_grey"
+                android:gravity="center_vertical"
+                android:hint="@string/string_dob"
+                android:padding="5dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                 app:met_primaryColor="@color/material_text">
+
+             </com.rengwuxian.materialedittext.MaterialTextView>
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/spinnerOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_occupation"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialTextView>
+
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/spinnerIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_income"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialTextView>
+        </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etNominee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_nominee"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/spinnerNomineeRelation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_nominee_relation"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialTextView>
+
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/spinnerNomineeAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_nominee_age"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialAutoCompleteTextView>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etAppointeeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_appointee"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                android:visibility="gone"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialEditText>
+
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/spinnerAppointeeRelation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:hint="@string/string_appointee_relation"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/insurance_text_size"
+                android:visibility="gone"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                app:met_primaryColor="@color/material_text">
+
+            </com.rengwuxian.materialedittext.MaterialTextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!--
+        <TextView
+            android:id="@+id/btnNextCustomerDetails"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/insurance_btn_color"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="18sp" />-->
+
+</RelativeLayout>

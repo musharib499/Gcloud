@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/iv_edit"
+
+        android:icon="@drawable/edit_seller_leads"
+
+        android:orderInCategory="100"
+        android:title="Edit"
+        app:showAsAction="collapseActionView|always" />
+    <!--
+        <item
+            android:id="@+id/action_add_lead"
+            android:icon="@drawable/addlead"
+            android:orderInCategory="100"
+
+            android:title="@string/add_lead"
+            app:showAsAction="always"/>-->
+
+</menu>

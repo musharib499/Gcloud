@@ -1,0 +1,436 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.administrator.gcloud.DocumentScreenActivity">
+
+    <!--  <LinearLayout
+          android:id="@+id/imageLayout"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:layout_marginBottom="10dp"
+          android:background="@color/insurance_inspected_bg"
+          android:gravity="center">
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/step_2"/>
+      </LinearLayout>-->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/insurance_inspected_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/iv_actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/ic_ab_back_material" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_actionBack"
+                android:text="More Details"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/insurance_action_bar_button_bg"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:src="@drawable/step_2" />
+
+    </LinearLayout>
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding">
+
+            <LinearLayout
+                android:id="@+id/previousPolicyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/prevPolicyEndDate"
+                        style="?android:attr/spinnerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Previous Policy End Date"
+                        android:drawableRight="@drawable/calendar_grey"
+                        android:drawablePadding="4dp"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/material_text" />
+        -->
+                <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/policyInsurer"
+                    style="?android:attr/spinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/string_previous_policy"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                    app:met_primaryColor="@color/material_text" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/policyNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/string_previous_policy_no"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:singleLine="true"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                    app:met_primaryColor="@color/material_text" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/joiningdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textColorHint="@color/grey">
+
+                    <com.gcloud.gaadi.ui.customviews.CustomCalender
+                        android:id="@+id/policyStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/string_previous_start_date"
+                        android:paddingBottom="10dp"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/insurance_text_size"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                        app:met_hideUnderline="true" />
+
+                </android.support.design.widget.TextInputLayout>
+              <!--  <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/policyStartDate"
+                    style="?android:attr/spinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:drawablePadding="4dp"
+                    android:drawableRight="@drawable/calendar_grey"
+                    android:hint="New Policy Start Date"
+                    android:textColor="@color/textview_color_selector"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_primaryColor="@color/material_text" />-->
+
+                <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/policyEndDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:hint="@string/string_previous_end_date"
+                    android:textColor="@color/textview_color_selector"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_hideUnderline="true" />
+
+                <LinearLayout
+                    android:id="@+id/reg_dateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/tv_regDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/reg_date_for_inspctd_cars"
+                        android:inputType="textCapWords"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/insurance_text_size"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                        app:met_primaryColor="@color/login_button_background" />
+
+                    <TextView
+                        android:id="@+id/registrationMonth"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/insurance_text_size" />
+
+                    <!--  <TextView
+                          android:id="@+id/registrationYear"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:text="@string/registrationYear"
+                          android:textColor="@color/textColor"
+                          android:textSize="@dimen/insurance_text_size"/>-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/engineNumChasisNumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/ownerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Previous Owner's FullName"
+                    android:textSize="@dimen/insurance_text_size"
+                    android:visibility="gone"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+                    app:met_primaryColor="@color/material_text" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/engineNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Engine No*"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="26"
+                    android:singleLine="true"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_primaryColor="@color/material_text" />
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/chasisNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Chassis No*"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="26"
+                    android:singleLine="true"
+                    android:textSize="@dimen/insurance_text_size"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+                    app:met_primaryColor="@color/material_text" />
+
+
+                <!--        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.rengwuxian.materialedittext.MaterialTextView
+                                android:id="@+id/tv_regDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:hint="@string/reg_date_for_inspctd_cars"
+                                android:inputType="textCapWords"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textColor"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelTextSize="14sp"
+                                app:met_primaryColor="@color/login_button_background"/>
+
+                            <TextView
+                                android:id="@+id/registrationMonth"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/month"
+                                android:textColor="@color/textColor"
+                                android:textSize="14sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/registrationYear"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/registrationYear"
+                                android:textColor="@color/textColor"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>-->
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/carFinancedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_carFinanced"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/car_financed"
+                    android:textColor="@color/insurance_light_gray"
+                    android:textSize="@dimen/insurance_text_size"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpCarFinanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_label_min_height"
+                    android:layout_below="@+id/tv_carFinanced"
+                    android:layout_marginTop="8dp"
+
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_carFinancedYes"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:button="@drawable/insurance_radio_button"
+                        android:text="@string/yes"
+                        android:textColor="@color/insurance_radio_button_text_color"
+                        android:textSize="@dimen/insurance_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/rb_carFinancedNo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/insurance_radio_button"
+                        android:checked="true"
+                        android:text="@string/no"
+                        android:textColor="@color/insurance_radio_button_text_color"
+                        android:textSize="@dimen/insurance_text_size" />
+
+                </RadioGroup>
+
+                <com.gcloud.gaadi.ui.CustomMaterialAutoCompleteTxtVw
+                    android:id="@+id/tv_bankList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rGrpCarFinanced"
+                    android:hint="@string/bank_list"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/insurance_text_size"
+                    android:visibility="gone"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"
+
+
+                    app:met_primaryColor="@color/login_button_background" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--  <Button
+          android:id="@+id/nextButton"
+          android:layout_width="match_parent"
+          android:layout_height="52dp"
+          android:layout_alignParentBottom="true"
+          android:background="@color/insurance_btn_color"
+          android:text="@string/next"
+          android:textColor="@color/white"/>-->
+
+
+</RelativeLayout>

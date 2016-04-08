@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gcloud.gaadi.ui.BaseActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:id="@+id/lay_coll_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/coll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/coll_sub_title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_sub_tital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/default_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/make_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/maruti"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sub_tital"
+            style="@style/textStyleHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="maruti"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/AppCompatWithAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:scrollbars="horizontal"
+        android:visibility="gone"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:tabTextColor="@color/grey"
+        tools:layout_scrollFlags="scroll|enterAlways" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_material_light"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_fab"
+
+            >
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:src="@drawable/filter"
+                android:visibility="gone"
+                app:layout_behavior="com.gcloud.gaadi.ui.swipelistview.ScrollAwareFABBehavior" />
+
+            <RelativeLayout
+                android:id="@+id/fab_lay_count"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@android:color/transparent"
+                android:elevation="8dp"
+                android:gravity="right"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/fab_counter"
+                    style="@style/fab_counter_light_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/counter_view"
+                    android:gravity="center"
+                    android:textColor="@color/primary" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

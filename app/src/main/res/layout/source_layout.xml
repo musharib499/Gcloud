@@ -1,0 +1,156 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/leadSourceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/budgetlayout"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sourceValueEdit"
+        style="@style/textStyleHeadingCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:text="@string/lead_source"
+        android:textColor="@color/textColor" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/leadSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/sourceWalkin"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_walkin"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceWebsite"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_website"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceGaadi"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_gaadi"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceCardekho"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_cardekho"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceZigwheels"
+                style="@style/textStyleHeading2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_zigwheels"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceCartrade"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_cartrade"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceCarwale"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_carwale"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceOlx"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_olx"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/sourceQuickr"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_btn_wd_orange_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/source_quickr"
+                android:textColor="@drawable/toggle_text_color"
+                android:textSize="11sp" />
+
+
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

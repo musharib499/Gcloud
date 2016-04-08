@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/view_stock_back"
+        layout="@layout/view_stock_more_options_list_item"
+        android:tag="view_stock_back" />
+
+
+    <include
+        android:id="@+id/view_stock_front"
+        layout="@layout/view_stock_list_item"
+        android:tag="view_stock_front" />
+
+
+</FrameLayout>

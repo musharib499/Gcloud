@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/listSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/grey_light"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/textStyleHeading"
+            android:text="Large Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/strokeColor" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listSeparator">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Ankit Garg" />
+
+        <ImageView
+            android:id="@+id/callType"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/call_recieve" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/callType"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/name"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="3dp"
+            android:text="9971126267" />
+
+
+        <ImageView
+            android:id="@+id/addLeadButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/add_lead" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:fillViewport="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:layout_above="@+id/bNext"
+        android:layout_alignParentTop="true">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+            android:id="@+id/company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company"
+            android:inputType="textAutoComplete"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize">
+            <requestFocus />
+        </com.rengwuxian.materialedittext.MaterialAutoCompleteTextView>
+
+     <!--   <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilStartDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:hintTextAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textColorHint="@color/grey"
+            android:gravity="center">-->
+
+            <com.rengwuxian.materialedittext.MaterialTextView
+                android:id="@+id/joiningdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="@string/string_doj"
+                android:textColorHint="@color/hintColor"
+                android:textSize="18sp"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"/>
+
+
+        <!--  </android.support.design.widget.TextInputLayout>
+  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/totalWorkExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total Work Experience (years)"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/monthlyIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="Gross Monthly Income"
+                android:inputType="number"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/existingEMI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="Existing EMIs"
+                android:inputType="number"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:text="Salary Account"/>-->
+
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+            android:id="@+id/mactv_bankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmploymentType"
+            android:layout_centerInParent="true"
+            android:hint="Salary Bank Name"
+            android:inputType="textAutoComplete|textCapSentences"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+            android:id="@+id/workCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="@string/work_city"
+            android:inputType="textAutoComplete|textCapSentences"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+        <TextView
+            android:id="@+id/tvEmploymentType"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvIncomeDetails"
+
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:text="Salary Credit Type"
+            android:textColor="#525162"
+            android:textSize="15sp"></TextView>
+
+        <Spinner
+            android:id="@+id/salaryCreditType"
+            style="@style/textSpinnerStyleHeading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmploymentType"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:hint="Select Employment Type"
+
+            android:paddingLeft="0dp"
+            android:textSize="15sp">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Serving notice period or not"
+            android:textColor="@color/hintColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rbgServingNoticePeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbServingNoticePeriodYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/rbServingNoticePeriodNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:checked="true"
+                    android:text="No" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--</ScrollView>-->
+
+    <Button
+        android:id="@+id/bNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_change_effect"
+        android:text="Next"
+        android:textColor="@color/white" />
+</RelativeLayout>

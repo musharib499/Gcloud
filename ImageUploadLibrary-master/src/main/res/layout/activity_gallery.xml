@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.truedev.application.Activity.GalleryActivity">
+
+    <!--   <android.support.v7.widget.Toolbar
+           android:id="@+id/toolBar"
+           android:layout_width="match_parent"
+           android:layout_height="?android:actionBarSize">
+
+       </android.support.v7.widget.Toolbar>-->
+
+    <GridView
+        android:id="@+id/gvFolders"
+        android:layout_below="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:columnWidth="@dimen/grid_column_width"
+        android:horizontalSpacing="@dimen/gv_horizontal_spacing"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/gv_vertical_spacing">
+
+    </GridView>
+
+</RelativeLayout>

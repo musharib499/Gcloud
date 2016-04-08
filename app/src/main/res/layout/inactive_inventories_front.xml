@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_stock_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_stock_list_item_height">
+
+    <RelativeLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/stockImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/emptyString"
+            android:scaleType="fitCenter" />
+        <!--<LinearLayout
+            android:id="@+id/leadsLayout"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:background="@color/transparent_orange"
+            android:orientation="horizontal"
+            android:padding="3dp">
+            <TextView
+                android:id="@+id/stockLeads"
+                style="@style/textStyleHeading2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:gravity="start"
+                android:text="10 Leads"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detailsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/imageLayout"
+        android:background="@drawable/item_select_background_white_drawable"
+        android:padding="8dp"
+        android:paddingLeft="8dp">
+
+        <ImageView
+            android:id="@+id/makeLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/emptyString"
+            android:src="@drawable/maruti"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/stockModelVersion"
+            style="@style/textStyleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/makeLogo"
+            android:layout_alignTop="@+id/makeLogo"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/makeLogo"
+            android:gravity="left|center_vertical"
+            android:text="Alto K10 LXI" />
+
+        <LinearLayout
+            android:id="@+id/stockDateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/stockModelVersion"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/color"
+                    android:layout_width="25dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|start"
+                    android:background="@drawable/oval_white_black_stroke"
+                    android:contentDescription="@string/emptyString"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/kmsDriven"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/color"
+                    android:gravity="center"
+                    android:text="1,45,000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/speed_kms"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/kmsDriven"
+                    android:text="kms"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/modelYear"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/calendar"
+                    android:gravity="center"
+                    android:text="2012"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fuelType"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="12sp" />
+                <!-- <ImageView
+                     android:id="@+id/color"
+                     android:layout_width="14dp"
+                     android:layout_height="14dp"
+                     android:layout_centerInParent="true"
+                     android:layout_gravity="center_vertical"
+                     android:background="@drawable/oval_white_black_stroke"
+                     android:contentDescription="@string/emptyString"
+                     android:visibility="visible"/>-->
+                <TextView
+                    android:id="@+id/colorValue"
+                    style="@style/textStyleHeading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:text="Silver Grey"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/moreOptions"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_weight=".4"
+                android:background="@drawable/item_selected_background_drawable"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/overflow_menu" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/stockPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_label_min_height"
+            android:layout_below="@+id/stockDateLayout"
+            android:layout_marginTop="4dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/stockPrice"
+                style="@style/textStyleHeading2Oragne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="4dp"
+                android:gravity="left|center_vertical"
+                android:text="2.48 Lacs" />
+
+            <ImageView
+                android:id="@+id/trustmark"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/trustmark" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

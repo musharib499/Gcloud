@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/strokeColor" />
+
+   <!-- <include
+        android:id="@+id/toolbar_menu"
+        layout="@layout/tool_bar" />-->
+
+    <TextView
+        android:id="@+id/tvBudgetFromFilter"
+        style="@style/textSpinnerStyleHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
+        android:hint="Budget From" />
+
+    <TextView
+        android:id="@+id/tvBudgetToFilter"
+        style="@style/textSpinnerStyleHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBudgetFromFilter"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
+        android:hint="Budget To" />
+
+    <TextView
+        android:id="@+id/tvEnquiryDateFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBudgetToFilter"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/abc_edit_text_material"
+        android:hint="@string/select_follow_up_date"
+        android:paddingLeft="8dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintColor"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/sourceLayout"
+        layout="@layout/source_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEnquiryDateFilter"
+        android:layout_margin="8dp"
+        android:layout_marginTop="20dp" />
+
+    <include
+        android:id="@+id/statusLayout"
+        layout="@layout/status_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sourceLayout"
+        android:layout_margin="8dp" />
+
+    <!--<RelativeLayout-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp">-->
+    <!--<Button-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:background="@color/actionbar_background"-->
+    <!--android:text="SEARCH"-->
+    <!--android:id="@+id/bFilterLeads"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--</RelativeLayout>-->
+</RelativeLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light2"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context="com.gcloud.gaadi.ui.InsuranceFilter">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="@dimen/default_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/ivr_range" />
+
+            <com.gcloud.gaadi.insurance.MySeekBar
+                android:id="@+id/seeb_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:dsb_indicatorColor="@color/primary"
+                app:dsb_progressColor="@color/primary"
+                app:dsb_rippleColor="@color/primary" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textStyleHeading2.customFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Min. IDV" />
+
+                    <TextView
+                        android:id="@+id/tv_min_idv"
+                        style="@style/textStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textStyleHeading2.customFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Max. IDV" />
+
+                    <TextView
+                        android:id="@+id/tv_max_idv"
+                        style="@style/textStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/default_little_margin"
+        android:layout_weight="2"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/tv_zero_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="Know More"
+                android:textColor="@color/primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_default_bg"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_zero_dep"
+                    style="@style/textStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_default_bg"
+                    android:button="@null"
+                    android:drawableRight="@drawable/stock_menu_checkbox"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/zero_check_string" />
+
+                <LinearLayout
+                    android:id="@+id/sub_check_zero_dep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/consumable"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/stock_menu_checkbox"
+                        android:padding="@dimen/default_padding"
+                        android:text="@string/consumables" />
+
+                    <CheckBox
+                        android:id="@+id/engine_protection"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/stock_menu_checkbox"
+                        android:padding="@dimen/default_padding"
+                        android:text="@string/engine_protection" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/leadStatusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_little_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deductible_string" />
+
+                    <TextView
+                        android:id="@+id/tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:text="(Know More)"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_deductible_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        style="@style/textStyleHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_btn_wd_white_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:onClick="radioButtonClicked"
+                        android:tag="2500"
+                        android:text="\u20B9 2,500"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_btn_wd_white_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:onClick="radioButtonClicked"
+                        android:tag="5000"
+                        android:text="\u20B9 5,000"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_btn_wd_white_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:onClick="radioButtonClicked"
+                        android:tag="7500"
+                        android:text="\u20B9 7,500"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_btn_wd_white_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:onClick="radioButtonClicked"
+                        android:tag="15000"
+                        android:text="\u20B9 15,000"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+
+                <HorizontalScrollView
+                    android:id="@+id/statusscrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lay_cancel"
+            style="@style/textStyleHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lay_apply"
+            style="@style/textStyleHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

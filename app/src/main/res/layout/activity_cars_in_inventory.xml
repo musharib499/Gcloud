@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_addStock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/makeModelVersionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/RSAPackage"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="RSA Package*" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+
+                    <com.gcloud.gaadi.ui.CustomMaterialAutoCompleteTxtVw
+                        android:id="@+id/makeModel"
+                        style="@style/autoCompleteTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownSelector="@drawable/autocomplete_dropdown"
+                        android:gravity="left|center_vertical"
+                        android:hint="Model* (Example i10, Swift, etc.)"
+                        android:inputType="text"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/hintColor"
+                        app:met_primaryColor="@color/hintColor"
+                        app:met_textColorHint="@color/hintColor"
+                        app:met_underlineColor="@color/gray" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/version"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+
+                            android:focusable="false"
+                            android:hint="@string/add_stock_version" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/stockYear"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Registration. Month and Year*" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/registrationNumberLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/registrationNumber"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="Registration number*"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapCharacters"
+                            android:paddingLeft="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/CustomerNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/CustomerName"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="Customer Name*"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapCharacters"
+                            android:paddingLeft="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/kmsDriven"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Mobile Number*"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="10" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/email"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Email ID*"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="10" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/registrationCityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                            android:id="@+id/registrationCity"
+                            style="@style/autoCompleteTextViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="City*"
+                            android:imeOptions="actionDone"
+                            android:paddingLeft="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addRSA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="ADD RSA"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

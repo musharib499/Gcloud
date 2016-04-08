@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/white">
+
+
+                <RelativeLayout
+                    android:id="@+id/detailsContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:id="@+id/makeLogo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/emptyString"
+                        android:src="@drawable/maruti"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/stockModelVersion"
+                        style="@style/textStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/makeLogo"
+                        android:layout_alignTop="@+id/makeLogo"
+                        android:layout_alignWithParentIfMissing="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/makeLogo"
+                        android:gravity="left|center_vertical"
+
+                        android:text="Alto K10 LXI" />
+
+
+                    <ImageView
+                        android:id="@+id/color"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/oval_white_black_stroke"
+                        android:contentDescription="@string/emptyString" />
+
+
+                    <TextView
+                        android:id="@+id/stockPrice"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/color"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="2.48 Lacs" />
+
+                    <TextView
+                        android:id="@+id/reg_no"
+                        style="@style/textStyleHeading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/stockPrice"
+                        android:layout_alignTop="@+id/stockPrice"
+                        android:layout_below="@+id/stockModelVersion"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/stockPrice"
+                        android:gravity="center"
+                        android:text="@string/registrationNumber"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/makeModelVersionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+
+                    <com.gcloud.gaadi.ui.CustomMaterialAutoCompleteTxtVw
+                        android:id="@+id/makeModel"
+                        style="@style/autoCompleteTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownSelector="@drawable/autocomplete_dropdown"
+                        android:gravity="left|center_vertical"
+                        android:hint="Model* (Example i10, Swift, etc.)"
+                        android:inputType="text"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextColor="@color/hintColor"
+                        app:met_primaryColor="@color/hintColor"
+                        app:met_textColorHint="@color/hintColor"
+                        app:met_underlineColor="@color/gray" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/version"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/add_stock_version" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!-- <android.support.design.widget.TextInputLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:gravity="bottom"
+                         app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                         <EditText
+                             android:id="@+id/version"
+                             style="@style/textSpinnerStyleHeading"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:editable="false"
+                             android:focusable="false"
+                             android:hint="@string/add_stock_version" />
+                     </android.support.design.widget.TextInputLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/rsaPackage"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="RSA Package*" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--  <android.support.design.widget.TextInputLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:gravity="bottom"
+                          app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                          <EditText
+                              android:id="@+id/rsaPackage"
+                              style="@style/textSpinnerStyleHeading"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+
+                              android:hint="RSA Package*" />
+                      </android.support.design.widget.TextInputLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/regMonYear"
+                            style="@style/textSpinnerStyleHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:hint="Registration Month and Year*" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/registrationNumberLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/registrationNumber"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="Registration Number*"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapCharacters"
+                            android:paddingLeft="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/CustomerNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/customerName"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="Customer Name*"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/mobileNumber"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Mobile Number*"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="10" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/email"
+                            style="@style/editTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Email ID*"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/registrationCityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <com.gcloud.gaadi.ui.CustomAutoCompleteTextView
+                            android:id="@+id/registrationCity"
+                            style="@style/autoCompleteTextViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:hint="City*"
+                            android:imeOptions="actionDone"
+                            android:paddingLeft="8dp"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
+

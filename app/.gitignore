@@ -1,0 +1,8 @@
+/build
+
+src/main/assets/make.json
+src/main/assets/makemodelversion.txt
+src/main/assets/crashlytics-build.properties
+src/main/main.iml
+build
+*.txt

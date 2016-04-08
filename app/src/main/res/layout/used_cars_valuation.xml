@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:id="@+id/isSellerOrBuyerRgrp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/buyer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@drawable/insurance_radio_button"
+                    android:checked="true"
+                    android:text="  I am a Buyer"
+                    android:textColor="@color/insurance_radio_button_text_color"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/seller"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@drawable/insurance_radio_button"
+                    android:text=" I am a Seller"
+                    android:textColor="@color/insurance_radio_button_text_color"
+                    android:textSize="@dimen/insurance_text_size" />
+
+            </RadioGroup>
+
+            <com.gcloud.gaadi.ui.CustomMaterialAutoCompleteTxtVw
+                android:id="@+id/makeModel"
+                style="@style/autoCompleteTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:dropDownSelector="@drawable/autocomplete_dropdown"
+                android:gravity="left|center_vertical"
+                android:hint="Model (Example i10, Swift, etc.)"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/hintColor"
+                app:met_primaryColor="@color/hintColor"
+                app:met_textColorHint="@color/gray"
+                app:met_underlineColor="@color/gray" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/version"
+                    style="@style/textSpinnerStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Version"
+                    android:paddingLeft="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+            <AutoCompleteTextView
+                android:id="@+id/city"
+                style="@style/textSpinnerStyleHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:dropDownSelector="@drawable/autocomplete_dropdown"
+                android:gravity="left|center_vertical"
+                android:hint="City"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/mfgYear"
+                    style="@style/textSpinnerStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Mfg. Year"
+                    android:paddingLeft="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                app:met_primaryColor="@color/hintColor">
+
+                <EditText
+                    android:id="@+id/kmsDriven"
+                    style="@style/textSpinnerStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Kms driven"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:paddingLeft="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/numOwners"
+                    style="@style/textSpinnerStyleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Number of Owners"
+                    android:paddingLeft="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_change_effect"
+        android:padding="15dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

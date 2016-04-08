@@ -1,0 +1,317 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/top_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f5f5"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvPersonalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lakshay"
+                    android:padding="@dimen/default_padding"
+                    android:text="PERSONAL DETAILS"
+                    android:textColor="#434343"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </android.support.v7.widget.AppCompatTextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/value2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_ll"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/firstName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="First name*"
+                        android:inputType="textCapSentences"
+                        android:maxLength="15"
+                        android:paddingLeft="@dimen/padding_value"
+                        android:singleLine="true"
+                        android:textColor="#434343"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/lastName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="Last name"
+                        android:inputType="textCapSentences"
+                        android:maxLength="15"
+                        android:paddingLeft="@dimen/padding_value"
+                        android:singleLine="true"
+                        android:textColor="#434343"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/mobile_No"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:digits="0123456789"
+                        android:hint="Mobile*"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/padding_value"
+                        android:singleLine="true"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+                </LinearLayout>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:hint="Email*"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/padding_value"
+                    android:singleLine="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+                <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                    android:id="@+id/homeCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:hint="@string/home_city"
+                    android:inputType="textAutoComplete"
+                    android:paddingLeft="@dimen/padding_value"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize" />
+
+
+                <com.rengwuxian.materialedittext.MaterialTextView
+                    android:id="@+id/etDateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="10dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="@string/string_dob"
+                    android:paddingLeft="@dimen/padding_value"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="18sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextSize="@dimen/insurance_floating_label_textSize"/>
+
+                <!-- </android.support.design.widget.TextInputLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="7dp"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_value"
+                        android:text="Gender"
+                        android:textColor="@color/hintColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_little_margin"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbMale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Male " />
+
+                            <RadioButton
+                                android:id="@+id/rbFemale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="Female" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilResidenceType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="@dimen/default_little_margin"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/residenceType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Residence Type"
+                        android:textColor="@color/hintColor"/>
+
+                    <Spinner
+                        android:id="@+id/residence_Type"
+                        style="@style/textSpinnerStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvEmploymentType"
+                        android:hint="Select Residence Type"
+                        android:paddingLeft="0dp"
+                        android:prompt="@string/prompt_select_residence_type">
+
+                    </Spinner>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="@dimen/padding_value"
+                    android:text="Length of stay at current address (in Years)"
+                    android:textColor="@color/hintColor" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rbgStayLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbLessThanOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=' &lt; 1 ' />
+
+                        <RadioButton
+                            android:id="@+id/rbOneOrTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:checked="false"
+                            android:text=" 1-2 " />
+
+                        <RadioButton
+                            android:id="@+id/rbMOreThanTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:checked="false"
+                            android:text=' &gt; 2 ' />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/next"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/value2"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_change_effect"
+                android:padding="2dp"
+                android:text="Next"
+                android:textColor="@color/white"></Button>
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

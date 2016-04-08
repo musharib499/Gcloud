@@ -1,0 +1,85 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="heading2_text_size">16sp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="view_stock_list_item_height">100dp</dimen>
+    <dimen name="separator_dimen">0.5dp</dimen>
+    <dimen name="cardview_margin">10dp</dimen>
+    <dimen name="abc_action_bar_default_height_material">56dp</dimen>
+    <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
+    <dimen name="insurance_title_top_margin">13dp</dimen>
+    <!--small margin-->
+    <dimen name="littel_margin">3dp</dimen>
+    <!--Hint Text Size  -->
+    <dimen name="hint_input_text_size">12sp</dimen>
+
+    <!--fab counter marging-->
+    <!--FAB button margin-->
+    <dimen name="margin_fab">16dp</dimen>
+
+    <!-- date time picker -->
+    <dimen name="done_label_size">14sp</dimen>
+    <dimen name="date_picker_component_width">270dip</dimen>
+    <dimen name="selected_calendar_layout_height">155dip</dimen>
+    <dimen name="date_picker_view_animator_height">270dip</dimen>
+    <dimen name="month_list_item_header_height">50dip</dimen>
+    <dimen name="month_day_label_text_size">10sp</dimen>
+    <dimen name="day_number_select_circle_radius">16dip</dimen>
+    <dimen name="month_select_circle_radius">45dip</dimen>
+    <dimen name="selected_date_year_size">30dip</dimen>
+    <dimen name="selected_date_day_size">75dip</dimen>
+    <dimen name="selected_date_month_size">30dip</dimen>
+    <dimen name="month_label_size">16sp</dimen>
+    <dimen name="day_number_size">16sp</dimen>
+    <dimen name="year_label_height">64dip</dimen>
+    <dimen name="year_label_text_size">22dip</dimen>
+    <dimen name="call_button_size">52dip</dimen>
+
+    <dimen name="time_label_size">52dp</dimen>
+    <dimen name="extra_time_label_margin">-30dp</dimen>
+    <dimen name="ampm_label_size">16sp</dimen>
+    <dimen name="ampm_left_padding">6dip</dimen>
+    <dimen name="separator_padding">4dip</dimen>
+    <dimen name="header_height">96dip</dimen>
+    <dimen name="picker_dimen">270dip</dimen>
+    <dimen name="view_label_min_height">48dp</dimen>
+
+    <item name="circle_radius_multiplier" format="float" type="string">0.82</item>
+    <item name="circle_radius_multiplier_24HourMode" format="float" type="string">0.85</item>
+    <item name="selection_radius_multiplier" format="float" type="string">0.16</item>
+    <item name="ampm_circle_radius_multiplier" format="float" translatable="false" type="string">
+        0.19
+    </item>
+    <item name="numbers_radius_multiplier_normal" format="float" type="string">0.81</item>
+    <item name="numbers_radius_multiplier_inner" format="float" type="string">0.60</item>
+    <item name="numbers_radius_multiplier_outer" format="float" type="string">0.83</item>
+    <item name="text_size_multiplier_normal" format="float" type="string">0.17</item>
+    <item name="text_size_multiplier_inner" format="float" type="string">0.14</item>
+    <item name="text_size_multiplier_outer" format="float" type="string">0.11</item>
+
+
+    <!-- For uploading photos -->
+    <dimen name="photo_width">95dp</dimen>
+    <dimen name="photo_height">95dp</dimen>
+    <dimen name="segmentsContainerHeight">80dp</dimen>
+    <dimen name="default_margin">20dp</dimen>
+    <dimen name="tuple_form_item">230dp</dimen>
+    <dimen name="proof_tuple_height">80dp</dimen>
+    <dimen name="default_little_margin">5dp</dimen>
+    <dimen name="default_large_margin">40dp</dimen>
+    <dimen name="default_little_padding">5dp</dimen>
+    <dimen name="insurance_text_size">14sp</dimen>
+    <dimen name="insurance_floating_label_textSize">14sp</dimen>
+
+    <!-- Lead Management System -->
+    <!--Finance  -->
+    <dimen name="padding_value">7dp</dimen>
+    <dimen name="circle_text_Size">30sp</dimen>
+    <dimen name="finance_offers_label_text_Size">12sp</dimen>
+
+
+</resources>

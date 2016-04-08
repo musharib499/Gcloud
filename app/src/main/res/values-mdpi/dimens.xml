@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="secLogoHeight">100dp</dimen>
+    <dimen name="priLogoHeight">150dp</dimen>
+    <dimen name="secLogoPadding">8dp</dimen>
+
+</resources>

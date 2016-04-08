@@ -1,0 +1,383 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/customerDetailstoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/insurance_inspected_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/iv_actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/ic_ab_back_material" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_actionBack"
+                android:text="Payment Mode"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/insurance_action_bar_button_bg"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/done_label"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:src="@drawable/step_4" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customerDetailstoolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/premiumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Premium"
+                    android:textColor="@color/insurance_dark_gray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tv_premiumAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/rupee_icon_orange"
+                    android:text="30,000"
+                    android:textColor="@color/insurance_inspected_bg"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/premiumLayout"
+                android:background="@color/insurance_tuple_divider" />
+
+            <!--<ScrollView
+                android:id="@+id/scrollView"
+                android:layout_below="@+id/premiumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btnSubmit"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/premiumLayout"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <LinearLayout
+                    android:id="@+id/paymentMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPaymentMode"
+                        style="@style/textStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/payment_mode"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupPaymentMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/tvPaymentMode"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioCheque"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/insurance_radio_button"
+
+                            android:checked="true"
+                            android:text="Cheque"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioCash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:button="@drawable/insurance_radio_button"
+                            android:text="Cash"
+                            android:textColor="@color/insurance_radio_button_text_color"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/chequeInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/cheque_in_favour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:enabled="false"
+                        android:hint="@string/cheque_in_favour_of"
+                        android:textColor="@color/insurance_dark_gray"
+                        android:textSize="16sp"
+                        app:met_floatingLabel="highlight" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etChequeNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/cheque_no"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/textColor"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/material_text" />
+
+
+                    <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                        android:id="@+id/tvIssuingBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/issue_bank"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@color/textColor"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/material_text" />
+
+
+                    <!--  <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center_vertical"
+                          android:text="@string/cheque_copy"
+                          android:layout_marginTop="10dp"
+                          android:textColor="@color/textColor"
+                          android:textSize="14sp" />
+
+                      <RelativeLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:layout_marginTop="8dp" >
+
+                          <ImageButton
+                              android:layout_width="200dp"
+                              android:layout_height="180dp"
+                              android:id="@+id/imageButton"
+                              android:contentDescription="@string/emptyString"
+                              android:src="@drawable/pic_upload"
+                              android:scaleType="fitXY"/>
+
+                          <ProgressBar
+                              android:id="@+id/progressBar"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_centerInParent="true"
+                              android:visibility="gone"/>
+
+                          <TextView
+                              android:id="@+id/retry"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="5dp"
+                              android:text="Retry"
+                              android:padding="5dp"
+                              android:background="@color/tranparent_black"
+                              android:textColor="@color/white"
+                              android:layout_centerInParent="true"
+                              android:textSize="20sp"
+                              android:visibility="gone"
+                              android:clickable="true"/>
+                      </RelativeLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/insurance_image_upload_container_bg"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                style="@style/textStyleHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/cheque_copy" />
+
+                            <!--<ImageView
+                                android:id="@+id/chequeTick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/tick"/>-->
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/cheque_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/upload_pic_bg">
+
+                            <ImageView
+                                android:id="@+id/cheque_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:scaleType="fitCenter" />
+
+                            <ImageView
+                                android:id="@+id/cheque_delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/delete_orange"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/cheque_retry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@color/transparent_black"
+                                android:padding="5dp"
+                                android:text="Retry"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp"
+                                android:visibility="gone" />
+
+                            <ProgressBar
+                                android:id="@+id/cheque_progressBar"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:visibility="gone" />
+
+                            <!--<TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center_horizontal"
+                                android:padding="3dp"
+                                android:text="Cheque"
+                                android:textSize="18sp"
+                                android:textColor="@android:color/white"
+                                android:background="@color/transparent_black"/>-->
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/insurance_btn_color"
+        android:gravity="center"
+        android:text="Issue Policy"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/fullScreenProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

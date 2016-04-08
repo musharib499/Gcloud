@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gcloud.gaadi.ui.CheckableRelativeLayout
+    android:id="@+id/list_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@+id/checkbox"
+        android:textColor="@color/textColor"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp" />
+
+</com.gcloud.gaadi.ui.CheckableRelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/abc_action_bar_default_height_material"
+
+    android:background="@color/transparentBlackBg"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/closeImgVw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+
+        android:contentDescription=""
+        android:src="@drawable/close_icon64" />
+
+    <TextView
+        android:id="@+id/images_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Gallery"
+        android:textColor="@color/action_bar_title_color"
+        android:textSize="24sp" />
+
+
+</LinearLayout>

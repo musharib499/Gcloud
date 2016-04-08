@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/photoWidgetContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/addPhotoWidget"
+        style="@style/textStyleHeading2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/segmentsContainerHeight"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/text_view_middle_selector_gray_black"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/device_access_camera"
+        android:gravity="bottom|center_horizontal"
+        android:padding="8dp"
+        android:tag="addPhoto"
+        android:text="@string/addPhoto" />
+
+    <RelativeLayout
+        android:id="@+id/photosAddedContainer"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/segmentsContainerHeight"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="0.5"
+        android:tag="viewPhoto"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/selectedImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/emptyString"
+            android:scaleType="fitXY"
+            android:src="@null" />
+
+
+        <TextView
+            android:id="@+id/photoCount"
+            style="@style/textStyleHeading2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/oval_white_black_stroke_image_layout"
+            android:gravity="center"
+            android:text="@string/zero" />
+    </RelativeLayout>
+
+</LinearLayout>

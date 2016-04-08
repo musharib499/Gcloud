@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/ivCaptured"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/captured_image_background"
+        android:padding="10dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/ivRemoveImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/camera_cancel_selector" />
+</RelativeLayout>

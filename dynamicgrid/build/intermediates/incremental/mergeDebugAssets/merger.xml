@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/mushareb/androidwork/AndroidStudioProjects/Gcloud/dynamicgrid/assets"/><source path="/home/mushareb/androidwork/AndroidStudioProjects/Gcloud/dynamicgrid/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/mushareb/androidwork/AndroidStudioProjects/Gcloud/dynamicgrid/src/debug/assets"/></dataSet></merger>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:id="@+id/clickableView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_bank"
+                                android:layout_width="90dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="50dp"
+                                android:scaleType="fitCenter">
+                            </ImageView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:padding="10dp">
+                            <TextView
+                                android:id="@+id/emi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="EMI"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/finance_offers_label_text_Size" />
+                            <TextView
+                                android:id="@+id/emiVal"
+                                style="@style/textInputLayoutStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/emi"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/maxEligibility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:singleLine="true"
+                            android:text="MAX ELIGIBILITY"
+                            android:textSize="@dimen/finance_offers_label_text_Size" />
+                        <TextView
+                            android:id="@+id/maxEligibilityVal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/maxEligibility"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/finance_offers_label_text_Size" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/reducingROI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+
+                            android:text="REDUCING ROI"
+                            android:textSize="@dimen/finance_offers_label_text_Size" />
+                        <TextView
+                            android:id="@+id/roiVal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/reducingROI"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/finance_offers_label_text_Size" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:button="@drawable/checkbox_selector"/>
+
+        </LinearLayout>
+        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/overlayView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#90FFFFFF"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                />
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+
+

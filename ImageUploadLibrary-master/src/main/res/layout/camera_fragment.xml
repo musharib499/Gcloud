@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/orange"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_ab_back_material" />
+
+            <TextView
+                android:id="@+id/photosText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivBack"
+                android:text="Photos"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/photosCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/photosText"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/photosText"
+                android:background="@drawable/text_view_blue_border"
+                android:paddingBottom="2dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="2dp"
+                android:text="0"
+                android:textColor="@color/textColor" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llActions"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_below="@+id/headerLayout"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/addPhotoCamera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_view_middle_selector_gray_black"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/take_photo"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Take Photo"
+                android:textColor="@color/textColor" />
+
+
+            <TextView
+                android:id="@+id/addPhotoGallary"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/text_view_middle_selector_gray_black"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/gallery"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Choose from Gallery"
+                android:textColor="@color/textColor" />
+
+            <!--<Button-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/bFromGallery"-->
+            <!--android:text="Choose From Gallery"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent" />-->
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/lineShadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llActions"
+            android:background="@drawable/header_gradient"
+            android:contentDescription="@string/emptyString"
+            android:paddingBottom="5dp" />
+
+        <!--<GridView-->
+        <!--android:layout_margin="@dimen/default_margin"-->
+        <!--android:id="@+id/gvPhotos"-->
+        <!--android:columnWidth="@dimen/grid_column_width"-->
+        <!--android:numColumns="auto_fit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:verticalSpacing="@dimen/vertical_space_images"-->
+        <!--android:horizontalSpacing="@dimen/horizontal_space_images"-->
+        <!--android:layout_height="wrap_content"></GridView>-->
+
+        <org.askerov.dynamicgrid.DynamicGridView
+            android:id="@+id/gvPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/done"
+            android:layout_below="@+id/llActions"
+            android:layout_margin="@dimen/default_margin"
+            android:horizontalSpacing="@dimen/gv_horizontal_spacing"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/gv_vertical_spacing">
+
+        </org.askerov.dynamicgrid.DynamicGridView>
+
+        <!--<Button-->
+        <!--android:id="@+id/bUploadPhotos"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:text="Upload"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/default_button_height" />-->
+
+        <RelativeLayout
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/text_view_nocorners_gray_black"
+            android:padding="5dp">
+
+            <TextView
+                style="@style/gc_dark_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:gravity="center"
+                android:text="OK" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/coachMarksImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d9000000"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/photos"
+            layout="@layout/coach_mark_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</FrameLayout>

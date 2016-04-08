@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppCompatActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyCompatActionBar</item>
+        <item name="actionBarStyle">@style/MyCompatActionBar</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:colorPrimaryDark">@color/notification_bar</item>
+        <item name="android:icon">@drawable/ic_launcher</item>
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        <item name="android:textAppearance">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:windowBackground">@color/background_floating_material_light
+        </item>
+        <item name="android:colorBackground">@color/background_floating_material_light
+        </item>
+        <item name="android:dialogTheme">@android:style/Theme.Holo.Light.Dialog</item>
+    </style>
+
+    <style name="AppCompatNoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:colorAccent">@color/primary</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:textColorHighlight">@color/gray</item>
+        <!-- color of the menu overflow icon (three vertical dots) -->
+        <item name="android:textColorSecondary">@color/gray</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+
+
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/hintColor</item>
+        <item name="android:textSize">@dimen/hint_input_text_size</item>
+
+    </style>
+
+    <style name="AppCompatWithAccent" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:actionBarStyle">@style/MyCompatActionBar</item>-->
+
+        <!--We will be using the toolbar so no need to show ActionBar-->
+
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/my_primary_text</item>
+
+        <!-- color of the menu overflow icon (three vertical dots) -->
+        <item name="android:textColorSecondary">@color/my_secondary_text</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+
+
+
+    </style>
+
+    <style name="ActionButtonOverflow" parent="@android:style/Widget.Material.PopupMenu.Overflow" tools:targetApi="21">
+        <item name="android:src">@drawable/ic_sort_white</item>
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">50dip</item>
+    </style>
+</resources>

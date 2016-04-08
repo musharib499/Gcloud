@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="vertical">
+
+    <!--<ImageView-->
+    <!--android:layout_margin="@dimen/default_margin"-->
+    <!--android:id="@+id/bDone"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:src="@drawable/ic_action_done"-->
+    <!--android:text="Done Laks"-->
+    <!--android:layout_width="@dimen/defaul_button_width"-->
+    <!--android:layout_height="@dimen/default_button_height" />-->
+
+</RelativeLayout>

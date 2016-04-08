@@ -1,0 +1,475 @@
+<android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_floating_material_light">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/anim_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <!--
+                                <ImageView
+                                    android:id="@+id/iv_back"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_edit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="right"
+                                    android:src="@drawable/edit_seller_leads"/>-->
+            </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollVw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_seller"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/addLeadLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/call_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_contactNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_call"
+                            style="@style/textStyleHeading" />
+
+                        <TextView
+                            android:layout_below="@+id/tv_contactNum"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_call"
+                            android:text="Mobile"
+                            android:id="@+id/mobileText"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/grey"
+                            style="@style/textStyleHeading" />
+
+                        <ImageView
+                            android:id="@+id/verified_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/mobileText"
+                            android:layout_below="@+id/tv_contactNum"
+                            android:src="@drawable/verification_logo"
+                            android:visibility="gone"/>
+
+                        <Button
+                            android:id="@+id/btn_callNow"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="Call Now"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:drawablePadding="3dp"
+                            android:background="#86be67"
+                            android:padding="5dp"
+                            android:textStyle="normal"
+                            android:textAllCaps="false"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/call_icon" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grey"
+                            android:layout_alignLeft="@+id/mobileText"
+                            android:layout_below="@+id/mobileText" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/email_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_email"
+                            style="@style/textStyleHeading" />
+
+                        <TextView
+                            android:layout_below="@+id/tv_email"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/emailText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_email"
+                            android:text="Email"
+                            android:textColor="@color/grey"
+
+                            style="@style/textStyleHeading" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/editLeadLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/et_fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@drawable/abc_edit_text_material"
+                        android:gravity="left|center_vertical"
+                        android:hint="Full Name"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="3dp"
+
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/grey"
+                        android:textSize="14sp" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:background="@drawable/abc_edit_text_material"
+                        android:gravity="left|center_vertical"
+                        android:hint="Email"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/grey"
+                        android:textSize="14sp" />
+
+                    <com.rengwuxian.materialedittext.MaterialTextView
+                        android:id="@+id/et_mobileNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/abc_edit_text_material"
+                        android:gravity="left|center_vertical"
+                        android:hint="Mobile"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="3dp"
+                        app:met_hideUnderline="true"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/grey"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:background="@color/gray_light2">
+
+                <TextView
+                    style="@style/textStyleHeadingCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/lead_source"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/lead_source"
+                    style="@style/textStyleHeading2.customFont"
+                    android:textColor="@color/gray"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_totalCarsSold"
+                style="@style/textStyleHeading"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:paddingLeft="10dp"
+                android:background="@color/white"
+                android:id="@+id/leadsRecyclerView"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                android:background="@color/white"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="90dp"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/seller_leads_status_layout" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/background_material_light" />
+
+                    <LinearLayout
+                        android:id="@+id/dateTimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/leadStatusLayout"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/textStyleHeading"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:text="FOLLOW UP" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/followupDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/abc_edit_text_material"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/select_follow_up_date"
+                                android:paddingLeft="8dp"
+                                android:paddingBottom="3dp"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:drawablePadding="3dp"
+                                android:drawableRight="@drawable/calendar_grey"
+                                android:textColor="@color/textColor"
+                                android:textColorHint="@color/hintColor"
+                                app:met_floatingLabel="highlight"
+                                app:met_primaryColor="@color/grey"
+                                android:textSize="14sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/followupTime"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/abc_edit_text_material"
+                                android:gravity="left|center_vertical"
+                                android:hint="@string/select_follow_up_time"
+                                android:paddingLeft="8dp"
+                                android:paddingBottom="3dp"
+                                android:drawablePadding="3dp"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:drawableRight="@drawable/clock"
+                                android:textColor="@color/textColor"
+                                android:textColorHint="@color/hintColor"
+                                app:met_floatingLabel="highlight"
+                                app:met_primaryColor="@color/grey"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dateTimeLayout"
+                        android:layout_marginTop="8dp"
+
+                        android:drawablePadding="8dp"
+                        android:gravity="left|top"
+                        android:hint="Add Comments"
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="always"
+                        android:padding="8dp"
+                        android:scrollHorizontally="false"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textCursorDrawable="@null"
+                        android:textSize="18sp"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/comments_header"
+                        style="@style/textStyleHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/comments"
+                        android:layout_marginTop="8dp"
+                        android:text="PREVIOUS COMMENTS"
+                        android:visibility="gone" />
+
+
+                    <ListView
+                        android:id="@+id/previousCommentsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/comments_header"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/transparent"
+                        android:divider="@color/strokeColor"
+                        android:dividerHeight="0.5dp"
+                        android:visibility="gone"
+
+                        />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/time_label_size"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:background="@android:color/transparent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Update Lead"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:background="@color/orange" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutContainer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/background_material_light">
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

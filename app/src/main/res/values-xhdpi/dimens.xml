@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="secLogoHeight">160dp</dimen>
+    <dimen name="priLogoHeight">180dp</dimen>
+    <dimen name="secLogoPadding">32dp</dimen>
+    <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
+    <dimen name="abc_action_bar_default_height_material">56dp</dimen>
+</resources>

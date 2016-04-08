@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3">
+    <dataSet config="22.0.0">
+        <source
+            path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/assets" />
+    </dataSet>
+    <dataSet config="debug">
+        <source
+            path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/build/intermediates/bundles/debug/assets">
+            <file name="fonts/Roboto-Medium.ttf"
+                path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/build/intermediates/bundles/debug/assets/fonts/Roboto-Medium.ttf" />
+        </source>
+    </dataSet>
+    <dataSet config="main">
+        <source
+            path="/home/vinodtakhar/AndroidStudioProjects/Gcloud/MaterialDateTimePickerLib/src/androidTest/assets" />
+    </dataSet>
+</merger>

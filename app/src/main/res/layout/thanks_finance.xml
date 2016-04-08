@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/emptyString"
+                android:src="@drawable/maruti"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_makeModelVersion"
+                style="@style/textStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivLogo"
+                android:layout_alignTop="@+id/ivLogo"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ivLogo"
+                android:gravity="left|center_vertical"
+                android:text="Alto K10 LXI" />
+
+            <TextView
+                android:id="@+id/tvRegNum"
+                style="@style/textStyleHeading2Oragne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_makeModelVersion"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:drawablePadding="4dp"
+                android:gravity="left|center_vertical"
+                android:text="" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvApplicationId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Application ID - "
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvApplicationNo"
+                    android:text="12345"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_toRightOf="@id/tvApplicationId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvThankyouMessage"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/default_large_margin"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="@dimen/default_little_margin"-->
+                <!--android:singleLine="false"-->
+                <!--android:text="@string/uploaded_doc_msg"-->
+                <!--android:textSize="13sp" />-->
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:gravity="center"
+                android:padding="@dimen/default_little_margin"
+                android:singleLine="false"
+                android:text="@string/uploaded_doc_msg"
+                android:textSize="13sp" />
+            <!--
+
+                <TextView
+                    android:id="@+id/tvOne"
+                    android:text="Thank You!"
+                    android:textSize="28sp"
+                    android:visibility="gone"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvTwo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/default_little_margin"
+                    android:layout_below="@id/tvOne"
+
+                    android:text="The Loan Application for "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Make Model "
+                    android:id="@+id/tv_makeModelVersion"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/default_little_margin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tvTwo"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/llRegNum"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/default_little_margin"
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="with "
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvRegNum"
+
+                        android:text="Reg Num"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:text="has been submitted with "
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginTop="@dimen/default_little_margin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tvTwo"
+                    android:layout_height="wrap_content" />
+
+            -->
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/default_large_margin"
+        app:cardMaxElevation="1dp">
+
+        <TextView
+            android:id="@+id/tvGoToMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/uploaded_back_msg"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
